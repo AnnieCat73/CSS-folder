@@ -133,8 +133,7 @@ a:focus {
   text-decoration: none;
   font-weight: bold;
   text-transform: capitalize;
-
-
+  font-size: var(--fs--200);
 }
 
 
@@ -159,17 +158,18 @@ a:focus {
 }
 
 /***********************************************/
-section {
+/*section {
   margin-top: 5em;
 }
 
-.flow-content>*+* {
-  margin-top: 1.25rem;
+section :nth-child() {
+  background-color: var(--clr-neutral-pale);
+}*/
+
+.flow-content>* {
+  margin-top: 5em;
 }
 
-.flow-content-large {
-  margin-top: 3rem;
-}
 
 
 .split {
@@ -178,9 +178,7 @@ section {
   gap: 1.2em;
 }
 
-.flow-content>*+* {
-  margin-top: var(--flow-spacer, 1em);
-}
+
 
 .split>*+* {
   margin: 4rem 0 0 0;
@@ -190,9 +188,7 @@ section {
   flex-basis: 100%;
 }
 
-.xl-space {
-  margin-top: 5rem !important;
-}
+
 
 
 
@@ -255,10 +251,27 @@ section {
 
 /*HERO-ILLUSTRATIONS*/
 
+.hero-illustrations {
+  position: relative;
+
+}
+
 .hero-illustrations .container {
   display: flex;
   flex-direction: column;
-  gap: 6em;
+  gap: 10em;
+  padding-bottom: 3em;
+}
+
+.bg-top-mobile {
+  position: absolute;
+  background-image: url('images/bg-section-top-mobile-1.svg');
+  background-repeat: no-repeat;
+  height: 5rem;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+
 }
 
 
@@ -303,6 +316,14 @@ section {
 
 /*GROW*/
 
+.grow {
+  position: relative;
+  background-color: var(--clr-neutral-pale);
+  padding-top: 4em;
+}
+
+.grow .container {}
+
 .grow .container,
 .flowing .container,
 .users .container {
@@ -326,6 +347,37 @@ section {
   font-size: var(--fs-400);
 }
 
+
+
+.bg-bottom-mobile {
+  position: absolute;
+  background-image: url('images/bg-section-bottom-mobile-1.svg');
+  background-repeat: no-repeat;
+
+  height: 4.2rem;
+  width: 100%;
+  bottom: -50px;
+  left: 0;
+}
+
+/*Users*/
+
+.users {
+  position: relative;
+  background-color: var(--clr-neutral-pale);
+}
+
+.users .bg-top-mobile {
+  position: absolute;
+  background-image: url('images/bg-section-bottom-mobile-1.svg');
+  background-repeat: no-repeat;
+  height: 10rem;
+  width: 100%;
+  top: -150px;
+  left: 0;
+}
+
+
 /*Build*/
 
 .build .build-desktop {
@@ -344,9 +396,7 @@ section {
   line-height: 1.6;
 }
 
-.build .btn {
-  font-size: var(--fs--200);
-}
+
 
 .build {
   margin-bottom: 10rem;
