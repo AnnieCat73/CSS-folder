@@ -1,0 +1,13 @@
+div {
+  position: relative;
+}
+
+div p {
+  position: absolute;
+  background-image: url('/images/bg-footer-top-mobile.svg');
+  background-repeat: no-repeat;
+  height: 3rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
