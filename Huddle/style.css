@@ -133,14 +133,7 @@ a:focus {
 
 /* utility/helper classes */
 
-.heading {}
 
-
-.text {}
-
-.bg-dark {}
-
-.bg-light {}
 
 .btn {
   display: inline-block;
@@ -182,6 +175,8 @@ a:focus {
     grid-column: 2 / 4;
   }
 }
+
+
 
 /***********************************************/
 /*section {
@@ -399,7 +394,7 @@ section :nth-child() {
 
 .grow .text h3,
 .flowing .text h3,
-.users .text .h3 {
+.users .text h3 {
   font-size: var(--fs-400);
 }
 
@@ -409,7 +404,6 @@ section :nth-child() {
   position: absolute;
   background-image: url('images/bg-section-bottom-mobile-1.svg');
   background-repeat: no-repeat;
-
   height: 4.2rem;
   width: 100%;
   bottom: -50px;
@@ -454,9 +448,9 @@ section :nth-child() {
   position: absolute;
   background-image: url('images/bg-section-bottom-mobile-1.svg');
   background-repeat: no-repeat;
-  height: 10rem;
+  height: 3rem;
   width: 100%;
-  top: -150px;
+  top: 150px;
   left: 0;
 }
 
@@ -503,12 +497,11 @@ section :nth-child() {
 
 .wave-mobile {
   position: absolute;
-  background-image: url('/images/bg-footer-top-mobile.svg');
+  background-image: url('images/bg-footer-top-mobile.svg');
   background-repeat: no-repeat;
-  background-color: #fff;
-  height: 3rem;
+  height: 10rem;
   width: 100%;
-  top: 0;
+  top: -53px;
   left: 0;
 }
 
@@ -642,7 +635,7 @@ section :nth-child() {
     background-image: url('images/bg-footer-top-desktop.svg');
     background-repeat: no-repeat;
     background-color: #fff;
-    height: 4rem;
+    height: 8.3rem;
     padding: 0rem;
     width: 100%;
     top: 0;
