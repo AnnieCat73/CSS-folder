@@ -193,15 +193,6 @@ section :nth-child() {
 
 
 
-
-
-
-
-
-
-
-
-
 /* components */
 
 /*HEADER*/
@@ -300,7 +291,7 @@ section :nth-child() {
   position: absolute;
   background-image: url('images/bg-section-top-mobile-1.svg');
   background-repeat: no-repeat;
-  height: 5rem;
+  height: 7rem;
   width: 100%;
   bottom: 0px;
   left: 0;
@@ -312,8 +303,8 @@ section :nth-child() {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  gap: 4em;
+  gap: 7em;
+  padding-bottom: 3rem;
 }
 
 .numbers h2 {
@@ -357,11 +348,7 @@ section :nth-child() {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
   }
-
-
-
 }
 
 /*GROW*/
@@ -369,7 +356,7 @@ section :nth-child() {
 .grow {
   position: relative;
   background-color: var(--clr-neutral-pale);
-  padding-top: 4em;
+  padding: 4em 0;
 }
 
 
@@ -406,7 +393,7 @@ section :nth-child() {
   background-repeat: no-repeat;
   height: 4.2rem;
   width: 100%;
-  bottom: -50px;
+  bottom: -65px;
   left: 0;
 }
 
@@ -428,6 +415,9 @@ section :nth-child() {
 }
 
 /*flowing*/
+.flowing {
+  padding-bottom: 8rem;
+}
 
 @media (min-width: 23.4370em) {
   .flowing .container {
@@ -442,15 +432,17 @@ section :nth-child() {
 .users {
   position: relative;
   background-color: var(--clr-neutral-pale);
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 
 .users .bg-top-mobile {
   position: absolute;
-  background-image: url('images/bg-section-bottom-mobile-1.svg');
+  background-image: url('images/bg-section-top-mobile-2.svg');
   background-repeat: no-repeat;
-  height: 3rem;
+  height: 4rem;
   width: 100%;
-  top: 150px;
+  top: -60px;
   left: 0;
 }
 
@@ -462,6 +454,11 @@ section :nth-child() {
 }
 
 /*Build*/
+
+.build {
+  margin-bottom: 10rem;
+  padding-top: 6rem;
+}
 
 .build .build-desktop {
   display: none;
@@ -481,9 +478,7 @@ section :nth-child() {
 
 
 
-.build {
-  margin-bottom: 10rem;
-}
+
 
 /*Footer*/
 
