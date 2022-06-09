@@ -290,9 +290,9 @@ section :nth-child() {
 
 }
 
-.bg-top-desktop {
+/*.bg-hero-desktop {
   display: none;
-}
+}*/
 
 
 .numbers {
@@ -338,14 +338,13 @@ section :nth-child() {
 
 @media (min-width: 23.4370em) {
 
-  .hero-illustrations {
-    position: relative;
-  }
+
 
   .numbers {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding-bottom: 10rem;
   }
 
   .bg-top-mobile {
@@ -353,15 +352,14 @@ section :nth-child() {
   }
 
   /***/
-  .bg-top-desktop {
+  .bg-hero-desktop {
     position: absolute;
-    background-image: url('images/bg-section-top-desktop-2.svg');
+    background-image: url('images/bg-section-top-desktop-1.svg');
     background-repeat: no-repeat;
-    height: 5rem;
+    height: 15rem;
     width: 100%;
-    bottom: -150px;
+    bottom: -100px;
     left: 0;
-
   }
 
 }
@@ -434,16 +432,7 @@ section :nth-child() {
     display: none;
   }
 
-  .grow .bg-bottom-desktop {
-    position: absolute;
-    background-image: url('images/bg-section-bottom-desktop-1.svg');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 20rem;
-    left: 0;
-    bottom: -155px;
-    outline: red solid 1px;
-  }
+
 
 
 }
@@ -492,15 +481,7 @@ section :nth-child() {
     display: none;
   }
 
-  .users .bg-top-desktop {
-    position: absolute;
-    background-image: url('images/bg-section-top-desktop-2.svg');
-    background-repeat: no-repeat;
-    height: 10rem;
-    width: 100%;
-    top: -160px;
-    left: 0;
-  }
+
 
 }
 
@@ -695,7 +676,6 @@ section :nth-child() {
 
   .footer-container {
     flex-direction: row;
-
     justify-content: space-between;
 
   }
@@ -718,8 +698,8 @@ section :nth-child() {
 
   .newsletter .right {
     width: 100%;
-    display: flex;
-    gap: 1em;
+    flex-direction: row;
+    gap: 2em;
 
   }
 
