@@ -351,7 +351,7 @@ section :nth-child() {
     display: none;
   }
 
-  /***/
+
   .bg-hero-desktop {
     position: absolute;
     background-image: url('images/bg-section-top-desktop-1.svg');
@@ -410,7 +410,7 @@ section :nth-child() {
   left: 0;
 }
 
-.grow .bg-bottom-desktop {
+.bg-illustr-desktop {
   display: none;
 }
 
@@ -432,6 +432,18 @@ section :nth-child() {
     display: none;
   }
 
+  /*******************/
+  .grow .bg-illustr-desktop {
+    position: absolute;
+    background-image: url('images/bg-section-bottom-desktop-1.svg');
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 100%;
+    bottom: 65px;
+    left: 0;
+  }
+
+  /*////////////////////*/
 
 
 
@@ -441,7 +453,7 @@ section :nth-child() {
 
 /*flowing*/
 .flowing {
-  padding-bottom: 8rem;
+  padding-bottom: 12rem;
 }
 
 @media (min-width: 23.4370em) {
@@ -481,7 +493,27 @@ section :nth-child() {
     display: none;
   }
 
+  .users .bg-users-desktop {
+    position: absolute;
+    background-image: url('images/bg-section-top-desktop-2.svg');
+    background-repeat: no-repeat;
+    height: 8rem;
+    width: 100%;
+    top: -80px;
+    left: 0;
+    right: 0;
+  }
 
+  .users .bg-busers-desktop {
+    position: absolute;
+    background-image: url('images/bg-section-bottom-desktop-2.svg');
+    background-repeat: no-repeat;
+    height: 12rem;
+    width: 100%;
+    bottom: -170px;
+    left: 0;
+    right: 0;
+  }
 
 }
 
@@ -489,7 +521,7 @@ section :nth-child() {
 
 .build {
   margin-bottom: 10rem;
-  padding-top: 6rem;
+  padding-top: 8rem;
 }
 
 .build .build-desktop {
@@ -508,7 +540,12 @@ section :nth-child() {
   line-height: 1.6;
 }
 
+@media (min-width: 23.4370em) {
+  .build {
+    margin-top: 8rem;
+  }
 
+}
 
 
 
