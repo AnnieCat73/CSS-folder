@@ -1,0 +1,143 @@
+:root {
+
+  --spacer: 1rem;
+  --ff-rubik: 'Rubik', sans-serif;
+  /*font-family:'McLaren', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;*/
+
+
+  /* small screen font-sizes */
+  --fs-200: 1rem;
+  --fs-300: 1.125rem;
+  /*18pp*/
+  --fs-400: 1.5rem;
+  /*24px*/
+  --fs-500: 1.75rem;
+  /*18px*/
+  --fs-600: 1.25rem;
+  /*20px*/
+  --fs-700: 1.313rem;
+  /*21px*/
+  --fs-900: 2.25rem;
+  /*36px
+
+  
+
+  /*Main colors*/
+  --clr-pale-violet: hsl(276, 100%, 81%);
+  --clr-moderate-violet: hsl(276, 55%, 52%);
+  --clr-grayblue: hsl(206, 6%, 79%);
+  --clr-heading: hsl(271, 36%, 24%);
+  --clr-text: hsl(270, 7%, 64%);
+
+  /*Secondary colors*/
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-app-bg: hsl(270, 20%, 96%);
+  --clr-submit-btn: hsl(271, 36%, 24%);
+  --clr-radio: hsl(289, 100%, 72%);
+
+  /*Gradients*/
+
+
+
+}
+
+
+@media (min-width: 40em) {
+  :root {}
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  line-height: 1.6;
+  font-family: var(--ff-rubik);
+  font-size: var(--fs-200);
+}
+
+
+/* typography */
+
+
+
+a:hover,
+a:focus {}
+
+
+/* utility/helper classes */
+
+
+
+
+/* general layout classes */
+
+.container {}
+
+
+
+
+
+.flow-content>*+* {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+
+
+
+
+
+@media (min-width: 40em) {}
+
+/* components */
+
+
+@media (min-width: 40em) {}
