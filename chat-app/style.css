@@ -39,7 +39,8 @@
   --clr-radio: hsl(289, 100%, 72%);
 
   /*Gradients*/
-
+  --clr-light-magenta: hsl(293, 100%, 63%);
+  --clr-violet: hsl(264, 100%, 61%);
 
 
 }
@@ -120,7 +121,16 @@ a:focus {}
 
 /* general layout classes */
 
-.container {}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  gap: 6em;
+}
 
 
 
@@ -135,9 +145,35 @@ a:focus {}
 
 
 
-@media (min-width: 40em) {}
+@media (min-width: 40em) {
+  .container {
+    flex-direction: row;
+    gap: 8em;
+  }
+}
 
 /* components */
 
+/*phone*/
 
-@media (min-width: 40em) {}
+.phone {
+  width: 270px;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 30px;
+
+}
+
+
+@media (min-width: 40em) {
+  .phone {
+    width: 320px;
+
+
+  }
+
+  .text {
+    flex-basis: 30%;
+
+  }
+}
