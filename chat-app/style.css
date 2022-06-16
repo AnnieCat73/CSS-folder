@@ -9,6 +9,7 @@
 
 
   /* small screen font-sizes */
+  --fs-180: .8rem;
   --fs-200: 1rem;
   --fs-300: 1.125rem;
   /*18pp*/
@@ -100,9 +101,9 @@ img {
 }
 
 body {
-  line-height: 1.6;
+  line-height: 1;
   font-family: var(--ff-rubik);
-  font-size: var(--fs-200);
+  font-size: var(--fs-180);
 }
 
 
@@ -116,7 +117,10 @@ a:focus {}
 
 /* utility/helper classes */
 
-
+.chat-pink {
+  color: var(--clr-moderate-violet);
+  background-color: var(--clr-grayblue);
+}
 
 
 /* general layout classes */
@@ -146,10 +150,16 @@ a:focus {}
 
 
 @media (min-width: 40em) {
+  body {
+    font-size: var(--fs-200);
+  }
+
   .container {
     flex-direction: row;
     gap: 8em;
   }
+
+
 }
 
 /* components */
@@ -159,17 +169,22 @@ a:focus {}
 .phone {
   width: 270px;
   height: 600px;
-  border: 2px solid black;
+  border: 12px solid #ffffff;
   border-radius: 30px;
-
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 100px 1fr 100px 100px;
+  gap: .8em;
+  box-shadow: 20px 20px 50px 15px grey;
+  background-color: var(--clr-app-bg);
 }
+
+
 
 
 @media (min-width: 40em) {
   .phone {
     width: 320px;
-
-
   }
 
   .text {
@@ -177,3 +192,95 @@ a:focus {}
 
   }
 }
+
+
+
+/*header*/
+
+.header {
+  background: linear-gradient(to right, var(--clr-violet), var(--clr-light-magenta));
+  color: #ffffff;
+  outline: 1px solid red;
+}
+
+.avatar {
+  height: 2rem;
+
+}
+
+.contact {
+  display: flex;
+}
+
+.walker {
+  display: flex;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details p {
+  color: var(--clr-pale-violet);
+}
+
+
+
+
+@media (min-width: 40em) {}
+
+
+
+
+
+
+
+/*chat-top*/
+
+
+@media (min-width: 40em) {}
+
+/*chat-middle*/
+
+.chat-middle {
+  outline: 1px solid purple;
+}
+
+.images {
+  display: flex;
+  gap: .3em;
+}
+
+.dog-img {
+  height: 3rem;
+  border-radius: 5px;
+}
+
+
+@media (min-width: 40em) {}
+
+
+/*cost*/
+
+.cost {
+  outline: 1px solid green;
+}
+
+.walk {
+  background: linear-gradient(to right, var(--clr-light-magenta), var(--clr-violet));
+  color: #ffffff;
+  display: flex;
+  color: #ffffff;
+}
+
+.time {
+  display: flex;
+}
+
+@media (min-width: 40em) {}
+
+
+/*footer*/
+
+@media (min-width: 40em) {}
