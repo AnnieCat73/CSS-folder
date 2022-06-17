@@ -9,6 +9,7 @@
 
 
   /* small screen font-sizes */
+  --fs-170: .7rem;
   --fs-180: .8rem;
   --fs-200: 1rem;
   --fs-300: 1.125rem;
@@ -120,6 +121,20 @@ a:focus {}
 .chat-pink {
   color: var(--clr-moderate-violet);
   background-color: var(--clr-grayblue);
+  font-size: var(--fs-170);
+  text-align: left;
+  padding: .5em;
+  border-radius: 5px;
+  line-height: 1.3;
+}
+
+.chat-light {
+  background-color: var(--clr-white);
+  font-size: var(--fs-170);
+  text-align: left;
+  padding: .5em;
+  border-radius: 5px;
+  line-height: 1.3;
 }
 
 
@@ -199,30 +214,49 @@ a:focus {}
 
 .header {
   background: linear-gradient(to right, var(--clr-violet), var(--clr-light-magenta));
-  color: #ffffff;
-  outline: 1px solid red;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  color: var(--clr-white);
+  padding: 1em;
 }
 
 .avatar {
   height: 2rem;
-
+  border-radius: 50%;
+  border: 1px solid var(--clr-white);
 }
 
-.contact {
-  display: flex;
-}
+
 
 .walker {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: .4em;
+  width: 100%;
+  height: 100%;
 }
 
 .details {
   display: flex;
   flex-direction: column;
+  gap: .2em;
+}
+
+.details h3 {
+  font-size: var(--fs-200);
+  font-weight: normal;
 }
 
 .details p {
   color: var(--clr-pale-violet);
+  font-size: var(--fs-180);
+}
+
+.fa-solid-pa {
+  margin-left: auto;
 }
 
 
@@ -238,23 +272,61 @@ a:focus {}
 
 /*chat-top*/
 
+.chat-top {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr 1fr;
+  gap: .6em;
+  padding: 0 .5em;
+}
+
+.chat-pink.box-1 {
+  grid-column: 1 / 2;
+}
+
+.chat-pink.box-2 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
 
 @media (min-width: 40em) {}
 
 /*chat-middle*/
 
 .chat-middle {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: repeat(3, min-content) 1fr;
+  row-gap: .5em;
+  padding: 0 .5em;
   outline: 1px solid purple;
 }
 
 .images {
   display: flex;
   gap: .3em;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: end;
 }
 
 .dog-img {
   height: 3rem;
   border-radius: 5px;
+}
+
+.chat-light-large {
+  grid-column: 1 / -1;
+  grid-row: 2 /3;
+  justify-self: end;
+  max-width: 25ch;
+}
+
+.chat-light-small {
+  grid-column: 1 / -1;
+  grid-row: 3 /4;
+  justify-self: end;
 }
 
 
@@ -265,6 +337,7 @@ a:focus {}
 
 .cost {
   outline: 1px solid green;
+  padding: 0 .5em;
 }
 
 .walk {
@@ -282,5 +355,9 @@ a:focus {}
 
 
 /*footer*/
+.footer {
+  padding: 0 .5em;
+  outline: 1px solid green;
+}
 
 @media (min-width: 40em) {}
