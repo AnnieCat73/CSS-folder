@@ -1,44 +1,28 @@
-# Frontend Mentor - Chat app CSS illustration solution
+# Chat app CSS illustration 
 
  
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Built with](#built-with)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
-
-## Overview
 
 ### The challenge
 
-Users should be able to:
+Users of this chat app illustration should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
-- **Bonus**: See the chat interface animate on the initial load
+- See the chat interface animate on the initial load
 
 ### Screenshot
 
 ![](./screenshot.jpg)
 
-
-
-
-### Links
-
-
-
-## My process
 
 ### Built with
 
@@ -47,21 +31,6 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-
-
-### What I learned
-
-
-
-### Continued development
-
-
-
-### Useful resources
 
 
 
@@ -71,6 +40,6 @@ Users should be able to:
 
 
 
-## Acknowledgments
+
 
 
