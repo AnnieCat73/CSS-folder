@@ -178,7 +178,33 @@ a:focus {}
 
 /* components */
 
+/*background*/
+
+.purple {
+  width: 50%;
+  height: 70vh;
+  background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  position: absolute;
+  border-radius: 0px 0px 1000px 0px;
+  z-index: -1;
+}
+
+.grey {
+  width: 50%;
+  height: 50vh;
+  background-color: rgba(240, 234, 234, 0.582);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 1000px 0px 0px 0px;
+  z-index: -1;
+}
+
+@media (min-width: 50em) {}
+
+
 /*phone*/
+
 
 .phone {
   width: 270px;
@@ -192,6 +218,8 @@ a:focus {}
   box-shadow: 20px 20px 50px 15px grey;
   background-color: var(--clr-app-bg);
 }
+
+
 
 @media (min-width: 50em) {
   .phone {
@@ -215,7 +243,20 @@ a:focus {}
   border-bottom-right-radius: .5em;
   color: var(--clr-white);
   padding: 1em;
+  position: relative;
 }
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  background-color: var(--clr-white);
+  width: 200px;
+  height: 15px;
+  border-radius: 0px 0px 15px 15px;
+}
+
 
 .avatar {
   height: 2rem;
@@ -277,7 +318,11 @@ a:focus {}
 }
 
 
-@media (min-width: 50em) {}
+@media (min-width: 50em) {
+  .header::before {
+    left: 50px;
+  }
+}
 
 /*chat-middle*/
 
