@@ -1,0 +1,154 @@
+:root {
+
+  --spacer: 1rem;
+  --ff-sans: ;
+
+  /* small screen font-sizes */
+
+  --fs-300: 1.125rem;
+  /*18px*/
+  --fs-400: 1.5rem;
+  /*24px*/
+  --fs-500: 1.75rem;
+  /*18px*/
+  --fs-600: 1.25rem;
+  /*20px*/
+  --fs-700: 1.313rem;
+  /*21px*/
+  --fs-900: 2.25rem;
+  /*36px*/
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+
+  /*colors*/
+  --clr-light-100: #ffffff;
+  --clr-neutral-100: #4c4d5f;
+  --clr-accent-100: #00b289;
+  --clr-accent-200: #f8db62;
+
+
+
+  --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+
+@media (min-width: 40em) {
+  :root {}
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  line-height: 1.6;
+  font-family: var(--ff-sans);
+}
+
+
+/* typography */
+
+h1,
+h2,
+h3,
+.section-subtitle {
+  font-family: var(--ff-sans);
+}
+
+
+
+a:hover,
+a:focus {
+  color: var(--clr-primary-400);
+}
+
+
+/* utility/helper classes */
+
+.heading {}
+
+
+.text {}
+
+.bg-dark {}
+
+.bg-light {}
+
+.btn {
+  display: inline-block;
+  font-size: var(--fs-300);
+  border: 0;
+  font-weight: var(--fw-700);
+  line-height: 1.125;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+
+
+/* general layout classes */
+
+.container {}
+
+section {}
+
+
+
+
+
+
+
+@media (min-width: 40em) {}
+
+/* components */
+
+
+@media (min-width: 40em) {}
