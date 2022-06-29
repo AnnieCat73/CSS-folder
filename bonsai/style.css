@@ -7,6 +7,7 @@
   /* small screen font-sizes */
   --fs-250: 0.813rem;
   /*13px*/
+  --fs-270: 0.875rem;
   --fs-280: 1rem;
   /*16px*/
   --fs-290: 1.063rem;
@@ -16,14 +17,21 @@
   --fs-320: 1.25rem;
   --fs-400: 1.5rem;
   /*24px*/
+  --fs-460: 1.625rem;
   --fs-500: 1.75rem;
   /*18px*/
   --fs-600: 1.25rem;
   /*20px*/
   --fs-700: 1.313rem;
   /*21px*/
+  --fs-810: 1.875rem;
+  /*30px*/
   --fs-900: 2.25rem;
   /*36px*/
+  --fs-920: 2.5rem;
+  --fs-940: 3.875rem;
+  /*62px*/
+  --fs-980: 4.375rem;
 
   --fw-400: 400;
   --fw-700: 700;
@@ -43,16 +51,6 @@
 }
 
 
-@media (min-width: 40em) {
-  :root {}
-}
-
-@media (min-width: 61.8em) {
-  :root {
-    --fs-400: 2.4rem;
-    /*heading for desktop no for tablet*/
-  }
-}
 
 /* reset */
 
@@ -385,13 +383,6 @@ section {}
   }
 }
 
-
-
-
-
-
-
-
 @media (min-width: 40em) {}
 
 /*Pricing*/
@@ -489,8 +480,6 @@ section {}
     grid-column: 1 / 3;
     justify-self: end;
   }
-
-
 }
 
 @media (min-width: 62em) {
@@ -500,9 +489,87 @@ section {}
   }
 
   .heading {
+    font-size: var(--fs-320);
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     font-size: 2.5rem;
     align-self: end;
   }
+}
+
+
+/*plans*/
+
+.plan .type h2 {
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-200);
+  font-weight: var(--fw-700);
+  line-height: 1.4;
+}
+
+.plan .type p {
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-270);
+  line-height: 20px;
+  font-weight: var(--fw-400);
+}
+
+.price-container {
+  display: flex;
+  gap: 1em;
+  color: var(--clr-neutral-200);
+}
+
+.plan-price {
+  display: flex;
+  gap: .5em;
+}
+
+.plan-price .amount {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-980);
+  line-height: 80px;
+  font-weight: var(--fw-700);
+}
+
+.plan-price .currency {
+  align-self: center;
+  font-size: var(--fs-500);
+}
+
+.plan-month {
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+  font-weight: var(--fw-400);
+  line-height: 1.4;
+  align-self: flex-end;
+}
+
+@media (min-width: 30em) {
+  .plan-price .currency {
+    font-size: var(--fs-810);
+  }
+}
+
+@media (min-width: 48.125em) {
+  .plan-price .currency {
+    align-self: flex-start;
+    margin-top: .2em;
+  }
+
+  .plan-price .amount {
+    font-size: var(--fs-940);
+  }
+}
+
+@media (min-width: 61.8em) {
+  .plan .type h2 {
+    font-size: var(--fs-460);
+  }
+
+  .price-container .plan-month {
+    font-size: var(--fs-400);
+  }
+
+
 }
