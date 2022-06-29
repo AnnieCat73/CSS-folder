@@ -500,6 +500,30 @@ section {}
 
 /*plans*/
 
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  border: .3px solid rgba(2, 4, 69, .15);
+  border-radius: 4px;
+  box-shadow: 0 0 68px 0 rgba(2, 4, 69, .08);
+  padding: 4em 1em 3em 1em;
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .plan .type h2 {
   font-size: var(--fs-400);
   color: var(--clr-neutral-200);
@@ -543,6 +567,31 @@ section {}
   font-weight: var(--fw-400);
   line-height: 1.4;
   align-self: flex-end;
+}
+
+.plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.plan-feature {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: var(--clr-neutral-200);
+}
+
+.plan-feature p {
+  font-size: var(--fs-290);
+  font-weight: var(--fw-400);
+  letter-spacing: .6px;
+  line-height: 23px;
+}
+
+.plan .btn-accent {
+  padding: 1.375em 1.5625em;
+  width: 100%;
 }
 
 @media (min-width: 30em) {
