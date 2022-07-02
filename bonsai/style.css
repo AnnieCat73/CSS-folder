@@ -194,9 +194,10 @@ a:focus {
 /* general layout classes */
 
 .container {
+  width: 90%;
   max-width: 75em;
   margin: 0 auto;
-  padding: 0 1.5em;
+  padding: 0;
 }
 
 
@@ -265,7 +266,8 @@ section {}
   top: 0;
   bottom: auto;
   background-color: var(--clr-light-100);
-  z-index: 100000000
+  z-index: 100000000;
+
 }
 
 .nav-mobile {
@@ -311,6 +313,30 @@ section {}
 .btn-signup {
   display: block;
 }
+
+/*
+
+HERE
+
+}*/
+
+.mobile-menu {
+
+  position: fixed;
+  background-color: var(--clr-light-100);
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  transform: translateX(0px);
+  transition: transform 250ms;
+  height: 100%;
+  z-index: 3;
+}
+
+/*HERE
+}*/
 
 
 @media (min-width: 61.8em) {
