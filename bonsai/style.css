@@ -314,14 +314,9 @@ section {}
   display: block;
 }
 
-/*
-
-HERE
-
-}*/
+/*mobile-menu*/
 
 .mobile-menu {
-
   position: fixed;
   background-color: var(--clr-light-100);
   width: 100%;
@@ -329,14 +324,17 @@ HERE
   right: 0;
   bottom: 0;
   left: 100%;
-  transform: translateX(0px);
+  transform: translateX(0);
   transition: transform 250ms;
   height: 100%;
   z-index: 3;
 }
 
-/*HERE
-}*/
+.navigation-open {
+  transform: translateX(-100%);
+}
+
+
 
 
 @media (min-width: 61.8em) {
