@@ -186,7 +186,9 @@ a:focus {
 }
 
 .btn-accent:hover {
+  background-color: var(--clr-accent-100);
   color: var(--clr-light-100);
+  outline: 0;
 }
 
 @media (min-width: 40em) {}
@@ -365,11 +367,15 @@ button.close-btn {
 }
 
 .dropdown-toggle a {
-  color: var(--clr-dark-100);
+  color: var(--clr-neutral-100);
   font-size: var(--fs-300);
   font-weight: var(--fw-400);
   text-decoration: none;
   line-height: 22px;
+}
+
+.dropdown-toggle a:hover {
+  color: var(--clr-dark-100);
 }
 
 .dropdown-toggle .dropdown-arrow {
