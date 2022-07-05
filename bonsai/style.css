@@ -636,6 +636,11 @@ button.close-btn {
   gap: .5em;
 }
 
+#billed {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
 .plan-price .amount {
   font-weight: var(--fw-700);
   font-size: var(--fs-980);
@@ -664,7 +669,6 @@ button.close-btn {
 
 .plan-feature {
   display: flex;
-
   gap: 1em;
   align-items: center;
   color: var(--clr-neutral-200);

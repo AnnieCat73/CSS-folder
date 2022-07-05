@@ -20,6 +20,8 @@ let toggleBtn = document.querySelector(".toggle-ball");
 const price1 = document.querySelector("#price-1");
 const price2 = document.querySelector("#price-2");
 const price3 = document.querySelector("#price-3");
+let billed = document.querySelectorAll("#billed");
+let text = "Billed yearly";
 
 
 
@@ -29,14 +31,19 @@ toggleBtn.addEventListener("click", e => {
     price1.innerText = '17';
     price2.innerText = '32';
     price3.innerText = '52';
+    billed.forEach((bill) => {
+      bill.innerText = text;
+    })
+
   }
   else {
     price1.innerText = '24';
     price2.innerText = '39';
     price3.innerText = '79';
-
+    billed.forEach((bill) => {
+      bill.innerText = "";
+    })
   }
-
 })
 
 
