@@ -26,6 +26,7 @@
   /*21px*/
   --fs-810: 1.875rem;
   /*30px*/
+  --fs-840: 2rem;
   --fs-900: 2.25rem;
   /*36px*/
   --fs-920: 2.5rem;
@@ -768,4 +769,17 @@ button.close-btn {
 
 /*Boxes*/
 
-.boxes h2 {}
+.boxes h2 {
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  text-align: center;
+  line-height: 140%;
+}
+
+@media (min-width: 50em) {
+  .boxes h2 {
+    font-size: var(--fs-840);
+
+  }
+}
