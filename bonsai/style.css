@@ -31,6 +31,7 @@
   --fs-900: 2.25rem;
   /*36px*/
   --fs-920: 2.5rem;
+  --fs-930: 2.75rem;
   --fs-940: 3.875rem;
   /*62px*/
   --fs-980: 4.375rem;
@@ -815,9 +816,27 @@ button.close-btn {
   font-weight: var(--fw-700);
 }
 
+.box-pricing .currency {
+  margin-right: .1em;
+}
+
+.box-2 .price,
+.box-3 .price {
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-920);
+  font-weight: var(--fw-700);
+  line-height: 130%;
+}
+
+.plan-month {
+  font-weight: var(--fw-400);
+
+}
+
 @media (min-width: 50em) {
   .boxes h2 {
     font-size: var(--fs-840);
+
   }
 
   .box-content h3 {
@@ -826,5 +845,14 @@ button.close-btn {
 
   .box-pricing .amount {
     font-size: var(--fs-840);
+  }
+
+  .box-pricing .amount {
+    font-size: var(--fs-920);
+  }
+
+  .box-2 .price,
+  .box-3 .price {
+    font-size: var(--fs-930);
   }
 }
