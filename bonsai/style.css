@@ -829,6 +829,13 @@ button.close-btn {
 
 .box-pricing {}
 
+.box-pricing .amount-1 {
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-200);
+  line-height: 140%;
+  font-weight: var(--fw-700);
+}
+
 .box-pricing .amount {
   color: var(--clr-neutral-200);
   font-size: var(--fs-400);
@@ -871,7 +878,7 @@ button.close-btn {
     font-size: var(--fs-790);
   }
 
-  .box-pricing .amount {
+  .box-pricing .amount-1 {
     font-size: var(--fs-840);
   }
 
