@@ -732,6 +732,7 @@ button.close-btn {
 
 @media (min-width: 48.125em) {
   .plan-price .currency {
+
     align-self: flex-start;
     margin-top: .2em;
   }
@@ -771,6 +772,8 @@ button.close-btn {
 
 /*Boxes*/
 
+.boxes {}
+
 .boxes h2 {
   color: var(--clr-neutral-200);
   font-size: var(--fs-400);
@@ -779,9 +782,24 @@ button.close-btn {
   line-height: 140%;
 }
 
+.box-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 2em;
+  box-shadow: 0 0 60px 0 rgba(2, 4, 69, .05);
+}
+
 .box-content h3 {
   color: var(--clr-neutral-200);
-  font-size: var(--fs-400);
+  font-size: var(--fs-280);
   font-weight: var(--fw-700);
   line-height: 1.4;
 }
@@ -808,6 +826,8 @@ button.close-btn {
   max-width: 100%;
   font-size: 14px;
 }
+
+.box-pricing {}
 
 .box-pricing .amount {
   color: var(--clr-neutral-200);
