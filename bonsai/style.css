@@ -772,12 +772,16 @@ button.close-btn {
 
 /*Boxes*/
 
-.boxes {}
+.boxes {
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
 
 .boxes h2 {
   color: var(--clr-neutral-200);
   font-size: var(--fs-400);
   font-weight: var(--fw-400);
+  margin-bottom: 1.5em;
   text-align: center;
   line-height: 140%;
 }
@@ -887,15 +891,25 @@ button.close-btn {
 
   .boxes h2 {
     font-size: var(--fs-840);
-
   }
 
   .box {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
+  .box-1 {
+    padding: 2.3em 2em;
+  }
 
+  .box-2 {
+    padding: 2.5em 2em;
+  }
+
+  .box-3 {
+    padding: 3em 2em;
+  }
 
   .box-content h3 {
     font-size: var(--fs-790);
