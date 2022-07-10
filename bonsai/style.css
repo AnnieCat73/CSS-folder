@@ -785,7 +785,7 @@ button.close-btn {
 .box-container {
   display: flex;
   flex-direction: column;
-  gap: .5em;
+  gap: 1em;
 }
 
 .box {
@@ -793,6 +793,7 @@ button.close-btn {
   border-radius: 15px;
   display: flex;
   flex-direction: column-reverse;
+  gap: 1em;
   padding: 2em;
   box-shadow: 0 0 60px 0 rgba(2, 4, 69, .05);
 }
@@ -811,6 +812,12 @@ button.close-btn {
   line-height: 20px;
 }
 
+.box-3-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .box-3 .learn-link {
   color: var(--clr-accent-100);
   cursor: pointer;
@@ -818,16 +825,24 @@ button.close-btn {
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
-  gap: .5em
+  gap: .5em;
+  order: 4;
+}
+
+.learn-link p {
+  font-size: var(--fs-250);
 }
 
 .learn-link img {
   display: inline-block;
   max-width: 100%;
-  font-size: 14px;
+  width: .4rem;
+
 }
 
-.box-pricing {}
+.box-pricing {
+  margin-left: 2em;
+}
 
 .box-pricing .amount-1 {
   font-size: var(--fs-400);
@@ -869,10 +884,18 @@ button.close-btn {
 }
 
 @media (min-width: 50em) {
+
   .boxes h2 {
     font-size: var(--fs-840);
 
   }
+
+  .box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
 
   .box-content h3 {
     font-size: var(--fs-790);
