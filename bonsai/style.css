@@ -797,7 +797,7 @@ button.close-btn {
   border-radius: 15px;
   display: flex;
   flex-direction: column-reverse;
-  gap: 1em;
+  gap: .8em;
   padding: 2em;
   box-shadow: 0 0 60px 0 rgba(2, 4, 69, .05);
 }
@@ -835,6 +835,7 @@ button.close-btn {
 
 .learn-link p {
   font-size: var(--fs-250);
+
 }
 
 .learn-link img {
@@ -921,6 +922,10 @@ button.close-btn {
 
   .box-pricing .amount {
     font-size: var(--fs-920);
+  }
+
+  .box-pricing .plan-month {
+    margin-left: 1em;
   }
 
   .box-2 .price,
