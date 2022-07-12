@@ -936,3 +936,29 @@ button.close-btn {
 
 
 /*Frequently*/
+
+.free-cta {
+  background-color: var(--clr-accent-300);
+  padding: 3em 3.3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+}
+
+.large-heading {
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-920);
+  line-height: 130%;
+  text-align: center;
+  font-weight: var(--fw-400);
+
+}
+
+.large-heading span {
+  color: var(--clr-accent-100);
+}
+
+.free-cta a {
+  align-self: center;
+}
