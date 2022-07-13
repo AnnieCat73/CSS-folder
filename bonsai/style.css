@@ -962,3 +962,18 @@ button.close-btn {
 .free-cta a {
   align-self: center;
 }
+
+
+@media (min-width: 56em) {
+  .free-cta {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em 2em;
+  }
+
+  .large-heading {
+    font-size: var(--fs-930);
+    text-align: center;
+    max-width: 24ch;
+  }
+}
