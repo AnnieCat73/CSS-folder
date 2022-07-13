@@ -963,6 +963,14 @@ button.close-btn {
   align-self: center;
 }
 
+.frequently-heading {
+  color: var(--clr-accent-100);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-700);
+  line-height: 36px;
+  text-align: center;
+}
+
 
 @media (min-width: 56em) {
   .free-cta {
@@ -975,5 +983,10 @@ button.close-btn {
     font-size: var(--fs-930);
     text-align: center;
     max-width: 24ch;
+  }
+
+  .frequently-heading {
+    font-size: var(--fs-840);
+    line-height: 38px;
   }
 }
