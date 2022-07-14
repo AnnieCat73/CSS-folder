@@ -8,6 +8,7 @@
   --fs-250: 0.813rem;
   /*13px*/
   --fs-270: 0.875rem;
+  /*14px*/
   --fs-280: 1rem;
   /*16px*/
   --fs-290: 1.063rem;
@@ -980,6 +981,21 @@ button.close-btn {
   font-size: var(--fs-440);
   line-height: 30px;
   text-align: left;
+}
+
+.panel-paragraph {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-270);
+  font-weight: var(--fw-400);
+  text-align: left;
+  line-height: 26px;
+}
+
+@media (min-width: 48em) {
+  .panel-paragraph {
+    font-size: var(--fs-280);
+    line-height: 30px;
+  }
 }
 
 
