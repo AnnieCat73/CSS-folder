@@ -939,6 +939,11 @@ button.close-btn {
 
 
 /*Frequently*/
+.frequently {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
 
 .free-cta {
   background-color: var(--clr-accent-300);
@@ -983,12 +988,22 @@ button.close-btn {
   text-align: left;
 }
 
+.pricing-question {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0 2em;
+}
+
+
+
 .panel-paragraph {
   color: var(--clr-neutral-100);
   font-size: var(--fs-270);
   font-weight: var(--fw-400);
   text-align: left;
   line-height: 26px;
+  padding-bottom: 1em;
 }
 
 @media (min-width: 48em) {
