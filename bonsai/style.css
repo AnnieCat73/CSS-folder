@@ -1054,3 +1054,16 @@ button.close-btn {
 
 
 /*footer*/
+
+
+
+
+/*Resources*/
+
+.dropdown-footer {
+  display: flex;
+}
+
+.dropdown-footer-trigger {
+  width: .8rem;
+}
