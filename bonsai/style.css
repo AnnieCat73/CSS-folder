@@ -985,7 +985,6 @@ button.close-btn {
   font-weight: var(--fw-700);
   font-size: var(--fs-440);
   line-height: 30px;
-
   text-align: left;
 }
 
@@ -1057,7 +1056,20 @@ button.close-btn {
 /*footer*/
 
 
+.dropdown-link {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: var(--fs-280);
+  text-decoration: none;
+  letter-spacing: .11px;
+  line-height: 30px;
+}
 
+.dropdown-link:hover,
+.dropdonw-link:active {
+  color: var(--clr-dark-100);
+  outline: 0;
+}
 
 /*Resources*/
 
