@@ -989,9 +989,8 @@ button.close-btn {
   text-align: left;
 }
 
-/*.check {
+.check {
   color: #4c525a;
-  /*content: "";
   background-image: url("https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/59f05f389cd27200014f061e_icon-expand.png");
   position: absolute;
   background-repeat: no-repeat;
@@ -1002,9 +1001,11 @@ button.close-btn {
   background-size: auto 20px;
   font-size: 25px;
   line-height: 30px;
+  height: 1rem;
+  width: 1rem;
   cursor: pointer;
 
-}*/
+}
 
 .pricing-question {
   display: flex;
