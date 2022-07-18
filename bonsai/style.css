@@ -90,8 +90,8 @@ figure {
   margin: 0;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
   padding: 0;
 }
