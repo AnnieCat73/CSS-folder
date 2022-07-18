@@ -1057,6 +1057,7 @@ button.close-btn {
 
 
 .dropdown-link {
+  color: var(--clr-neutral-100);
   cursor: pointer;
   background-color: transparent;
   font-size: var(--fs-280);
@@ -1064,6 +1065,8 @@ button.close-btn {
   letter-spacing: .11px;
   line-height: 30px;
 }
+
+.dropdown-link a {}
 
 .dropdown-link:hover,
 .dropdonw-link:active {
