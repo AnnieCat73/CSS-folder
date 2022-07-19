@@ -15,6 +15,7 @@
   /*17px*/
   --fs-300: 1.125rem;
   /*18px*/
+
   --fs-320: 1.25rem;
   --fs-400: 1.5rem;
   /*24px*/
@@ -1055,6 +1056,14 @@ button.close-btn {
 
 /*footer*/
 
+.footer-title {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-290);
+  font-weight: var(--fw-700);
+  letter-spacing: .12px;
+
+  text-transform: uppercase;
+}
 
 .dropdown-link {
   color: var(--clr-neutral-100);
@@ -1066,10 +1075,8 @@ button.close-btn {
   line-height: 30px;
 }
 
-.dropdown-link a {}
-
 .dropdown-link:hover,
-.dropdonw-link:active {
+.dropdown-link:active {
   color: var(--clr-dark-100);
   outline: 0;
 }
@@ -1082,4 +1089,10 @@ button.close-btn {
 
 .dropdown-footer-trigger {
   width: .8rem;
+}
+
+@media (min-width: 48em) {
+  .footer-title {
+    font-size: var(--fs-280);
+  }
 }
