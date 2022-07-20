@@ -84,6 +84,8 @@ body,
 h1,
 h2,
 h3,
+h4,
+h5,
 p,
 dl,
 dd,
@@ -1056,6 +1058,10 @@ button.close-btn {
 
 /*footer*/
 
+.footer ul li {
+  font-size: var(--fs-290);
+}
+
 .footer-title {
   color: var(--clr-neutral-100);
   font-size: var(--fs-290);
@@ -1069,7 +1075,6 @@ button.close-btn {
   color: var(--clr-neutral-100);
   cursor: pointer;
   background-color: transparent;
-  font-size: var(--fs-280);
   text-decoration: none;
   letter-spacing: .11px;
   line-height: 30px;
@@ -1077,7 +1082,21 @@ button.close-btn {
 
 .dropdown-link:hover,
 .dropdown-link:active {
-  color: var(--clr-dark-100);
+  outline: 0;
+}
+
+.title-green {
+  color: var(--clr-accent-100);
+  cursor: pointer;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-400);
+  letter-spacing: .11px;
+  line-height: 30px;
+}
+
+.title-green:hover,
+.title-green:focus {
+  color: var(--clr-accent-100);
   outline: 0;
 }
 
