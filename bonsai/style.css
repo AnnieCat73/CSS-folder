@@ -1100,6 +1100,15 @@ button.close-btn {
   outline: 0;
 }
 
+.footer-subtitle {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-290);
+  font-weight: var(--fw-700);
+  line-height: 22px;
+  letter-spacing: .11px;
+  ;
+}
+
 /*Resources*/
 
 .dropdown-footer {
@@ -1113,5 +1122,9 @@ button.close-btn {
 @media (min-width: 48em) {
   .footer-title {
     font-size: var(--fs-280);
+  }
+
+  .footer-subtitle {
+    font-size: var(--fs-300);
   }
 }
