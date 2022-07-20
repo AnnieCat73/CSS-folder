@@ -1106,7 +1106,12 @@ button.close-btn {
   font-weight: var(--fw-700);
   line-height: 22px;
   letter-spacing: .11px;
-  ;
+
+}
+
+.templates li {
+  display: flex;
+  gap: .3em;
 }
 
 /*Resources*/
