@@ -1058,6 +1058,12 @@ button.close-btn {
 
 /*footer*/
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .footer ul li {
   font-size: var(--fs-290);
 }
