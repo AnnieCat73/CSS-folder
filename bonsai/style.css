@@ -1109,15 +1109,18 @@ button.close-btn {
 
 }
 
-.templates li {
+.templates li,
+.comparison li {
   display: flex;
   gap: .3em;
+  align-items: center;
 }
 
 /*Resources*/
 
 .dropdown-footer {
   display: flex;
+
 }
 
 .dropdown-footer-trigger {
