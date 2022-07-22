@@ -1062,6 +1062,7 @@ button.close-btn {
   display: flex;
   flex-direction: column;
   gap: 2em;
+  padding: 6em 0;
 }
 
 .footer ul li {
@@ -1073,8 +1074,12 @@ button.close-btn {
   font-size: var(--fs-290);
   font-weight: var(--fw-700);
   letter-spacing: .12px;
-
+  padding-bottom: 1em;
   text-transform: uppercase;
+}
+
+.dropdown-footer {
+  margin-bottom: .5em;
 }
 
 .dropdown-link {
@@ -1084,6 +1089,7 @@ button.close-btn {
   text-decoration: none;
   letter-spacing: .11px;
   line-height: 30px;
+  margin-bottom: .5em;
 }
 
 .dropdown-link:hover,
@@ -1112,6 +1118,7 @@ button.close-btn {
   font-weight: var(--fw-700);
   line-height: 22px;
   letter-spacing: .11px;
+  padding-top: .5em;
 
 }
 
