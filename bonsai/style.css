@@ -1145,6 +1145,10 @@ button.close-btn {
 }
 
 @media (min-width: 48em) {
+  .footer {
+    flex-direction: row;
+  }
+
   .footer-title {
     font-size: var(--fs-280);
   }
