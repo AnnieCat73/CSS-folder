@@ -1125,8 +1125,12 @@ button.close-btn {
 .templates li,
 .comparison li {
   display: flex;
-  gap: .3em;
+  gap: .5em;
   align-items: center;
+}
+
+.dropdown-footer-trigger {
+  padding-bottom: .3em;
 }
 
 /*Resources*/
