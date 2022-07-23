@@ -47,3 +47,7 @@ toggleBtn.addEventListener("click", e => {
 })
 
 
+
+/*Accordion*/
+
+
