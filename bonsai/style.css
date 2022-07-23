@@ -1028,6 +1028,12 @@ button.close-btn {
   padding-bottom: 1em;
 }
 
+/*toggle*/
+
+.toggle {
+  display: none;
+}
+
 @media (min-width: 48em) {
   .panel-paragraph {
     font-size: var(--fs-280);
