@@ -1017,7 +1017,9 @@ button.close-btn {
   position: relative;
 }
 
-
+.pricing-event {
+  margin-bottom: 1em;
+}
 
 .panel-paragraph {
   color: var(--clr-neutral-100);

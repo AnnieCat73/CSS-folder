@@ -47,17 +47,14 @@ toggleBtn.addEventListener("click", e => {
 })
 
 
-
 /*Accordion*/
 
 const questions = document.querySelectorAll('.pricing-event');
 const panels = document.querySelectorAll('.panel');
 
-console.log(questions)
-
-Array.from(questions).forEach((question) => {
-  question.addEventListener('click', () => {
-    panels.forEach(panel => panel.classList.toggle('toggle'));
-  });
+Array.from(questions).forEach((question, index) => {
+  question.addEventListener('click', e => {
+    panels[index].classList.toggle('toggle')
+  })
 });
 
