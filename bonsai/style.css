@@ -998,7 +998,7 @@ button.close-btn {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 100% 50%;
-  top: 0;
+  top: 30px;
   right: 0;
   background-size: auto 20px;
   font-size: 25px;
@@ -1034,6 +1034,12 @@ button.close-btn {
 
 .toggle {
   display: none;
+}
+
+@media (min-width: 22.5em) {
+  .check {
+    top: 0;
+  }
 }
 
 @media (min-width: 48em) {
