@@ -97,6 +97,7 @@ ul,
 ol {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 input,
@@ -215,9 +216,7 @@ a:focus {
 
 
 
-.container.footer {}
 
-section {}
 
 
 
@@ -1136,6 +1135,12 @@ button.close-btn {
 
 }
 
+.templates .dropdown-link {
+  margin-bottom: 0;
+}
+
+.templates {}
+
 .templates li,
 .comparison li {
   display: flex;
@@ -1156,6 +1161,10 @@ button.close-btn {
 
 .dropdown-footer-trigger {
   width: .8rem;
+}
+
+.self-employed {
+  margin-top: 2em;
 }
 
 @media (min-width: 48em) {
