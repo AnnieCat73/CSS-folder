@@ -1115,6 +1115,7 @@ button.close-btn {
   cursor: pointer;
   font-size: var(--fs-300);
   font-weight: var(--fw-400);
+  margin-top: 1em;
   letter-spacing: .11px;
   line-height: 30px;
 }
@@ -1131,15 +1132,14 @@ button.close-btn {
   font-weight: var(--fw-700);
   line-height: 22px;
   letter-spacing: .11px;
-  padding-top: .5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 
 }
 
 .templates .dropdown-link {
   margin-bottom: 0;
 }
-
-.templates {}
 
 .templates li,
 .comparison li {
@@ -1156,7 +1156,7 @@ button.close-btn {
 
 .dropdown-footer {
   display: flex;
-
+  margin-bottom: 0;
 }
 
 .dropdown-footer-trigger {
