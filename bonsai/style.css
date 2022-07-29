@@ -945,6 +945,7 @@ button.close-btn {
   display: flex;
   flex-direction: column;
   gap: 3em;
+  padding: 3em 0;
 }
 
 .free-cta {
@@ -979,6 +980,7 @@ button.close-btn {
   font-weight: var(--fw-700);
   line-height: 36px;
   text-align: center;
+  margin-top: 2em;
 }
 
 .pricing-question h2 {
