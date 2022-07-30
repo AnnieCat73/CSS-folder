@@ -54,7 +54,7 @@ const panels = document.querySelectorAll('.panel');
 
 Array.from(questions).forEach((question, index) => {
   question.addEventListener('click', e => {
-    panels[index].classList.toggle('toggle')
+    panels[index].classList.toggle('toggle-q')
   })
 });
 

@@ -448,11 +448,7 @@ button.close-btn {
     gap: 1em;
   }
 
-  .btn-light.login {}
 
-
-
-  .btn-accent.signup {}
 
 
 
@@ -519,8 +515,8 @@ button.close-btn {
   background-color: var(--clr-light-100);
   margin-right: 2px;
   margin-left: 2px;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-  transform-style: preserve-3d;
+  /*transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+  transform-style: preserve-3d;*/
 }
 
 .toggle-active {
@@ -1033,7 +1029,7 @@ button.close-btn {
 
 /*toggle*/
 
-.toggle {
+.toggle-q {
   display: none;
 }
 
