@@ -1097,10 +1097,13 @@ button.close-btn {
   color: var(--clr-neutral-100);
   cursor: pointer;
   background-color: transparent;
+  display: flex;
+  gap: .3em;
   text-decoration: none;
   letter-spacing: .11px;
   line-height: 30px;
   margin-bottom: .5em;
+
 }
 
 .dropdown-link:hover,
@@ -1148,6 +1151,7 @@ button.close-btn {
 
 .dropdown-footer-trigger {
   padding-bottom: .3em;
+  cursor: pointer;
 }
 
 /*Resources*/
