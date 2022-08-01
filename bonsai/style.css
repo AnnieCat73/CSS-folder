@@ -201,10 +201,6 @@ a:focus {
   outline: 0;
 }
 
-@media (min-width: 40em) {}
-
-@media (min-width: 40em) {}
-
 /* general layout classes */
 
 .container {
@@ -216,21 +212,11 @@ a:focus {
 
 
 
-
-
-
-
-
-
-
-
 @media (min-width: 48em) {
   .container {
     padding: 0 2.3em;
   }
 }
-
-@media (min-width: 61.8em) {}
 
 /* components */
 
@@ -240,10 +226,15 @@ a:focus {
   display: block;
   background-color: var(--clr-accent-300);
   position: absolute;
-  top: -88%;
+  /*top: -88%;
   right: -23%;
   width: 90%;
   height: 120%;
+  bottom: auto;*/
+  top: -95%;
+  right: -60%;
+  width: 90%;
+  height: 150%;
   bottom: auto;
   z-index: -999;
   border-radius: 6.6vw;
@@ -251,14 +242,22 @@ a:focus {
 }
 
 
-@media (min-width: 48em) {
+/*@media (min-width: 48em) {
   .blue {
     left: 0;
     top: -120%;
     height: 150%;
   }
+}*/
+@media (min-width: 48em) {
+  .blue {
+
+    top: -95%;
+    height: 180%;
+  }
 }
 
+/*Here below*/
 @media (min-width: 62em) {
   .blue {
     left: 0;
