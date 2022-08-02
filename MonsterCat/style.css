@@ -1,0 +1,234 @@
+:root {
+
+
+  --ff-headings: font-family: 'Montserrat', sans-serif;
+  --ff-body: font-family: 'Open Sans', sans-serif;
+
+  /* small screen font-sizes */
+  --fs-240: 0.731rem;
+  /*11.7PX*/
+
+  --fs-260: 0.813rem;
+  /*13px*/
+
+  --fs-270: 0.875rem;
+  /*14PX*/
+
+  --fs-280: 1rem;
+  /*16PX*/
+
+  --fs-290: 1.063rem;
+  /*17px*/
+  --fs-300: 1.125rem;
+  /*18PX*/
+
+  --fs-310: 1.25rem;
+  /*20PX*/
+  --fs-320: 1.375rem;
+  /*22PX h1*/
+
+
+  /*
+  --fs-330: 1.25rem;
+  --fs-400: 1.5rem;
+  /*24px*
+  --fs-440: 1.563rem;
+  --fs-460: 1.625rem;
+  /*25px*
+  --fs-500: 1.75rem;
+  /*18px*
+  --fs-600: 1.25rem;
+  /*20px*
+  --fs-700: 1.313rem;
+  /*21px*
+  --fs-790: 1.375rem;
+  --fs-810: 1.875rem;
+  /*30px*
+  --fs-840: 2rem;
+  --fs-900: 2.25rem;
+  /*36px*
+  --fs-920: 2.5rem;
+  --fs-930: 2.75rem;
+  --fs-940: 3.875rem;
+  /*62px*
+  --fs-980: 4.375rem;*/
+
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+
+
+  /*colors*/
+  --clr-dark-100: #000000;
+  --clr-dark-200: #383838;
+  --clr-light-100: #f1f1f1;
+  --clr-light-200: #fdfdfd;
+  --clr-light-300: #eeeeee;
+  --clr-neutral-100: #898888;
+  --clr-accent-100: #1e90ff;
+  --clr-accent-200: #50a584;
+
+
+
+
+  --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 33.125em) {
+  :root {
+    --fs-310: 1.719rem;
+    /*h2*/
+
+  }
+
+}
+
+@media (min-width: 48.125em) {
+  :root {
+    --fs-270: 1.125rem;
+    --fs-310: 2.188rem;
+    --fs-320: 2rem;
+    /*h1*/
+
+  }
+
+}
+
+@media (min-width: 90em) {
+  :root {
+    --fs-310: 2.813rem;
+    --fs-320: 3rem;
+  }
+
+}
+
+
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--clr-dark-100);
+  background-image: url(https://cdn.monstercat.com/background-tile.webp);
+  background-repeat: repeat;
+  background-attachment: scroll;
+  color: var(--clr-light-100);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+
+  overflow-x: hidden;
+  margin: 0;
+}
+
+
+
+
+/* typography */
+
+h1,
+h2,
+h3,
+.section-subtitle {
+  ;
+}
+
+
+
+a:hover,
+a:focus {
+  ;
+}
+
+
+/* utility/helper classes */
+
+.main-grid {
+  display: grid;
+  place-items: center;
+  padding: 0 1em;
+}
+
+@media (min-width: 90em) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: ;
+    padding: 0 1em;
+  }
+}
+
+
+
+
+
+/* general layout classes */
+
+.container {
+  /*container for all the main content plus footer*/
+  width: 90%;
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+
+@media (min-width: 48em) {}
+
+/* components */
