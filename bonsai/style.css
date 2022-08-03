@@ -142,11 +142,11 @@ a:focus {
 
 /* utility/helper classes */
 
-.main-grid {
+/*.main-grid {
   display: grid;
   place-items: center;
   padding: 0 1em;
-}
+}*/
 
 
 
@@ -207,7 +207,7 @@ a:focus {
   width: 90%;
   max-width: 75em;
   margin: 0 auto;
-  padding: 0;
+  padding: 0rem;
 }
 
 
@@ -226,13 +226,8 @@ a:focus {
   display: block;
   background-color: var(--clr-accent-300);
   position: absolute;
-  /*top: -88%;
-  right: -23%;
-  width: 90%;
-  height: 120%;
-  bottom: auto;*/
   top: -95%;
-  right: -60%;
+  right: -40%;
   width: 90%;
   height: 150%;
   bottom: auto;
@@ -241,29 +236,11 @@ a:focus {
   transform: rotate(-23deg);
 }
 
-
-/*@media (min-width: 48em) {
-  .blue {
-    left: 0;
-    top: -120%;
-    height: 150%;
-  }
-}*/
-@media (min-width: 48em) {
-  .blue {
-
-    top: -95%;
-    height: 180%;
-  }
-}
-
-/*Here below*/
 @media (min-width: 62em) {
   .blue {
     left: 0;
     right: 120%;
   }
-
 }
 
 /*Header*/
