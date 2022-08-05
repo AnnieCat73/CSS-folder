@@ -1,8 +1,5 @@
 :root {
-
-
   --ff-serif: font-family: 'PT Serif', serif;
-
 
   /* small screen font-sizes */
   --fs-250: 0.813rem;
@@ -15,7 +12,6 @@
   /*17px*/
   --fs-300: 1.125rem;
   /*18px*/
-
   --fs-320: 1.25rem;
   --fs-400: 1.5rem;
   /*24px*/
@@ -40,9 +36,9 @@
   /*62px*/
   --fs-980: 4.375rem;
 
+  /*font weights*/
   --fw-400: 400;
   --fw-700: 700;
-
 
   /*colors*/
   --clr-dark-100: #0d0d14;
@@ -54,12 +50,8 @@
   --clr-accent-200: #f8db62;
   --clr-accent-300: #f2faff;
 
-
-
   --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
 }
-
-
 
 /* reset */
 
@@ -117,10 +109,7 @@ body {
   background-color: var(--clr-light-100);
   line-height: 1.6;
   font-family: var(--ff-serif);
-
 }
-
-
 
 
 /* typography */
@@ -132,8 +121,6 @@ h3,
   font-family: var(--ff-sans);
 }
 
-
-
 a:hover,
 a:focus {
   color: var(--clr-primary-400);
@@ -141,14 +128,6 @@ a:focus {
 
 
 /* utility/helper classes */
-
-/*.main-grid {
-  display: grid;
-  place-items: center;
-  padding: 0 1em;
-}*/
-
-
 
 .text-tick {
   color: var(--clr-neutral-100);
@@ -243,6 +222,7 @@ a:focus {
   }
 }
 
+
 /*Header*/
 .nav-large {
   display: none;
@@ -255,7 +235,6 @@ a:focus {
   bottom: auto;
   background-color: var(--clr-light-100);
   z-index: 100000000;
-
 }
 
 .nav-mobile {
@@ -364,12 +343,10 @@ button.close-btn {
 
 .dropdown-toggle .dropdown-arrow {
   padding-right: 1em;
-
 }
 
 
 @media (min-width: 61.8em) {
-
   .nav-mobile {
     display: none;
   }
@@ -390,13 +367,11 @@ button.close-btn {
     justify-content: space-between;
     align-items: center;
     flex-basis: 75%;
-
   }
 
   .main-nav-left {
     display: flex;
     gap: 4em;
-
   }
 
   .main-nav-left a {
@@ -418,15 +393,10 @@ button.close-btn {
     cursor: pointer;
   }
 
-
   .main-nav-right {
     display: flex;
     gap: 1em;
   }
-
-
-
-
 
   .main-nav-left a,
   .main-nav-right a {
@@ -442,7 +412,6 @@ button.close-btn {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3rem 6rem;
-
 }
 
 .heading {
@@ -491,8 +460,6 @@ button.close-btn {
   background-color: var(--clr-light-100);
   margin-right: 2px;
   margin-left: 2px;
-  /*transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-  transform-style: preserve-3d;*/
 }
 
 .toggle-active {
@@ -543,7 +510,6 @@ button.close-btn {
 @media (min-width: 62em) {
   .pricing {
     grid-template-columns: auto 1fr;
-
   }
 
   .heading {
@@ -605,7 +571,6 @@ button.close-btn {
 
 .price-container {
   border-bottom: 2px solid var(--clr-accent-100);
-
   display: flex;
   gap: 1em;
   color: var(--clr-neutral-200);
@@ -652,7 +617,6 @@ button.close-btn {
   gap: 1em;
   align-items: center;
   color: var(--clr-neutral-200);
-
 }
 
 .plan-feature p {
@@ -678,8 +642,6 @@ button.close-btn {
   right: -65px;
   left: auto;
   transform: rotate(45deg);
-
-
 }
 
 .popular-tag h2 {
@@ -724,7 +686,6 @@ button.close-btn {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 
   .plan {
@@ -743,7 +704,6 @@ button.close-btn {
     right: -120px;
     padding: .6em 2.3em;
   }
-
 }
 
 
@@ -812,14 +772,12 @@ button.close-btn {
 
 .learn-link p {
   font-size: var(--fs-250);
-
 }
 
 .learn-link img {
   display: inline-block;
   max-width: 100%;
   width: .4rem;
-
 }
 
 .box-pricing {
@@ -862,7 +820,6 @@ button.close-btn {
 
 .plan-month {
   font-weight: var(--fw-400);
-
 }
 
 @media (min-width: 50em) {
@@ -935,7 +892,6 @@ button.close-btn {
   line-height: 130%;
   text-align: center;
   font-weight: var(--fw-400);
-
 }
 
 .large-heading span {
@@ -979,7 +935,6 @@ button.close-btn {
   height: 1rem;
   width: 1rem;
   cursor: pointer;
-
 }
 
 .pricing-question {
@@ -1079,7 +1034,6 @@ button.close-btn {
   letter-spacing: .11px;
   line-height: 30px;
   margin-bottom: .5em;
-
 }
 
 .dropdown-link:hover,
@@ -1111,7 +1065,6 @@ button.close-btn {
   letter-spacing: .11px;
   margin-top: 1.5em;
   margin-bottom: 1em;
-
 }
 
 .templates .dropdown-link {
@@ -1148,7 +1101,6 @@ button.close-btn {
 @media (min-width: 48em) {
   .footer {
     flex-direction: row;
-
     justify-content: space-between;
   }
 

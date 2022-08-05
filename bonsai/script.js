@@ -1,7 +1,6 @@
 //Mobile navigation
 
 const openBtn = document.querySelector('.open-nav');
-
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeNav = document.querySelector('.close-btn');
 
@@ -34,9 +33,7 @@ toggleBtn.addEventListener("click", e => {
     billed.forEach((bill) => {
       bill.innerText = text;
     })
-
-  }
-  else {
+  } else {
     price1.innerText = '24';
     price2.innerText = '39';
     price3.innerText = '79';
