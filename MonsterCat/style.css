@@ -31,6 +31,10 @@
   /*28.8PX*/
   --fs-400: 2rem;
   /*32PX*/
+  --fs-430: 2.4rem;
+  /*38.4PX*/
+  --fs-450: 3rem;
+  /*48PX*/
 
   /*
   --fs-330: 1.25rem;
@@ -186,19 +190,6 @@ body {
 
 /* typography */
 
-h1,
-h2,
-h3,
-.section-subtitle {
-  ;
-}
-
-
-
-a:hover,
-a:focus {
-  ;
-}
 
 
 /* utility/helper classes */
@@ -238,6 +229,23 @@ a:focus {
   color: var(--clr-dark-100);
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.pt-small {
+  padding-top: 3em;
+}
+
+.pt-large {
+  padding-top: 8em;
+}
+
+.mt-large {
+  margin-top: 4em;
+}
+
 /* general layout classes */
 
 .container {
@@ -270,21 +278,24 @@ a:focus {
   background-size: cover;
   z-index: -1;
   filter: blur(5px) brightness(38%);
+  overflow: hidden;
+  mask-image: linear-gradient(180deg, black 50%, transparent 100%);
 }
 
 /*Header*/
-
 
 .main-nav {
   position: fixed;
   top: 0;
   width: 100%;
+
   background-color: #130f11;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(10px);
+  /*backdrop-filter: blur(10px);*/
   padding: 0.5rem 1rem;
+  z-index: 40;
 }
 
 .logo img {
@@ -328,6 +339,7 @@ a:focus {
   transition: transform 0.25s;
   right: 0;
   position: absolute;
+  z-index: 45;
 }
 
 .navigation-open {
@@ -427,7 +439,7 @@ a:focus {
 @media (min-width: 68.875em) {
   .main-nav {
     background-color: initial;
-    backdrop-filter: none;
+
     padding: 1.5rem 2rem;
   }
 
@@ -443,18 +455,34 @@ a:focus {
 }
 
 /*hero section*/
+.hero {
+
+  gap: 2em;
+}
+
+.main-hero {
+
+  gap: 1.8em;
+}
+
+.hero-info {
+
+  gap: 1.6em;
+}
 
 .hero-heading {
   font-family: var(--ff-headings);
   font-size: var(--fs-320);
   font-weight: var(--fw-800);
   text-transform: uppercase;
+  line-height: 1.6;
   letter-spacing: 0.1em;
 }
 
 .hero-heading span {
   font-family: var(--ff-body);
   font-size: var(--fs-280);
+  display: block;
 }
 
 .album-rel {
@@ -488,11 +516,22 @@ a:focus {
   color: var(--clr-dark-100);
 }
 
+.hero-btns {
+  align-items: flex-start;
+}
+
 .hero-btns .btn-border {
   font-size: var(--fs-270);
   font-weight: var(--fw-600);
   letter-spacing: 0.1em;
-  padding: calc(1rem) calc(1.5rem);
+  padding: calc(.9rem) calc(1.5rem);
+}
+
+@media (min-width: 22.125em) {
+  .hero-btns {
+    flex-direction: row;
+    gap: .3em;
+  }
 }
 
 @media (min-width: 33.125em) {
@@ -503,23 +542,64 @@ a:focus {
   .hero-heading span {
     font-size: var(--fs-320);
   }
+
+
 }
 
 @media (min-width: 48em) {
+  .main-hero {
+    position: relative;
+  }
+
+  .pt-large {
+    padding-top: 14em;
+  }
+
   .hero-heading {
     font-size: var(--fs-400);
   }
 
   .hero-heading span {
-    font-size: 1.8rem;
+    font-size: var(--fs-440);
   }
 
   .album-rel {
     font-size: 1.156rem;
+    position: absolute;
+    bottom: 0;
+    left: -35px;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
   }
 
 
 
 }
 
-@media (min-width: 62em) {}
+@media (min-width: 68em) {
+  .hero {
+    flex-direction: row;
+    gap: 4em;
+  }
+
+  .hero-heading {
+    font-size: var(--fs-450);
+  }
+
+  .hero-heading span {
+    font-size: 2.4rem;
+  }
+
+  .hero-info {
+    align-self: center;
+  }
+
+  .hero-btns {
+    gap: 1em;
+  }
+
+  .hero-btns .btn-border {
+    padding: calc(.8rem) calc(1.5rem);
+  }
+
+}

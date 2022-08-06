@@ -15,8 +15,9 @@
     <title>MonsterCat</title>
   </head>
   <body>
-    <div class="background-poster"></div>
+    
     <header>
+      <div class="background-poster"></div>
       <nav class="main-nav">
         <a href="#" class="logo"><img src="https://cdn.monstercat.com/monstercat-logo.webp" alt="Monstercat Logo" width="50" height="50"></a>
         <ul class="socials">
@@ -149,19 +150,34 @@
       </nav>
     </header>
     <main class="container">
-      <section class="hero">
-        <div>
+      <!--Hero-->
+      <section class="hero pt-large flex-col">
+        <div class="main-hero flex-col">
           <img class="hero-img" src="https://cdx.monstercat.com/?encoding=webp&url=https%3A%2F%2Fwww.monstercat.com%2Frelease%2FMCLP017%2Fcover%3F2ee434f2-4499-4c30-a937-4aec2b4ac1fc&width=600" alt="Album art of Level Days">
-          <p class="album-rel"><span>Instinct</span> -Released May 22, 2020</p>
+          <p class="album-rel"><span>Instinct</span> - Released May 22, 2020</p>
         </div>
-        <div class="hero-info">
+        <div class="hero-info flex-col">
           <h1 class="hero-heading">Level days <span>conro</span></h1>
-          <div class="hero-btns">
+          <div class="hero-btns flex-col">
             <a class="btn-full" href="#">Listen Now</a>
             <a class="btn-border" href="#">Share</a>
           </div>
         </div>
+      </section>
+      <!--Streaming-->
+      <section class="streaming pt-small">
+        <h2>Stream it your way</h2>
+        <div class="streaming-services">
+          <div class="stream">
+            <a href="https://monstercatmedia.bandcamp.com/album/level-days" target="_blank" class="tooltip tooltip-top p-xsmall btn-release-social" platform="Bandcamp">
+              <i class="fab fa-fw fa-bandcamp"></i>
+              <span class="tooltip-text">
+              Stream on Bandcamp
+              </span>
+              </a>
+          </div>
 
+        </div>
 
       </section>
 
