@@ -23,7 +23,6 @@ let billed = document.querySelectorAll("#billed");
 let text = "Billed yearly";
 
 
-
 toggleBtn.addEventListener("click", e => {
   toggleBtn.classList.toggle("toggle-active");
   if (toggleBtn.classList.contains("toggle-active")) {
