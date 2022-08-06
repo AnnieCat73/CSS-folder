@@ -36,31 +36,6 @@
   --fs-450: 3rem;
   /*48PX*/
 
-  /*
-  --fs-330: 1.25rem;
-  --fs-400: 1.5rem;
-  /*24px*
-  --fs-440: 1.563rem;
-  --fs-460: 1.625rem;
-  /*25px*
-  --fs-500: 1.75rem;
-  /*18px*
-  --fs-600: 1.25rem;
-  /*20px*
-  --fs-700: 1.313rem;
-  /*21px*
-  --fs-790: 1.375rem;
-  --fs-810: 1.875rem;
-  /*30px*
-  --fs-840: 2rem;
-  --fs-900: 2.25rem;
-  /*36px*
-  --fs-920: 2.5rem;
-  --fs-930: 2.75rem;
-  --fs-940: 3.875rem;
-  /*62px*
-  --fs-980: 4.375rem;*/
-
 
   --fw-400: 400;
   --fw-500: 500;
@@ -131,6 +106,7 @@ h3,
 .h3,
 h4,
 .h4 {
+  font-family: var(--ff-headings);
   line-height: 1;
 }
 
@@ -583,11 +559,11 @@ body {
   }
 
   .hero-heading {
-    font-size: var(--fs-450);
+    font-size: var(--fs-430);
   }
 
   .hero-heading span {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .hero-info {
@@ -602,4 +578,98 @@ body {
     padding: calc(.8rem) calc(1.5rem);
   }
 
+}
+
+
+/*Streaming*/
+
+.streaming {
+  gap: 1.5em;
+}
+
+.streaming-services {
+  display: flex;
+}
+
+.streaming-heading {
+  font-size: var(--fs-320);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+}
+
+.stream {
+  display: inline-block;
+  border: solid 2px white;
+  padding: 0.50rem;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.stream::before,
+.stream::after {
+  --arrow-size: 10px;
+  --scale: 0;
+  --tooltip-color: var(--clr-light-100);
+  --translate-y: calc(-100% - var(--arrow-size));
+  /*transform: translate(0);*/
+  position: absolute;
+  top: -.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 50ms transform;
+  transform-origin: bottom center;
+}
+
+.stream::before {
+  content: attr(data-tooltip);
+  font-size: var(--fs-240);
+  font-weight: var(--fw-600);
+  font-family: var(--ff-body);
+  backdrop-filter: blur(3px);
+  letter-spacing: 0.1em;
+  border-radius: .1em;
+  content: attr(data-tooltip);
+  color: var(--clr-dark-100);
+  background-color: var(--tooltip-color);
+  padding: .5rem;
+  width: max-content;
+  text-align: center;
+  text-transform: uppercase;
+  /*max-width: 100%; -- this will only make it as long as the box*/
+}
+
+.stream:hover::before,
+.stream:hover::after {
+  --scale: 1;
+  /*transform: translate(1);*/
+}
+
+/*tooltip*/
+.stream::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}
+
+@media (min-width: 33.125em) {
+  .streaming-heading {
+    font-size: var(--fs-400);
+  }
+}
+
+@media (min-width: 48em) {
+  .streaming-heading {
+    font-size: var(--fs-430);
+  }
+}
+
+@media (min-width: 68em) {
+  .streaming-heading {
+    font-size: var(--fs-450);
+  }
 }
