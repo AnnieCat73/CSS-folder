@@ -222,6 +222,32 @@ body {
   margin-top: 4em;
 }
 
+.sub-heading {
+  font-size: var(--fs-320);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+}
+
+@media (min-width: 33.125em) {
+  .sub-heading {
+    font-size: var(--fs-400);
+  }
+}
+
+@media (min-width: 48em) {
+  .sub-heading {
+    font-size: var(--fs-430);
+  }
+}
+
+@media (min-width: 68em) {
+  .sub-heading {
+    font-size: var(--fs-450);
+  }
+}
+
+
 /* general layout classes */
 
 .container {
@@ -594,12 +620,7 @@ header {
   display: flex;
 }
 
-.streaming-heading {
-  font-size: var(--fs-320);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 
-}
 
 .stream {
   display: inline-block;
@@ -608,8 +629,6 @@ header {
   text-align: center;
   position: relative;
 }
-
-
 
 .stream::before,
 .stream::after {
@@ -659,20 +678,6 @@ header {
   transform-origin: top center;
 }
 
-@media (min-width: 33.125em) {
-  .streaming-heading {
-    font-size: var(--fs-400);
-  }
-}
 
-@media (min-width: 48em) {
-  .streaming-heading {
-    font-size: var(--fs-430);
-  }
-}
 
-@media (min-width: 68em) {
-  .streaming-heading {
-    font-size: var(--fs-450);
-  }
-}
+/*Track List*/
