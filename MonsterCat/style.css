@@ -157,7 +157,7 @@ body {
   font-weight: var(--fw-400);
   line-height: 1.6;
 
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 0;
 }
 
@@ -259,19 +259,21 @@ body {
 }
 
 /*Header*/
-
-.main-nav {
+header {
   position: fixed;
   top: 0;
   width: 100%;
+  overflow: hidden;
+  z-index: 40;
+}
 
+.main-nav {
   background-color: #130f11;
   display: flex;
   justify-content: space-between;
   align-items: center;
   /*backdrop-filter: blur(10px);*/
   padding: 0.5rem 1rem;
-  z-index: 40;
 }
 
 .logo img {
@@ -311,7 +313,7 @@ body {
   letter-spacing: .5px;
   transform: translateX(0);
   text-transform: uppercase;
-  padding: 4em;
+  padding: 2em 3em;
   transition: transform 0.25s;
   right: 0;
   position: absolute;
@@ -431,8 +433,9 @@ body {
 }
 
 /*hero section*/
-.hero {
 
+
+.hero {
   gap: 2em;
 }
 
