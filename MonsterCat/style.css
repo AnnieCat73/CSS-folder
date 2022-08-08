@@ -193,7 +193,11 @@ body {
 }
 
 .pt-small {
-  padding-top: 3em;
+  padding-top: 3.5em;
+}
+
+.pt-medium {
+  padding-top: 4em;
 }
 
 .pt-large {
