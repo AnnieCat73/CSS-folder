@@ -733,3 +733,13 @@ header {
   }
 
 }
+
+
+
+/*footer*/
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--clr-light-100);
+}
