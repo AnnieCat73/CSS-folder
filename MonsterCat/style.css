@@ -765,3 +765,34 @@ hr {
   height: 1px;
   background-color: var(--clr-light-100);
 }
+
+.nav-top {
+  display: grid;
+}
+
+.nav-left,
+.nav-right {
+  text-transform: uppercase;
+
+
+}
+
+.nav-left li,
+.nav-right li {
+  font-size: var(--fs-270);
+  font-weight: var(--fw-700);
+  line-height: 1.75;
+}
+
+.nav-left li a,
+.nav-right li a {
+  color: var(--clr-light-100);
+
+  text-decoration: none;
+  transition: color 0.3s ease-in;
+}
+
+.nav-left li a:hover,
+.nav-right li a:hover {
+  color: var(--clr-light-200);
+}
