@@ -24,6 +24,8 @@
 
   --fs-310: 1.25rem;
   /*20PX*/
+  --fs-315: 1.313rem;
+  /*21PX*/
   --fs-320: 1.375rem;
   /*22PX h1*/
   --fs--330: 1.438rem;
@@ -779,7 +781,7 @@ hr {
 
 .nav-left li,
 .nav-right li {
-  font-size: var(--fs-270);
+  font-size: var(--fs-290);
   font-weight: var(--fw-700);
   line-height: 1.75;
 }
@@ -795,4 +797,13 @@ hr {
 .nav-left li a:hover,
 .nav-right li a:hover {
   color: var(--clr-light-200);
+}
+
+@media (min-width: 48.125em) {
+
+  .nav-left li,
+  .nav-right li {
+    font-size: var(--fs-315);
+    line-height: 1.6;
+  }
 }
