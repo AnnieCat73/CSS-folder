@@ -107,3 +107,114 @@ function makeSound(key) {
   }
 }
 
+/* Another option:
+
+class TrackList {
+  constructor() {
+    this.playBtns = document.querySelectorAll('.play');//button
+    this.track1 = document.querySelector('.track-1');
+    this.track2 = document.querySelector('.track-2');//etc
+    this.index = 0;
+
+    this.btm = 150
+
+    this.isPlaying = null;
+  }
+  activeBtn() {
+    this.classList.toggle("active");//f.ex makes it stand out/.active add to CSS so <button class="active" - in CSS .track-1.active {}
+  }
+
+  repeat() {
+    playBtns.forEach(playBtn => {
+      playBtn.addEventListener('click', activeBtn);
+      if (playBtn.classList.contains('active')) {
+        //check each sound
+        if (playBtn.classList.contains('track-1')) {
+          this.track1Audio.currentTime = 0;
+          this.track1Audio.play();
+        }
+        if (playBtn.classList.contains('track-2')) {
+          this.track2.currentTime = 0;
+          this.track2Audio.play();
+        }
+        if (playBtn.classList.contains('track-3')) {
+          this.track3Audio.currentTime = 0;
+          this.track3Audio.play();
+        }//etc
+
+      }
+    })
+    //this.index++;??
+  }
+
+  start() {
+    const interval = (60 / this.bpm) * 1000;
+    //Check if it's playing
+
+    if (this.isPlaying) {
+      //Clear the interval
+      clearInterval(this.isPlaying);
+      console.log(this.isPlaying);
+      this.isPlaying = null;
+    } else {
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, interval);
+    }
+  }
+
+  updateBtn() {
+    //NULL
+
+    if (!this.isPlaying) {
+      this.playBtn.innerText = "Stop";
+      this.playBtn.classList.add("active");
+    } else {
+      this.playBtn.innerText = "Play";
+      this.playBtn.classList.remove("active");
+    }
+  }
+}
+
+const trackList = new TrackList();
+
+trackList.playBtns.forEach(playBtn => {
+  playBtn.addEventListener('click', function () {
+    trackList.updateBtn();
+    trackList.start();
+  });
+
+
+});
+
+
+/*In html file:
+
+<table class="table">
+          <tr id="track-1">
+            <td class="track-no p-table" width="30px">1</td>
+            <td class="track p-table">
+              <button class="play a">a</button>
+              <!--<button class="play a">&#9611</button>
+              <a href="#" class="play a">
+                <i class="fal fa-play"></i>
+               
+              </a>-->
+              <div class="track-info">
+                The Small Things
+                <span>Conro</span>
+              </div>
+            </td>
+            <td class="track-time">
+              <span class="track-length p-table">3.35</span>
+              <a href="#" >
+                <i class="fal fa-share-alt"></i>
+              </a>
+            </td>
+          </tr>
+          <tr id="track-2">
+
+
+<audio src="/audio/Escapism - Yung Logos.mp3" class="play-track track-1"></audio>
+etc
+*/
