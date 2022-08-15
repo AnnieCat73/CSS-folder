@@ -199,18 +199,24 @@
 
       </section>
       <!--Tracklist-->
+      
       <section class="track-list pt-small">
         <h2 class="sub-heading">Track List</h2>
         <table class="table">
-          <tr id="track-1">
+          <tr>
             <td class="track-no p-table" width="30px">1</td>
             <td class="track p-table">
-              <button class="play a">a</button>
-              <!--<button class="play a">&#9611</button>
+              <!--
+              <button class="play1 a">a</button>
+
+              --<button class="play a">&#9611</button>
               <a href="#" class="play a">
                 <i class="fal fa-play"></i>
                
               </a>-->
+              <audio id="myAudio1" src="/audio/Escapism - Yung Logos.mp3" preload="auto">
+              </audio>
+              <a class="play" onClick="togglePlay1()">A</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -223,14 +229,12 @@
               </a>
             </td>
           </tr>
-          <tr id="track-2">
+          <tr>
             <td class="track-no p-table" width="30px">2</td>
             <td class="track p-table">
-              <button class="play b">b</button>
-              <!--<a href="#" class="play b">
-
-                <i class="fal fa-play"></i>
-              </a>-->
+              <!--<button class="play b">b</button>-->
+              <audio id="myAudio2" src="./audio/Fingerprint - Mini Vandals.mp3"></audio>
+              <a class="play" onClick="togglePlay2()">B</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -243,10 +247,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-3">
+          <tr>
             <td class="track-no p-table" width="30px">3</td>
             <td class="track p-table">
-              <button class="play c">c</button>
+              <audio id="myAudio3" src="./audio/Glass - Anno Domini Beats.mp3"></audio>
+              <a class="play" onClick="togglePlay3()">C</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -259,10 +264,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-4">
+          <tr>
             <td class="track-no p-table" width="30px">4</td>
             <td class="track p-table">
-              <button class="play d">d</button>
+              <audio id="myAudio4" src="./audio/Kiss The Heavens - Asher Fulero.mp3"></audio>
+              <a class="play" onClick="togglePlay4()">D</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -275,10 +281,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-5">
+          <tr>
             <td class="track-no p-table" width="30px">5</td>
             <td class="track p-table">
-              <button class="play e">e</button>
+              <audio id="myAudio5" src="./audio/Metro - Yung Logos.mp3"></audio>
+              <a class="play" onClick="togglePlay5()">E</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -291,10 +298,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-6">
+          <tr>
             <td class="track-no p-table" width="30px">6</td>
             <td class="track p-table">
-              <button class="play f">f</button>
+              <audio id="myAudio6" src="./audio/No Doubt - Yung Logos.mp3"></audio>
+              <a class="play" onClick="togglePlay6()">F</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -307,10 +315,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-7">
+          <tr>
             <td class="track-no p-table" width="30px">7</td>
             <td class="track p-table">
-              <button class="play g">g</button>
+              <audio id="myAudio7" src="./audio/Pray - Anno Domini Beats.mp3"></audio>
+              <a class="play" onClick="togglePlay7()">G</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -323,10 +332,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-8">
+          <tr>
             <td class="track-no p-table" width="30px">8</td>
             <td class="track p-table">
-              <button class="play h">h</button>
+              <audio id="myAudio8" src="./audio/Retribution - NEFFEX.mp3"></audio>
+              <a class="play" onClick="togglePlay8()">H</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -339,10 +349,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-9">
+          <tr>
             <td class="track-no p-table" width="30px">9</td>
             <td class="track p-table">
-              <button class="play i">i</button>
+              <audio id="myAudio9" src="./audio/Sailing - Telecasted.mp3"></audio>
+              <a class="play" onClick="togglePlay9()">I</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -355,10 +366,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-10">
+          <tr>
             <td class="track-no p-table" width="30px">10</td>
             <td class="track p-table">
-              <button class="play j">j</button>
+              <audio id="myAudio10" src="./audio/Skylines - Anno Domini Beats.mp3"></audio>
+              <a class="play" onClick="togglePlay10()">J</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -371,10 +383,11 @@
               </a>
             </td>
           </tr>
-          <tr id="track-11">
+          <tr>
             <td class="track-no p-table" width="30px">11</td>
             <td class="track p-table">
-              <button class="play k">k</button>
+              <audio id="myAudio11" src="./audio/Till I Let Go (Instrumental) - NEFFEX.mp3"></audio>
+              <a class="play" onClick="togglePlay11()">K</a>
               <div class="track-info">
                 The Small Things
                 <span>Conro</span>
@@ -432,6 +445,14 @@
           </ul>
         </nav>
         <div class="update">
+          <h4>Monstercat News</h4>
+          <p>Don't miss a thing, stay up to date with the latest news from us.</p>
+          <form class="newsletter-form"><!--transparent border to add below in css-->
+            <input type="text" placeholder="Enter email" name="email">
+            <button type="submit" class="submit-btn">
+              <i class="fal fa-long-arrow-right"></i>
+            </button>
+          </form>
           
         </div>
 

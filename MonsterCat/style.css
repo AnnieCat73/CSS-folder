@@ -807,3 +807,19 @@ hr {
     line-height: 1.6;
   }
 }
+
+
+
+/********************/
+
+.track1.active,
+.track2.active,
+.track3.active,
+.track4.active,
+.track5.active,
+.track6.active,
+.track7.active,
+.track8.active,
+.track9.active {
+  background-color: aqua;
+}

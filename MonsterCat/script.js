@@ -15,19 +15,56 @@ closeNav.addEventListener('click', () => {
 
 
 
-/*Audio
+/*Audio*/
 
-<audio controls autoplay muted>
-  <source src="audio/Pray - Anno Domini Beats.mp3" type ="audio/mpeg">
-</audio> or better:
+const myAudio1 = document.getElementById("myAudio1");
+const myAudio2 = document.getElementById("myAudio2");
+const myAudio3 = document.getElementById("myAudio3");
+const myAudio4 = document.getElementById("myAudio4");
+const myAudio5 = document.getElementById("myAudio5");
+const myAudio6 = document.getElementById("myAudio6");
+const myAudio7 = document.getElementById("myAudio7");
+const myAudio8 = document.getElementById("myAudio8");
+const myAudio9 = document.getElementById("myAudio9");
+const myAudio10 = document.getElementById("myAudio10");
+const myAudio11 = document.getElementById("myAudio11");
 
-const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
-can use pause()
-*/
 
-//const audio = new Audio("/audio/Escapism - Yung Logos.mp3");
-const buttons = document.querySelectorAll(".play");
+function togglePlay1() {
+  return myAudio1.paused ? myAudio1.play() : myAudio1.pause();
+};
+function togglePlay2() {
+  return myAudio2.paused ? myAudio2.play() : myAudio2.pause();
+};
+function togglePlay3() {
+  return myAudio3.paused ? myAudio3.play() : myAudio3.pause();
+};
+function togglePlay4() {
+  return myAudio4.paused ? myAudio4.play() : myAudio4.pause();
+};
+function togglePlay5() {
+  return myAudio5.paused ? myAudio5.play() : myAudio5.pause();
+};
+function togglePlay6() {
+  return myAudio6.paused ? myAudio6.play() : myAudio6.pause();
+};
+function togglePlay7() {
+  return myAudio7.paused ? myAudio7.play() : myAudio7.pause();
+};
+function togglePlay8() {
+  return myAudio8.paused ? myAudio8.play() : myAudio8.pause();
+};
+function togglePlay9() {
+  return myAudio9.paused ? myAudio9.play() : myAudio9.pause();
+};
+function togglePlay10() {
+  return myAudio10.paused ? myAudio10.play() : myAudio10.pause();
+};
+function togglePlay11() {
+  return myAudio11.paused ? myAudio11.play() : myAudio11.pause();
+};
 
+/*const buttons = document.querySelectorAll(".play");
 //console.log(buttons)
 
 /*buttons.forEach(button => {
@@ -42,24 +79,23 @@ const buttons = document.querySelectorAll(".play");
 
 /*document.addEventListener("keydown", function (e) {
   makeSound(e.key)
-})*/
+})*
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function () {
     let buttonInnerHTML = this.innerHTML;
-    console.log(buttonInnerHTML)
-    makeSound(buttonInnerHTML);
-
+    //console.log(buttonInnerHTML)
+    //makeSound(buttonInnerHTML);
+    togglePlay(buttonInnerHTML);
 
   })
-}
+}*/
 
-
-function makeSound(key) {
+/*function makeSound(key) {
   switch (key) {
     case "a":
       const track1 = new Audio(`/audio/Escapism - Yung Logos.mp3`);
-      track1.play();
+      track1 ? track1.play() : track1.pause();
       break;
     case "b":
       const track2 = new Audio(`/audio/Fingerprint - Mini Vandals.mp3`);
@@ -105,116 +141,5 @@ function makeSound(key) {
 
 
   }
-}
+}*/
 
-/* Another option:
-
-class TrackList {
-  constructor() {
-    this.playBtns = document.querySelectorAll('.play');//button
-    this.track1 = document.querySelector('.track-1');
-    this.track2 = document.querySelector('.track-2');//etc
-    this.index = 0;
-
-    this.btm = 150
-
-    this.isPlaying = null;
-  }
-  activeBtn() {
-    this.classList.toggle("active");//f.ex makes it stand out/.active add to CSS so <button class="active" - in CSS .track-1.active {}
-  }
-
-  repeat() {
-    playBtns.forEach(playBtn => {
-      playBtn.addEventListener('click', activeBtn);
-      if (playBtn.classList.contains('active')) {
-        //check each sound
-        if (playBtn.classList.contains('track-1')) {
-          this.track1Audio.currentTime = 0;
-          this.track1Audio.play();
-        }
-        if (playBtn.classList.contains('track-2')) {
-          this.track2.currentTime = 0;
-          this.track2Audio.play();
-        }
-        if (playBtn.classList.contains('track-3')) {
-          this.track3Audio.currentTime = 0;
-          this.track3Audio.play();
-        }//etc
-
-      }
-    })
-    //this.index++;??
-  }
-
-  start() {
-    const interval = (60 / this.bpm) * 1000;
-    //Check if it's playing
-
-    if (this.isPlaying) {
-      //Clear the interval
-      clearInterval(this.isPlaying);
-      console.log(this.isPlaying);
-      this.isPlaying = null;
-    } else {
-      this.isPlaying = setInterval(() => {
-        this.repeat();
-      }, interval);
-    }
-  }
-
-  updateBtn() {
-    //NULL
-
-    if (!this.isPlaying) {
-      this.playBtn.innerText = "Stop";
-      this.playBtn.classList.add("active");
-    } else {
-      this.playBtn.innerText = "Play";
-      this.playBtn.classList.remove("active");
-    }
-  }
-}
-
-const trackList = new TrackList();
-
-trackList.playBtns.forEach(playBtn => {
-  playBtn.addEventListener('click', function () {
-    trackList.updateBtn();
-    trackList.start();
-  });
-
-
-});
-
-
-/*In html file:
-
-<table class="table">
-          <tr id="track-1">
-            <td class="track-no p-table" width="30px">1</td>
-            <td class="track p-table">
-              <button class="play a">a</button>
-              <!--<button class="play a">&#9611</button>
-              <a href="#" class="play a">
-                <i class="fal fa-play"></i>
-               
-              </a>-->
-              <div class="track-info">
-                The Small Things
-                <span>Conro</span>
-              </div>
-            </td>
-            <td class="track-time">
-              <span class="track-length p-table">3.35</span>
-              <a href="#" >
-                <i class="fal fa-share-alt"></i>
-              </a>
-            </td>
-          </tr>
-          <tr id="track-2">
-
-
-<audio src="/audio/Escapism - Yung Logos.mp3" class="play-track track-1"></audio>
-etc
-*/
