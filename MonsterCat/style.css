@@ -54,6 +54,7 @@
   --clr-light-200: #fdfdfd;
   --clr-light-300: #eeeeee;
   --clr-neutral-100: #898888;
+  --clr-neutral-200: #898888;
   --clr-accent-100: #1e90ff;
   --clr-accent-200: #50a584;
 
@@ -799,6 +800,13 @@ hr {
   color: var(--clr-light-200);
 }
 
+.form-heading {
+  color: var(--clr-neutral-200);
+  font-family: var(--ff-headings);
+  font-size: var(--fs-270);
+  text-transform: uppercase;
+}
+
 @media (min-width: 48.125em) {
 
   .nav-left li,
@@ -806,20 +814,8 @@ hr {
     font-size: var(--fs-315);
     line-height: 1.6;
   }
-}
 
-
-
-/********************/
-
-.track1.active,
-.track2.active,
-.track3.active,
-.track4.active,
-.track5.active,
-.track6.active,
-.track7.active,
-.track8.active,
-.track9.active {
-  background-color: aqua;
+  .form-heading {
+    font-size: var(--fs-310);
+  }
 }
