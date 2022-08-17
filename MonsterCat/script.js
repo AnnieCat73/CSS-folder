@@ -16,6 +16,9 @@ closeNav.addEventListener('click', () => {
 
 
 /*Audio*/
+const track1 = document.querySelector(".track1");
+const track2 = document.querySelector(".track2");
+
 
 const myAudio1 = document.getElementById("myAudio1");
 const myAudio2 = document.getElementById("myAudio2");
@@ -31,11 +34,32 @@ const myAudio11 = document.getElementById("myAudio11");
 
 
 function togglePlay1() {
-  return myAudio1.paused ? myAudio1.play() : myAudio1.pause();
+  if (myAudio1.paused) {
+    myAudio1.play();
+    track1.innerText = 'Q';
+  } else {
+    myAudio1.pause();
+    track1.innerText = 'A';
+  }
+
 };
 function togglePlay2() {
-  return myAudio2.paused ? myAudio2.play() : myAudio2.pause();
+  if (myAudio2.paused) {
+    myAudio2.play();
+    track2.innerText = 'T';
+  } else {
+    myAudio2.pause();
+    track2.innerText = 'B';
+  }
+
 };
+
+/*function togglePlay1() {
+  return myAudio1.paused ? myAudio1.play() : myAudio1.pause();
+}*
+function togglePlay2() {
+  return myAudio2.paused ? myAudio2.play() : myAudio2.pause();
+};*/
 function togglePlay3() {
   return myAudio3.paused ? myAudio3.play() : myAudio3.pause();
 };

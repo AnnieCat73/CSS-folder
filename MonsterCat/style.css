@@ -803,8 +803,15 @@ hr {
 .form-heading {
   color: var(--clr-neutral-200);
   font-family: var(--ff-headings);
-  font-size: var(--fs-270);
+  font-size: var(--fs-290);
   text-transform: uppercase;
+}
+
+.form-text {
+  color: var(--clr-light-100);
+  font-size: var(--fs-300);
+  font-style: italic;
+  line-height: 1.75;
 }
 
 @media (min-width: 48.125em) {
@@ -816,6 +823,10 @@ hr {
   }
 
   .form-heading {
+    font-size: var(--fs-315);
+  }
+
+  .form-text {
     font-size: var(--fs-310);
   }
 }
