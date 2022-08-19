@@ -722,6 +722,8 @@ header {
   margin-right: auto;
 }
 
+.track-time .fa {}
+
 @media (min-width:33.125em) {
   .table {
     font-size: var(--fs-300);
@@ -827,6 +829,23 @@ hr {
   outline: 0;
 }
 
+/**/
+.submit-btn {
+  background: transparent;
+  border: 0;
+}
+
+.fa {
+  display: inline-block;
+  color: var(--clr-light-200);
+  cursor: pointer;
+}
+
+.fal::before {
+  content: "\f178";
+}
+
+/**/
 @media (min-width: 48.125em) {
 
   .nav-left li,

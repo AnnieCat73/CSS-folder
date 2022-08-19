@@ -13,11 +13,54 @@ closeNav.addEventListener('click', () => {
   sideMenu.classList.add('navigation-open');
 })
 
+/*
+var playPause = document.getElementById("play-pause");
+
+playPause.addEventListener("click", function() {
+  if (video.paused == true) {
+    // Play the video
+    video.play();
+
+    // Update the button text to 'Pause'
+    playPause.classList.toggle('pause');
+  } else {
+    // Pause the video
+    video.pause();
+
+    // Update the button text to 'Play'
+   playPause.classList.toggle('pause');
+  }
+});
+css
+
+button{
+    height:50px;
+  width:50px;  
+  border:none;
+  outline:none;
+}
+
+button.play{
+  background:url("http://omniawebfactory.com/unik/wp-content/uploads/2016/10/play-beli-1.png");
+  background-size:100%;
+}
+button.pause{
+  background:url("http://omniawebfactory.com/unik/wp-content/uploads/2016/10/pause-beli-1.png");
+  background-size:100%;
+}
+
+
+
+
+*/
 
 
 /*Audio*/
 const track1 = document.querySelector(".track1");
 const track2 = document.querySelector(".track2");
+const playBtn = track1.querySelector(".fa");
+//const pauseBtn = track1.querySelector(".fa-fw");
+//console.log(pauseBtn)
 
 
 const myAudio1 = document.getElementById("myAudio1");
@@ -36,10 +79,11 @@ const myAudio11 = document.getElementById("myAudio11");
 function togglePlay1() {
   if (myAudio1.paused) {
     myAudio1.play();
-    track1.innerText = 'Q';
+    track1.classList.toggle()
+    //track1.innerHTML = playBtn;
   } else {
     myAudio1.pause();
-    track1.innerText = 'A';
+    //track1.innerHTML = pauseBtn;
   }
 
 };
