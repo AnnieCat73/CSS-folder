@@ -848,7 +848,7 @@ hr {
   cursor: pointer;
 }
 
-.fal::before {
+/*.fal::before {
   content: "\f178";
 }
 
