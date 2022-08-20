@@ -765,6 +765,12 @@ header {
 
 /*footer*/
 
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
 hr {
   border: none;
   height: 1px;
@@ -818,6 +824,7 @@ hr {
 
 .newsletter-form {
   display: flex;
+  border-bottom: 1px solid var(--clr-neutral-200);
 }
 
 .newsletter-form input {
