@@ -52,7 +52,26 @@ button.pause{
 
 
 
-*/
+*
+
+const playPauseBtn = track1.querySelector(".fa");
+const track1 = document.querySelector(".track1");
+
+playPauseBtn.addEventListener("click", function () {
+  if (myAudio1.paused == true) {
+    // Play the video
+    myAudio1.play();
+
+    // Update the button text to 'Pause'
+    playPauseBtn.classList.toggle('pause');
+  } else {
+    // Pause the video
+    myAudio1.pause();
+
+    // Update the button text to 'Play'
+    playPauseBtn.classList.toggle('pause');
+  }
+});*/
 
 
 /*Audio*/
@@ -79,13 +98,11 @@ const myAudio11 = document.getElementById("myAudio11");
 function togglePlay1() {
   if (myAudio1.paused) {
     myAudio1.play();
-    track1.classList.toggle()
-    //track1.innerHTML = playBtn;
+    document.querySelector(".track1").innerHTML = '<i class="fa-solid fa-pause"></i>';
   } else {
     myAudio1.pause();
-    //track1.innerHTML = pauseBtn;
+    document.querySelector(".track1").innerHTML = '<i class="fa fa-play"></i>';
   }
-
 };
 function togglePlay2() {
   if (myAudio2.paused) {
@@ -103,7 +120,7 @@ function togglePlay2() {
 }*
 function togglePlay2() {
   return myAudio2.paused ? myAudio2.play() : myAudio2.pause();
-};*/
+};*
 function togglePlay3() {
   return myAudio3.paused ? myAudio3.play() : myAudio3.pause();
 };
@@ -159,55 +176,4 @@ for (let i = 0; i < buttons.length; i++) {
   })
 }*/
 
-/*function makeSound(key) {
-  switch (key) {
-    case "a":
-      const track1 = new Audio(`/audio/Escapism - Yung Logos.mp3`);
-      track1 ? track1.play() : track1.pause();
-      break;
-    case "b":
-      const track2 = new Audio(`/audio/Fingerprint - Mini Vandals.mp3`);
-      track2.play();
-      break;
-    case "c":
-      const track3 = new Audio(`/audio/Glass - Anno Domini Beats.mp3`);
-      track3.play();
-      break;
-    case "d":
-      const track4 = new Audio(`/audio/Kiss The Heavens - Asher Fulero.mp3`);
-      track4.play();
-      break;
-    case "e":
-      const track5 = new Audio(`/audio/Metro - Yung Logos.mp3`);
-      track5.play();
-      break;
-    case "f":
-      const track6 = new Audio(`/audio/No Doubt - Yung Logos.mp3`);
-      track6.play();
-      break;
-    case "g":
-      const track7 = new Audio(`/audio/Pray - Anno Domini Beats.mp3`);
-      track7.play();
-      break;
-    case "h":
-      const track8 = new Audio(`/audio/Retribution - NEFFEX.mp3`);
-      track8.play();
-      break;
-    case "i":
-      const track9 = new Audio(`/audio/Sailing - Telecasted.mp3`);
-      track9.play();
-      break;
-    case "j":
-      const track10 = new Audio(`/audio/Skylines - Anno Domini Beats.mp3`);
-      track10.play();
-      break;
-    case "k":
-      const track11 = new Audio(`/audio/Till I Let Go (Instrumental) - NEFFEX.mp3`);
-      track11.play();
-      break;
-    default: console.log(buttonInnerHTML);
-
-
-  }
-}*/
 

@@ -724,6 +724,8 @@ header {
 
 .track-time .fa {}
 
+
+
 @media (min-width:33.125em) {
   .table {
     font-size: var(--fs-300);
@@ -834,6 +836,7 @@ hr {
   flex: 1;
   font-size: var(--fs-315);
   outline: 0;
+  padding-bottom: 0.5rem;
 }
 
 /**/
@@ -846,6 +849,12 @@ hr {
   display: inline-block;
   color: var(--clr-light-200);
   cursor: pointer;
+}
+
+.update {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 /*.fal::before {
