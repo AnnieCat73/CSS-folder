@@ -779,9 +779,9 @@ hr {
   background-color: var(--clr-light-100);
 }
 
-.nav-top {
+/*.nav-top {
   display: grid;
-}
+}*/
 
 .nav-left,
 .nav-right {
@@ -869,10 +869,12 @@ hr {
 
   }
 
-  .nav-top {
-    display: flex;
+  .first-nav {
+    flex-basis: 33.3%;
+  }
 
-
+  .second-nav {
+    flex-basis: 33.3%;
   }
 
   .nav-left li,
@@ -881,7 +883,9 @@ hr {
     line-height: 1.6;
   }
 
-  .update {}
+  .update {
+    flex-basis: 33.3%;
+  }
 
   .form-heading {
     font-size: var(--fs-315);
