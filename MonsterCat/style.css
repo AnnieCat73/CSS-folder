@@ -863,12 +863,25 @@ hr {
 
 /**/
 @media (min-width: 48.125em) {
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .nav-top {
+    display: flex;
+
+
+  }
 
   .nav-left li,
   .nav-right li {
     font-size: var(--fs-315);
     line-height: 1.6;
   }
+
+  .update {}
 
   .form-heading {
     font-size: var(--fs-315);
