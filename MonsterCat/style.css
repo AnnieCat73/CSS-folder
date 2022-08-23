@@ -770,7 +770,6 @@ header {
 .footer-top {
   display: flex;
   flex-direction: column;
-  gap: 3em;
 }
 
 hr {
@@ -778,10 +777,6 @@ hr {
   height: 1px;
   background-color: var(--clr-light-100);
 }
-
-/*.nav-top {
-  display: grid;
-}*/
 
 .nav-left,
 .nav-right {
@@ -855,6 +850,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding: 3em 0 2em;
 }
 
 /*.fal::before {
@@ -866,6 +862,7 @@ hr {
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
+    gap: 3em;
 
   }
 
@@ -885,6 +882,7 @@ hr {
 
   .update {
     flex-basis: 33.3%;
+    padding: 0;
   }
 
   .form-heading {
