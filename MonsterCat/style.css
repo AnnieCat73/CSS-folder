@@ -779,6 +779,7 @@ header {
 .footer-top {
   display: flex;
   flex-direction: column;
+
 }
 
 hr {
@@ -868,7 +869,7 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     gap: 3em;
-
+    margin-bottom: 2.5em;
   }
 
   .first-nav {
