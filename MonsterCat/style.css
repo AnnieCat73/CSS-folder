@@ -844,7 +844,7 @@ hr {
   padding-bottom: 0.5rem;
 }
 
-/**/
+
 .submit-btn {
   background: transparent;
   border: 0;
@@ -863,6 +863,16 @@ hr {
   padding: 3em 0 2em;
 }
 
+/*Footer bottom*/
+
+.rights {
+  font-style: italic;
+  color: var(--clr-light-100);
+  font-size: var(--fs-290);
+  letter-spacing: .5px;
+}
+
+
 
 @media (min-width: 48.125em) {
   .footer-top {
@@ -873,7 +883,9 @@ hr {
   }
 
   .first-nav {
+    color: var(--clr-light-100);
     flex-basis: 33.3%;
+    font-size: var(--fs-300);
   }
 
   .second-nav {
@@ -896,6 +908,12 @@ hr {
   }
 
   .form-text {
+    font-size: var(--fs-310);
+  }
+}
+
+@media (min-width: 90em) {
+  .rights {
     font-size: var(--fs-310);
   }
 }

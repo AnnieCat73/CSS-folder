@@ -13,68 +13,32 @@ closeNav.addEventListener('click', () => {
   sideMenu.classList.add('navigation-open');
 })
 
-/*
-var playPause = document.getElementById("play-pause");
-
-playPause.addEventListener("click", function() {
-  if (video.paused == true) {
-    // Play the video
-    video.play();
-
-    // Update the button text to 'Pause'
-    playPause.classList.toggle('pause');
-  } else {
-    // Pause the video
-    video.pause();
-
-    // Update the button text to 'Play'
-   playPause.classList.toggle('pause');
-  }
-});
-css
-
-button{
-    height:50px;
-  width:50px;  
-  border:none;
-  outline:none;
-}
-
-button.play{
-  background:url("http://omniawebfactory.com/unik/wp-content/uploads/2016/10/play-beli-1.png");
-  background-size:100%;
-}
-button.pause{
-  background:url("http://omniawebfactory.com/unik/wp-content/uploads/2016/10/pause-beli-1.png");
-  background-size:100%;
-}
+/*Audio test 1*/
 
 
+const playBtns = document.querySelectorAll(".play");
+const tracks = document.querySelectorAll(".track");
+
+playBtns.forEach((playBtn) => {
+  playBtn.addEventListener("click", () => {
+    const audios = document.querySelectorAll("#myAudio");
+    audios.forEach((audio) => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+
+      } else {
+        audio.pause();
+        playBtn.innerHTML = '<i class="fa fa-play"></i>';
 
 
-*
+      }
+    }
+    )
+  })
+})
 
-const playPauseBtn = track1.querySelector(".fa");
-const track1 = document.querySelector(".track1");
-
-playPauseBtn.addEventListener("click", function () {
-  if (myAudio1.paused == true) {
-    // Play the video
-    myAudio1.play();
-
-    // Update the button text to 'Pause'
-    playPauseBtn.classList.toggle('pause');
-  } else {
-    // Pause the video
-    myAudio1.pause();
-
-    // Update the button text to 'Play'
-    playPauseBtn.classList.toggle('pause');
-  }
-});*/
-
-
-/*Audio*/
+/*Audio test 2*
 const track1 = document.querySelector(".track1");
 const track2 = document.querySelector(".track2");
 const playBtn = track1.querySelector(".fa");
@@ -114,66 +78,6 @@ function togglePlay2() {
   }
 
 };
-
-/*function togglePlay1() {
-  return myAudio1.paused ? myAudio1.play() : myAudio1.pause();
-}*
-function togglePlay2() {
-  return myAudio2.paused ? myAudio2.play() : myAudio2.pause();
-};*
-function togglePlay3() {
-  return myAudio3.paused ? myAudio3.play() : myAudio3.pause();
-};
-function togglePlay4() {
-  return myAudio4.paused ? myAudio4.play() : myAudio4.pause();
-};
-function togglePlay5() {
-  return myAudio5.paused ? myAudio5.play() : myAudio5.pause();
-};
-function togglePlay6() {
-  return myAudio6.paused ? myAudio6.play() : myAudio6.pause();
-};
-function togglePlay7() {
-  return myAudio7.paused ? myAudio7.play() : myAudio7.pause();
-};
-function togglePlay8() {
-  return myAudio8.paused ? myAudio8.play() : myAudio8.pause();
-};
-function togglePlay9() {
-  return myAudio9.paused ? myAudio9.play() : myAudio9.pause();
-};
-function togglePlay10() {
-  return myAudio10.paused ? myAudio10.play() : myAudio10.pause();
-};
-function togglePlay11() {
-  return myAudio11.paused ? myAudio11.play() : myAudio11.pause();
-};
-
-/*const buttons = document.querySelectorAll(".play");
-//console.log(buttons)
-
-/*buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    let buttonInnerHTML = this.innerHTML;
-    //console.log(buttonInnerHTML)
-    makeSound(buttonInnerHTML);
-    /*audio.play();
-    pause();*
-  });
-});*/
-
-/*document.addEventListener("keydown", function (e) {
-  makeSound(e.key)
-})*
-
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function () {
-    let buttonInnerHTML = this.innerHTML;
-    //console.log(buttonInnerHTML)
-    //makeSound(buttonInnerHTML);
-    togglePlay(buttonInnerHTML);
-
-  })
-}*/
+*/
 
 
