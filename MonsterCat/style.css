@@ -219,6 +219,10 @@ body {
   margin-top: 2.5em;
 }
 
+.mt-small {
+  margin-top: 2em;
+}
+
 .mb-large {
   margin-bottom: 5em;
 
