@@ -874,6 +874,11 @@ hr {
   letter-spacing: .5px;
 }
 
+.footer-socials ul {
+  display: flex;
+  gap: 1em;
+}
+
 
 
 @media (min-width: 48.125em) {
