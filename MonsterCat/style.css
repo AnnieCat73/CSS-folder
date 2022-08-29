@@ -874,6 +874,12 @@ hr {
   letter-spacing: .5px;
 }
 
+.footer-bottom-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .footer-socials ul {
   display: flex;
   gap: 1em;
@@ -916,6 +922,19 @@ hr {
 
   .form-text {
     font-size: var(--fs-310);
+  }
+
+  .footer-bottom-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rights {
+    margin-top: 0;
+  }
+
+  .footer-socials {
+    align-self: center;
   }
 }
 
