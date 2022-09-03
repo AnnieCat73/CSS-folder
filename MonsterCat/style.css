@@ -887,6 +887,19 @@ hr {
 
 /*footer acknowledge*/
 
+.footer-acknowledge {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footer-acknowledge p {
+  font-style: italic;
+  font-size: var(--fs-280);
+  line-height: 1.2;
+  text-align: center;
+}
+
 
 @media (min-width: 48.125em) {
   .footer-top {
