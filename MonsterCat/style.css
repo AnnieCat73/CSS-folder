@@ -1,6 +1,4 @@
 :root {
-
-
   --ff-headings: font-family: 'Montserrat', sans-serif;
   --ff-body: font-family: 'Open Sans', sans-serif;
 
@@ -64,14 +62,6 @@
   --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 33.125em) {
-  :root {
-    /*--fs-310: 1.719rem;*/
-    /*h2*/
-
-  }
-
-}
 
 @media (min-width: 48.125em) {
   :root {
@@ -264,12 +254,6 @@ body {
   padding: 0 1rem;
 }
 
-
-
-@media (min-width: 48em) {}
-
-
-
 /*Sections*/
 
 
@@ -311,6 +295,10 @@ header {
   height: 2.188rem;
 }
 
+.socials {
+  display: none;
+}
+
 .fab {
   color: var(--clr-light-100);
   display: inline-block;
@@ -327,9 +315,7 @@ header {
   background: transparent;
 }
 
-/*.socials {
-  display: none;
-}*/
+
 
 /*mobile/tablet nav - inside menu*/
 
@@ -579,9 +565,6 @@ header {
     transform: rotate(180deg);
     writing-mode: vertical-lr;
   }
-
-
-
 }
 
 @media (min-width: 68em) {
@@ -611,7 +594,6 @@ header {
   }
 
 }
-
 
 /*Streaming*/
 
@@ -682,7 +664,6 @@ header {
 }
 
 
-
 /*Track List*/
 
 .table {
@@ -693,11 +674,8 @@ header {
 }
 
 .track {
-
-
   display: flex;
   align-items: center;
-
   gap: 1em;
   font-weight: var(--fw-600);
 }
@@ -733,7 +711,7 @@ header {
   margin-right: auto;
 }
 
-.track-time .fa {}
+
 
 
 
@@ -882,6 +860,7 @@ hr {
 
 .footer-socials ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
@@ -895,7 +874,7 @@ hr {
 
 .footer-acknowledge p {
   font-style: italic;
-  font-size: var(--fs-280);
+  font-size: var(--fs-290);
   line-height: 1.2;
   text-align: center;
 }
