@@ -28,6 +28,7 @@
   /*22PX h1*/
   --fs--330: 1.438rem;
   /*23PX*/
+  --fs-340: 1.5rem;
   --fs-380: 1.8rem;
   /*28.8PX*/
   --fs-400: 2rem;
@@ -327,8 +328,8 @@ header {
   height: 100vh;
   overflow: hidden;
   letter-spacing: .5px;
-  transform: translateX(0);
-  display: none;
+  /*transform: translateX(0);*/
+  display: block;
   text-transform: uppercase;
   padding: 2em 3em;
   transition: transform 0.25s;
@@ -337,10 +338,10 @@ header {
   z-index: 45;
 }
 
-.navigation-open {
+/*.navigation-open {
   transform: translateX(100%);
 
-}
+}*/
 
 .menu-container {
   display: flex;
@@ -786,7 +787,6 @@ hr {
 .nav-left li a,
 .nav-right li a {
   color: var(--clr-light-100);
-
   text-decoration: none;
   transition: color 0.3s ease-in;
 }
@@ -823,6 +823,12 @@ hr {
   font-size: var(--fs-315);
   outline: 0;
   padding-bottom: 0.5rem;
+}
+
+.newsletter-form input::placeholder {
+  color: var(--clr-neutral-200);
+  font-size: var(--fs-340);
+
 }
 
 

@@ -1,4 +1,4 @@
-//Side navigation
+/*Side navigation
 
 const openNav = document.querySelector(".open-nav");
 const sideMenu = document.querySelector(".side-menu");
@@ -12,7 +12,7 @@ openNav.addEventListener('click', () => {
 
 closeNav.addEventListener('click', () => {
   sideMenu.classList.add('navigation-open');
-})
+})*/
 
 /*Audio test 1*/
 
