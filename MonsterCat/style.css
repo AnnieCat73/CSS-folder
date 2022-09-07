@@ -503,9 +503,17 @@ header {
   font-weight: var(--fw-600);
   letter-spacing: 0.1em;
   padding: calc(0.6rem) calc(2.5rem);
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.btn-full::before {
+  content: "▶";
+  position: absolute;
+  left: 12px;
+
 }
 
 .btn-full:hover {
@@ -522,7 +530,18 @@ header {
   font-size: var(--fs-270);
   font-weight: var(--fw-600);
   letter-spacing: 0.1em;
+  position: relative;
   padding: calc(.5rem) calc(2rem);
+}
+
+.hero-btns .btn-border::before {
+  content: "";
+  background-image: url('/images/share.png');
+  /*Need to find a transparent image*/
+  position: absolute;
+  width: 1em;
+  top: 0;
+  left: 12px;
 }
 
 @media (min-width: 22.125em) {
