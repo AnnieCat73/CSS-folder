@@ -676,6 +676,12 @@ header {
   transform-origin: top center;
 }
 
+@media(min-width: 48.125em) {
+  .stream {
+    padding: 1.3rem;
+  }
+}
+
 
 /*Track List*/
 
