@@ -13,34 +13,7 @@ openNav.addEventListener('click', () => {
 closeNav.addEventListener('click', () => {
   sideMenu.classList.remove('navigation-open');
 })
-/*
-function toggleMenu() {
-  if (sideMenu.classList.contains("navigation-open")) {
-    sideMenu.classList.remove("navigation-open");
-  } else {
-    sideMenu.classList.add("navigation-open");
-  }
-}
 
-openNav.addEventListener("click", toggleMenu);
-
-/*side nav test*
-
-const sideNav = document.querySelector(".side-menu");
-//const overlay = document.querySelector(".overlay");
-const openNav = document.querySelector(".open-nav");
-const closeNav = sideNav.querySelector(".close-btn");
-
-openNav.addEventListener("click", toggleHamburger);
-closeNav.addEventListener("click", toggleHamburger);
-//overlay.addEventListener("click", toggleHamburger);
-
-function toggleHamburger() {
-  //overlay.classList.toggle("showOverlay");
-  openNav.classList.add("showNav");
-  //sideNav.classList.toggle("showNav");
-  closeNav.classList.remove("showNav");
-}*/
 
 
 
