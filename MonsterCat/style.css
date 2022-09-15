@@ -864,10 +864,29 @@ hr {
   border: 0;
 }
 
+.submit-btn:hover,
+.submit-btn:focus {
+  background: var(--clr-light-100);
+  border-color: var(--clr-light-100);
+  border-radius: 15px;
+  transition: color 100ms linear, background-color 100ms linear;
+  transition-property: color, background-color;
+  transition-duration: 100ms, 100ms;
+  transition-timing-function: linear, linear;
+  transition-delay: 0s, 0s;
+  align-self: center;
+  padding: 0 .3em;
+}
+
 .fa {
   display: inline-block;
   color: var(--clr-light-200);
   cursor: pointer;
+}
+
+.fa:hover,
+.fa:focus {
+  color: var(--clr-dark-100);
 }
 
 .update {
