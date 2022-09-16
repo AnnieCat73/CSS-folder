@@ -350,8 +350,13 @@ header {
 
 .top {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
+}
+
+.top a {
+  margin-right: auto;
 }
 
 .close-btn {
@@ -359,8 +364,9 @@ header {
   border: 0;
   color: var(--clr-light-100);
   display: inline-block;
-  font-size: 45px;
+  font-size: 3rem;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .inner-menu {
@@ -394,6 +400,7 @@ header {
 
 .side-socials {
   display: flex;
+  flex-wrap: wrapcd;
   gap: 1.5em;
 }
 
@@ -414,6 +421,9 @@ header {
 }
 
 @media(min-width: 26em) {
+  .top {
+    flex-direction: row;
+  }
 
   /*.side-menu {
     width: 25.625rem;
