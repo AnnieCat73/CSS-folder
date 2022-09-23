@@ -24,8 +24,9 @@
     color: white;
     font-family: 'Anton', sans-serif;
     position: absolute;
-    bottom: 30px;
+    bottom: 5%;
     left: 20px;
+
 }
 
 .plan__list {
@@ -115,7 +116,10 @@
     border: 2px solid #424242;
     border-radius: 50%;
     margin: auto;
+    padding: 20px;
 }
+
+
 
 .key-feature__description {
     text-align: center;
