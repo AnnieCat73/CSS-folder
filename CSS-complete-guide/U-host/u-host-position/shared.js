@@ -12,8 +12,10 @@ console.log(noBtn)
 //iterate over buttons
 for (let i = 0; i < selectPlanBtns.length; i++) {
   selectPlanBtns[i].addEventListener("click", function () {
-    modal.style.display = 'block';
-    backdrop.style.display = 'block';
+    /*modal.style.display = 'block';
+    backdrop.style.display = 'block';*/
+    modal.classList.add('open');
+    backdrop.classList.add('open')
   });
 }
 
@@ -29,10 +31,39 @@ noBtn.addEventListener("click", function () {
 
 //or better
 
-backdrop.addEventListener("click", closeModal);
-noBtn.addEventListener("click", closeModal);
+backdrop.addEventListener("click", function () {
+  mobileNav.style.display = 'none';
+  closeModal();
+});
+
+if (modalNoButton) {
+  noBtn.addEventListener("click", closeModal);
+}
+
 
 function closeModal() {
-  modal.style.display = "none";
-  backdrop.style.display = 'none';
+  //modal.style.display = "none";
+  //backdrop.style.display = 'none';
+  if (modal) {
+    modal.classList.remove('open');
+
+  }
+  backdrop.classList.remove('open');
 }
+
+
+const toggleButton = document.querySelector('.toggle-button');
+const mobileNav = document.querySelector('.mobile-nav');
+
+//
+
+/*backdrop.addEventListener("click", function () {
+  mobileNav.style.display = 'none';
+})*/
+
+toggleButton.addEventListener("click", function () {
+  //mobileNav.style.display = 'block';
+  //backdrop.style.display = 'block';
+  modal.classList.add('open');
+  backdrop.classList.add('open');
+})
