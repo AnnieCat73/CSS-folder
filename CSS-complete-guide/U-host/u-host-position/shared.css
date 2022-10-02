@@ -29,7 +29,7 @@ main {
     top: 0;
     left: 0;
     background: #2ddf5c;
-    padding: 1.125rem 1rem;
+    padding: .5rem 1rem;
     z-index: 1;
     display: flex;
     justify-content: space-between;
