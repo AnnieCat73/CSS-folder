@@ -57,6 +57,7 @@ main {
     color: #0e4f1f;
     background: white;
     line-height: 1.4;
+    text-shadow: 2px 2px 7px #ccc;
 }
 
 .clearfix {
