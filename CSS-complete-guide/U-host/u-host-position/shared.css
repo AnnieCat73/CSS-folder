@@ -36,10 +36,7 @@ main {
     align-items: center;
 }
 
-.main-header>div {
-    display: inline-block;
-    vertical-align: middle;
-}
+
 
 .main-header__brand {
     color: #0e4f1f;
@@ -47,8 +44,10 @@ main {
     font-weight: bold;
     font-size: 1.375rem;
     width: 3.75rem;
-    display: inline-block;
-    vertical-align: middle;
+
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .main-header__brand img {
@@ -64,13 +63,17 @@ main {
 }
 
 .main-nav__items {
+    width: 100%;
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
+    justify-content: end;
+
 }
 
 .main-nav__item {
-    display: inline-block;
+    display: flex;
     margin: 0 1rem;
 }
 
@@ -115,6 +118,12 @@ main {
     background: white;
     width: 80%;
     height: 100vh;
+}
+
+.nav-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .mobile-nav__items {
