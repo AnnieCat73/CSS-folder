@@ -22,6 +22,8 @@
 .el2 {
     background: rgba(255, 0, 0, 0.5);
     grid-area: main;
+    justify-self: center;
+    align-self: center;
 }
 
 .el3 {
