@@ -1,4 +1,5 @@
 .container {
+    position: relative;
     margin: 150px auto;
     border: 1px solid black;
     width: 200px;
@@ -8,13 +9,26 @@
     /*the angle - or f.ex left, right*/
 }
 
-.box {
+.box1 {
     background: red;
     width: 100%;
     height: 100%;
-    transform: rotateX(30deg) rotateY(80deg) rotateZ(30deg);
+    transform: rotateY(80deg);
     perspective: 1000px;
     color: white;
     font-family: sans-serif;
     text-align: center;
+    position: absolute;
+}
+
+.box2 {
+    background: blue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    perspective: 1000px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    transform: translateX(1rem) translateZ(-10rem);
 }
