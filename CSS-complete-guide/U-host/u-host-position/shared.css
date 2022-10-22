@@ -99,6 +99,13 @@ main {
     border-bottom: 5px solid white;
 }
 
+
+
+.main-nav__item--cta {
+    animation: wiggle 200ms 3s 8 alternate;
+}
+
+
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
     color: white;
@@ -260,5 +267,15 @@ main {
         flex-direction: row;
         justify-content: center;
 
+    }
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(10deg);
     }
 }
