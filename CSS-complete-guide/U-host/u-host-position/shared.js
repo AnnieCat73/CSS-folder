@@ -2,8 +2,9 @@ const backdrop = document.querySelector(".backdrop");
 const selectPlanBtns = document.querySelectorAll(".plan button");
 const modal = document.querySelector('.modal');
 const noBtn = modal.querySelector(".modal__actions .modal__action--negative");
+const ctaButton = document.querySelector(".main-nav__item--cta");
 
-console.log(noBtn)
+//console.log(noBtn)
 //console.dir(selectPlanBtns);
 //nodelist of 3 buttons inside div with class of plan
 
@@ -40,7 +41,7 @@ backdrop.addEventListener("click", function () {
   closeModal();
 });
 
-if (modalNoButton) {
+if (noBtn) {//modalNoButton
   noBtn.addEventListener("click", closeModal);
 }
 
@@ -78,4 +79,17 @@ toggleButton.addEventListener("click", function () {
     backdrop.classList.add('open');
   }, 10);
 
+})
+
+
+//animation on cta button
+
+ctaButton.addEventListener('animationstart', function (e) {
+  console.log('Animation started', e);
+})
+ctaButton.addEventListener('animationend', function (e) {
+  console.log('Animation ended', e);
+})
+ctaButton.addEventListener('animationiteration', function (e) {
+  console.log('Animation iteration', e);
 })
