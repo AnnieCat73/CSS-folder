@@ -115,7 +115,7 @@ main {
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
     color: white;
-    background: #ff1b68;
+    background: var(--highlight-color);
     padding: 0.5rem 1rem;
     border-radius: 8px;
 }
@@ -124,7 +124,7 @@ main {
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
-    color: #ff1b68;
+    color: var(--highlight-color);
     background: white;
     border: none;
 }
