@@ -94,7 +94,7 @@ main {
 .main-nav__item a,
 .mobile-nav__items {
     text-decoration: none;
-    color: #0e4f1f;
+    color: var(--dark-green);
     font-weight: bold;
     padding: 0.188rem 0;
 }
