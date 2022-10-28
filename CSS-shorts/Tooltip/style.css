@@ -1,54 +1,113 @@
-  /* reset */
+/* reset */
  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+*,
+*::before,*::after {
+  box-sizing: border-box;
+}
  
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4 {
-    line-height: 1;
-  }
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
  
-  body,
-  h1,
-  h2,
-  h3,
-  p,
-  dl,
-  dd,
-  figure {
-    margin: 0;
-  }
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
  
-  ul[class],
-  ol[class] {
-    list-style: none;
-    padding: 0;
-  }
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
  
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
  
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-   }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
  
-  body {
-    line-height: 1.6;
+body {
+  line-height: 1.6;
     
-  }
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip:before {
+  content: attr(title);
+  position: absolute;
+  width: 120px;
+  background-color: #333333;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.2;
+  border-radius: 5px;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -70px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-color: #000 transparent transparent transparent;
+  visibility: hidden;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
  
