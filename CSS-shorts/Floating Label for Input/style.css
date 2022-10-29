@@ -59,3 +59,37 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+div {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 11px;
+  left: 14px;
+  font-size: 0.9rem;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+#email {
+  padding: 0.6rem 0.8rem;
+  border: solid 1px #ccc;
+  border-radius: 0.375rem;
+  width: 18rem;
+  font-size: 0.9rem;
+}
+
+#email:focus {
+  outline: none;
+  border: solid 1px #999;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+input:-webkit-autofill + label {
+  transform: translate(-15px, -35px);
+  color: #555;
+}
