@@ -27,10 +27,10 @@ figure {
   margin: 0;
 }
  
-ul[class],
-ol[class] {
+ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
  
 input,
@@ -65,4 +65,36 @@ nav {
 
 .menu-icon:hover {
   cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  background-color: #3d4852;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #dae1e7;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #38bdf8;
+}
+
+#checkbox {
+  display: none;
+}
+#checkbox:checked ~ ul {
+  max-height: 300px;
+  padding: 10px 0;
 }
