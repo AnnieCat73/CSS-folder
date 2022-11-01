@@ -50,3 +50,34 @@ body {
   line-height: 1.6;
   
 }
+
+.gradient {
+  margin: 3rem;
+  display: inline-block;
+  position: relative;
+  padding: 1.2rem 5rem;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+
+  background-image: linear-gradient(to bottom right, rgba(  rgba(21,220,255,1) 0%, rgba(129,4,222,1) 100%));
+  z-index: 1;
+}
+
+.gradient::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to top left, rgba(21,220,255,1) 0%, rgba(129,4,222,1) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.gradient:hover::before {
+  opacity: 1;
+}
