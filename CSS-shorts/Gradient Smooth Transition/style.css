@@ -4,7 +4,9 @@
 *::before,*::after {
   box-sizing: border-box;
 }
- 
+
+
+
 h1,
 .h1,
 h2,
@@ -81,3 +83,5 @@ body {
 .gradient:hover::before {
   opacity: 1;
 }
+
+/*NB see html tag above for scroll behaviour stuff"
