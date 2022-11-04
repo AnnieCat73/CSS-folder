@@ -28,3 +28,40 @@ a {
 section > * + * {
   margin-top: 1.2rem;
 }
+
+/*EXPLANATION*
+
+section > * + * {
+  margin-top: 1.2rem;
+}
+
+Since * is the universal selector, the type of element does not matter. This will select all immediate children of section element except for the first child. Isn’t that convenient?
+
+The usual method
+The usual way of doing something like this is to add margin / padding / border for every child and then negate that using :last-child selector.
+
+
+ul > li {
+  margin-bottom: 1.5rem;
+}
+
+ul > li:lst-child {
+  margin-bottom: 0;
+}
+
+The alternate method
+While the usual method works great, we can achieve the same with much lesser code using the adjacent sibling selector. Check this out!
+
+ul > li + li {
+  margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+*/
