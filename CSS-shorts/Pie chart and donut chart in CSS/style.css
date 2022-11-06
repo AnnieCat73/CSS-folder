@@ -1,3 +1,31 @@
 body {
   padding: 4rem;
 }
+
+.chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: conic-gradient(
+    pink 0deg 190deg,
+    yellow 190deg 260deg,
+    skyblue 260deg 360deg
+  );
+}
+
+.donut {
+  margin-top: 2rem;
+
+  /* To place the hole in the center */
+  display: grid;
+  place-items: center;
+}
+
+.donut::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 100%;
+}
