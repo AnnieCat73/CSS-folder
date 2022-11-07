@@ -4,3 +4,34 @@ body {
   color: #555;
   line-height: 1.4;
 }
+
+p {
+  margin: 0;
+  padding: 0 0 1rem;
+}
+
+#outer-parent {
+  max-width: 32rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.25rem;
+ 
+}
+
+#inner-parent {
+  padding: 0.25rem 1.25rem;
+  border: solid 1px #ddd;
+  border-radius: 0.25rem;
+  width: 10rem;
+  position: relative;
+}
+
+#status {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: green;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
