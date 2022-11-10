@@ -1,0 +1,29 @@
+p {
+  max-width: 28rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  font-size: 2rem;
+  color: #4c4c4c;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: #088beb;
+  display: inline-block;
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #088beb;
+  transition: width 0.5s ease-in-out;
+}
+
+.underline:hover::after {
+  width: 100%;
+}
