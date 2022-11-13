@@ -19,6 +19,18 @@ body {
   display: contents;
   gap: 0.75rem;
 }
+
+/*When you set use display: contents on an element, that element’s children become direct children of the element’s parent. It’s like, that element disappears from the Markup.
+So, in our case, for mobile layout, if we use display: contents on our .text element, it gets ignored, so looks like this in html:
+
+<div class="container">
+  <h2>...</h2>
+  <p>...<p/>
+  <a>...</a>
+  <img/>
+</div> //<div class="text">.</div> gets ignored
+*/
+
 img {
   max-width: 100%;
   max-height: 13rem;
@@ -38,4 +50,19 @@ a {
   text-decoration: none;
   font-weight: 600;
   color: #2563EB;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    order: 0;
+  }
 }
