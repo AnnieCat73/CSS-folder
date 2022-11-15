@@ -52,3 +52,15 @@ body {
     "footer footer";
   }
 }
+
+/*desktop layout*/
+@media (min-width: 700px) {
+  .container {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "navigation content sidebar"
+    "navigation content sidebar"
+    "footer footer footer";
+  }
+}
