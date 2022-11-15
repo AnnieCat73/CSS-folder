@@ -23,22 +23,27 @@ body {
 /*Grid area names*/
 .header {
   grid-area: header;
+  outline: 3px solid red;
 }
 
 .content {
   grid-area: content;
+  outline: 3px solid slateblue;
 }
 
 .navigation {
   grid-area: navigation;
+  outline: 3px solid green;
 }
 
 .sidebar {
   grid-area: sidebar;
+  outline: 3px solid pink;
 }
 
 .footer {
   grid-area: footer;
+  outline: 3px solid purple;
 }
 
 /*mid-size devices layout*/
