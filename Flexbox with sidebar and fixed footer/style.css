@@ -1,0 +1,100 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/*body::-webkit-scrollbar {
+  display: none;
+}*/
+/*apply this for scrollbar not to show in firefox*/
+html {
+  scrollbar-width: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+header ul li  {
+  list-style: none;
+ 
+}
+
+header ul li a {
+  text-decoration: none;
+}
+  
+
+main {
+  overflow: hidden;
+  display: flex;
+}
+    
+aside {
+  width: 200px;
+  flex-basis: 200px;
+  flex: 0 0 200px;
+  /*display: none;*/
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  overflow: auto;
+}
+
+/*For scrollbar to not show but still be able to scroll*/
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+        
+}
+    
+  
+
+
+
+
+
+/* Demo Styles 
+------------------------------------- */
+
+
+.container > * { border: 4px dashed red; margin: .5rem; }
+main > * { border: 4px dashed red; margin: .5rem; }
+article > * { border: 4px dashed red; margin: .5rem; }
+
+header,
+aside,
+.content, 
+footer {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+h1, p {
+  margin-top: 0;
+}
+
+header {
+  background-color: yellow;
+}
+aside {
+  background-color: papayawhip;
+}
+footer {
+  background-color: goldenrod;
+}
