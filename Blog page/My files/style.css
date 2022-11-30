@@ -29,11 +29,8 @@
 }
 
 
-@media (min-width: 40rem) {
+@media (min-width: 40em) {
   :root {
-    --fs-200: 0.75rem;
-    --fs-300: 1rem;
-    --fs-400: 1.25rem;
     --fs-500: 1.75rem;
     --fs-600: 2.125rem;
     --fs-900: 4.25rem;
@@ -91,7 +88,112 @@ select {
 }
 
 body {
-  line-height: 1.6;
+  line-height: 1.4;
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  padding: 1.5rem;/**/
 }
 
 
+/************************/
+
+/*Typography*/
+
+h1,
+h2,
+h3,
+.section-subtitle,
+.text-serif {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-200);
+}
+
+a {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-900);
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-primary-400);
+}
+
+.text-500 {/*for a section or part that font size is different*/
+  font-size: var(--fs-500);
+}
+
+.page-title {
+  font-size: var(--fs-900);
+}
+
+.page-intro {
+  font-size: var(--fs-600);
+}
+
+.section-title {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-400);
+}
+
+.section-subtitle {
+  font-size: var(--fs-600);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+}
+
+
+/*general layout*/
+
+section {
+  padding: 2.5rem 0;
+}
+
+
+@media (min-width: 40em) {
+  section {
+    padding: 5.5rem 0;
+  }
+}
+
+.container {
+  max-width: 50rem;
+  
+  margin: 0 auto;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+/* 1)
+.flow-content > * {
+  margin-bottom: 1rem;
+}
+
+.flow-content > *:last-child{
+  margin-bottom: 0;
+}
+
+Selecting all direct children of flow-content and do something with them i.e here adding a margin-bottom BUT we don't want it on last element
+to have extra space
+
+OR INSTEAD CAN DO - SO USE 1 OF THESE 2
+
+2)
+.flow-content > * + * {
+  margin-top: 2rem;
+}
+
+Here selecting all direct children that are siblings of another element, the adjacent sibling combinator.
+So any element that is an adjacent sibling to any other element that is a direct child inside of flow-content.
+So looking at our code and saying is this an adjacent sibling, meaning does it have a sibling before it. If sibling before it then it gets selected and gets the margin top applied. If no sibling before it then not get selected and no margin top applied
+
+
+lobotomized owl selector
+
+*/
