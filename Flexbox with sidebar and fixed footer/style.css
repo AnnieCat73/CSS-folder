@@ -12,6 +12,11 @@ html {
   scrollbar-width: none;
 }
 
+img {
+  max-width: 100%;
+  width: 200px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -23,6 +28,12 @@ html {
 header {
   position: fixed;
   right: 70px;
+  
+  
+}
+
+.logo {
+  display: none;
 }
 
 header ul {
@@ -31,6 +42,7 @@ header ul {
   justify-content: flex-end;
   gap: 1em;
   padding: 0;
+  
 }
 
 header ul li  {
@@ -109,4 +121,27 @@ aside {
 }
 footer {
   background-color: goldenrod;
+}
+
+
+@media (max-width: 75rem) {
+  aside {
+    display: none;
+    
+    /*height: auto;
+    min-height: 0;
+    position: static;
+    width: 100%;*/
+  }
+
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    padding: 0 2rem;
+  }
+  .logo {
+    display: block;
+  }
 }
