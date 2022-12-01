@@ -74,6 +74,7 @@ ol[class] {
   /*can do margin: 0; as well*/
 }
 
+
 img {
   max-width: 100%;
   height: auto;
@@ -92,6 +93,13 @@ body {
   font-family: var(--ff-sans);
   font-size: var(--fs-400);
   padding: 1.5rem;/**/
+}
+
+.bg-primary-300 {
+  background-color: var(--clr-primary-300);
+  border-radius: 1rem;
+  padding-left: 1rem;/*need to do this to not overwrite top/bottom section padding*/
+  padding-right: 1rem;
 }
 
 
@@ -128,6 +136,7 @@ a:focus {
 }
 
 .page-intro {
+ 
   font-size: var(--fs-600);
 }
 
@@ -166,6 +175,8 @@ section {
   margin: 0 auto;
 }
 
+/*utility classes*/
+
 .flow-content > * + * {
   margin-top: var(--flow-spacer, 1em);
 }
@@ -197,3 +208,102 @@ So looking at our code and saying is this an adjacent sibling, meaning does it h
 lobotomized owl selector
 
 */
+
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.split > * {
+  flex-basis: 100%;/*need this to make it look balanced*/
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}
+
+.xl-space {
+  margin-top: 5rem;
+}
+
+/*components - stuff that repeats- */
+
+
+.article-preview h3 {
+  font-size: var(--fs-500);
+}
+
+.article-preview img {/*nb for this to work need to add height/or width to image*/
+  object-fit: cover;
+  height: 12.5rem;
+  object-position: right;/*move what's inside image to the right*/
+  width: 100%;
+}
+
+.article-preview img {
+  object-fit: cover;
+  height: 12.5rem;
+  width: 100%;
+}
+
+.article-preview .article-info {
+  display: flex;
+  gap: 2em;
+  font-weight: var(--fw-400);
+  font-size: var(--fs-200);
+  color: var(--clr-neutral-400);
+}
+
+.cta form {
+  margin-top: 3rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.cta label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-400);
+}
+
+
+.cta form > div {
+  flex-basis: 100%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.cta input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--clr-neutral-300);
+}
+
+.cta input:focus {
+  border-color: var(--clr-primary-400);
+  border-width: 4px;
+}
+
+.cta input::placeholder {
+  color: var(--clr-neutral-300);
+  opacity: 1;
+}
+
+
+.cta button {
+  align-self: flex-start;
+}
+
+
+
+
+/* homepage styles */
+
+.intro {
+  --flow-spacer: 2em;
+}
