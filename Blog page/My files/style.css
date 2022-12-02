@@ -116,10 +116,12 @@ h3,
   font-weight: var(--fw-200);
 }
 
+
 a {
+  text-decoration: none;/*may leave it on as to show it's a link*/
   font-weight: var(--fw-700);
-  font-size: var(--fs-300);
   color: var(--clr-neutral-900);
+  font-size: var(--fs-300);
 }
 
 a:hover,
@@ -149,12 +151,29 @@ a:focus {
   font-size: var(--fs-600);
 }
 
-.btn {
+.btn {/*****/
   display: inline-block;
+  cursor: pointer;
+  border: 0;
+  background: none;
   text-decoration: none;
   color: var(--clr-neutral-900);
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-300);
 }
 
+.btn::after {/*toptal.com - HTML Arrows - get html entitiy*/
+  content:"\203A";
+  margin-left: 1em;
+  font-weight: var(--fw-300);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--clr-primary-400);
+}
+/****************/
 
 /*general layout*/
 
@@ -277,10 +296,10 @@ lobotomized owl selector
   flex-shrink: 1;
   flex-grow: 1;
 }
-
+/****/
 .cta input {
   width: 100%;
-  border: 0;
+  border: 0;/*Good to do this if only want border bottom*/
   border-bottom: 2px solid var(--clr-neutral-300);
 }
 
@@ -293,13 +312,70 @@ lobotomized owl selector
   color: var(--clr-neutral-300);
   opacity: 1;
 }
-
+/*******/
 
 .cta button {
   align-self: flex-start;
 }
 
+.call-to-action label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-400);
+}
 
+.call-to-action button {
+  align-self: flex-start;
+}
+
+@media (min-width: 40em) {
+  .call-to-action form {
+    flex-direction: row;
+  }
+
+  .call-to-action button {
+    align-self: center;
+  }
+}
+
+
+/*Footer*/
+
+
+footer {
+  padding-bottom: 1em;
+}
+/***** BORDER*/
+.primary-footer__inner {
+  --border: 2px solid var(--clr-neutral-200);
+  border-top: var(--border);
+  border-bottom: var(--border);
+  padding: 3em 0;
+  margin: 2em 0;
+}
+/*****/
+
+.footer-nav {
+  display: flex;
+
+}
+
+
+.footer-nav > *:first-child {
+  margin-right: 4em;
+}
+
+.footer-social {
+  display: flex;
+  gap: 2em;
+  margin: 0;
+}
+
+.footer-social a {
+  font-weight: var(--fw-200);
+  text-decoration: underline;
+}
 
 
 /* homepage styles */
