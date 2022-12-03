@@ -266,6 +266,7 @@ section {
 
   .primary-nav ul {
     padding: 0;
+    gap: 3em;
   }
 
   .primary-nav li {
