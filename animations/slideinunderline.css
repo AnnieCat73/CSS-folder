@@ -1,0 +1,54 @@
+body {
+  background-color: #131316;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+
+
+.section-heading {
+  outline: 1px solid yellow;
+  position: relative;
+}
+.section-heading .underline {
+  left: 0;
+}
+
+
+.underline {
+  height: 2px;
+  background: red;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  -webkit-animation: slide-in .25s 1 forwards;
+  animation: slide-in .25s 1 forwards;
+}
+@-webkit-keyframes slide-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes slide-in {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
