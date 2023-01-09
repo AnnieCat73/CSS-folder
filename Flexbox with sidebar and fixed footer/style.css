@@ -6,7 +6,7 @@ html, body {
 
 /*body::-webkit-scrollbar {
   display: none;
-}*/
+}
 /*apply this for scrollbar not to show in firefox*/
 html {
   scrollbar-width: none;
@@ -19,30 +19,32 @@ img {
 
 .container {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  
-  
 }
+
 
 header {
   position: fixed;
-  right: 70px;
-  
-  
+  top: 0;
+  right: 100px;
+  z-index: 999;
 }
 
 .logo {
   display: none;
 }
 
-header ul {
+.burger {
+  display: none;
+}
+
+ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 1em;
   padding: 0;
-  
+ 
+  right: 300px;
 }
 
 header ul li  {
@@ -54,14 +56,15 @@ header ul li a {
   text-decoration: none;
 }
   
-
 main {
-  overflow: hidden;
-  display: flex;
+  margin-left: 290px;
+  min-height: 100vh;
+  width: calc(100% - 290px);
+  
 }
     
 aside {
-  
+  position: fixed;
   width: 290px;
   flex-basis: 290px;
   flex: 0 0 290px;
@@ -74,7 +77,7 @@ aside {
   display: flex;
   flex-direction: column;
   overflow: auto;
-  max-width: 90rem;
+  max-width: 70rem;
   margin: 0 auto;
   padding: 2rem 4rem;
 }
@@ -84,25 +87,12 @@ aside {
   display: none;
 }
 
-footer {
-        
-}
-    
-  
-
-
-
-
-
 /* Demo Styles 
 ------------------------------------- *
-
-
 .container > * { border: 4px dashed red; margin: .5rem; }
 main > * { border: 4px dashed red; margin: .5rem; }
 article > * { border: 4px dashed red; margin: .5rem; }*/
 
-header,
 aside, 
 footer {
   border: 1px solid black;
@@ -123,8 +113,7 @@ footer {
   background-color: goldenrod;
 }
 
-
-@media (max-width: 75rem) {
+@media (max-width: 60rem) {
   aside {
     display: none;
     
@@ -134,7 +123,12 @@ footer {
     width: 100%;*/
   }
 
-  
+  main {
+    width: 100%;
+    margin-left: 0;
+    min-height: 0;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -143,5 +137,27 @@ footer {
   }
   .logo {
     display: block;
+  }
+  .burger {
+    display: none;
+  }
+}
+
+@media (max-width: 30rem) {
+  header {
+
+    display: none;
+  }
+
+  .content nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .burger {
+    display: block;
+    width: 1rem;
+    height: 1rem;
   }
 }

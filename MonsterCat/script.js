@@ -4,21 +4,15 @@ const openNav = document.querySelector(".open-nav");
 const sideMenu = document.querySelector(".side-menu");
 const closeNav = sideMenu.querySelector(".close-btn");
 
+openNav.addEventListener("click", () => {
+  sideMenu.classList.add("navigation-open");
+});
 
-
-openNav.addEventListener('click', () => {
-  sideMenu.classList.add('navigation-open')
-})
-
-closeNav.addEventListener('click', () => {
-  sideMenu.classList.remove('navigation-open');
-})
-
-
-
+closeNav.addEventListener("click", () => {
+  sideMenu.classList.remove("navigation-open");
+});
 
 /*Audio test 1*
-
 
 const playBtns = document.querySelectorAll(".play");
 const tracks = document.querySelectorAll(".track");
@@ -26,29 +20,25 @@ const tracks = document.querySelectorAll(".track");
 playBtns.forEach((playBtn) => {
   playBtn.addEventListener("click", () => {
     const audios = document.querySelectorAll("#myAudio");
+    console.log(audios);
     audios.forEach((audio) => {
       if (audio.paused) {
         audio.play();
         playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-
       } else {
         audio.pause();
         playBtn.innerHTML = '<i class="fa fa-play"></i>';
-
-
       }
-    }
-    )
-  })
-})
+    });
+  });
+});
 
-/*Audio test 2*
+/*Audio test 2*/
 const track1 = document.querySelector(".track1");
 const track2 = document.querySelector(".track2");
 const playBtn = track1.querySelector(".fa");
 //const pauseBtn = track1.querySelector(".fa-fw");
 //console.log(pauseBtn)
-
 
 const myAudio1 = document.getElementById("myAudio1");
 const myAudio2 = document.getElementById("myAudio2");
@@ -62,26 +52,22 @@ const myAudio9 = document.getElementById("myAudio9");
 const myAudio10 = document.getElementById("myAudio10");
 const myAudio11 = document.getElementById("myAudio11");
 
-
 function togglePlay1() {
   if (myAudio1.paused) {
     myAudio1.play();
-    document.querySelector(".track1").innerHTML = '<i class="fa-solid fa-pause"></i>';
+    document.querySelector(".track1").innerHTML =
+      '<i class="fa-solid fa-pause"></i>';
   } else {
     myAudio1.pause();
     document.querySelector(".track1").innerHTML = '<i class="fa fa-play"></i>';
   }
-};
+}
 function togglePlay2() {
   if (myAudio2.paused) {
     myAudio2.play();
-    track2.innerText = 'T';
+    track2.innerText = "T";
   } else {
     myAudio2.pause();
-    track2.innerText = 'B';
+    track2.innerText = "B";
   }
-
-};
-*/
-
-
+}

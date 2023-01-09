@@ -30,7 +30,7 @@ section {
   top: 60px;
   left: 0;
   -webkit-animation: slide-in .25s 1 forwards;
-  animation: slide-in .25s 1 forwards;
+  animation: slide-in .75s 1 forwards;
 }
 @-webkit-keyframes slide-in {
   0% {

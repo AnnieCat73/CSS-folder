@@ -400,7 +400,7 @@ header {
 
 .side-socials {
   display: flex;
-  flex-wrap: wrapcd;
+  flex-wrap: wrap;
   gap: 1.5em;
 }
 
