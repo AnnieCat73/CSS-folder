@@ -86,3 +86,20 @@ input:checked {
   width: 24px;
   height: 24px;
 }
+
+
+/*first/last child
+
+Pseudo-classes aren't just for states like hover/focus/checked! They can also help us apply conditional logic.
+
+The :last-child pseudo-class will only select <p> tags which are the final element within its container. It needs to be the last child within its parent.
+
+Similarly, the :first-child pseudo-class will match the first child within a parent container. */
+
+li:first-child {
+  color: red;
+}
+
+li:last-child {
+  color: green;
+}
