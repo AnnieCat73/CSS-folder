@@ -50,7 +50,19 @@ img {
 body {
   line-height: 1.6;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
 }
+
+section {
+  padding: 5rem 0;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+
 
 /*Focus*
 
@@ -64,4 +76,13 @@ Focus styles are primarily useful for folks who don't use a "pointer-style" inpu
 
 Fortunately, browsers do come with default focus styles. It varies by browser, but it's typically either a blue or dotted outline. */
 
+/*:checked
 
+The :checked pseudo-class only applies to checkboxes and radio buttons that are "filled in". You can apply additional styles to indicate that the input is activated:
+
+Browsers don't offer too much flexibility when it comes to checkboxes and radio buttons, but this neat trick lets you apply certain CSS properties depending on its status.*/
+
+input:checked {
+  width: 24px;
+  height: 24px;
+}
