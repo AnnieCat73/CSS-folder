@@ -52,4 +52,16 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*Focus*
+
+When we interact with one of these elements (either by clicking on it or tabbing to it), it becomes focused. It'll capture keyboard input, so we can type into a form field or press "Enter" to follow a link.
+
+The :focus pseudo-class allows us to apply styles exclusively when an interactive element has focus:
+
+For most users, a button can be focused by clicking on it. Focus can then be moved between buttons by pressing “Tab” (to go forward) or “Shift” + “Tab” (to go backwards).
+
+Focus styles are primarily useful for folks who don't use a "pointer-style" input device (like a mouse, a trackpad, or a finger on a touchscreen). For example, I built the foundations of this course platform without the use of a keyboard/mouse, due to a repetitive stress injury; initially, I did all of my navigation by voice, speaking "tab" into a microphone to move between focused elements. The focus styles show you where you are on the page, which element is selected.
+
+Fortunately, browsers do come with default focus styles. It varies by browser, but it's typically either a blue or dotted outline. */
+
 
