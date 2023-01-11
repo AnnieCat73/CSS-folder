@@ -66,7 +66,12 @@ h3 {
   margin-bottom: 1rem;
 }
 
-
+.m-top {
+  margin-top: 2rem;
+}
+.m-bottom {
+  margin-bottom: 2rem;
+}
 
 /*Focus*
 
@@ -148,4 +153,27 @@ input {
 }
 input::placeholder {
   color: goldenrod;
+}
+
+
+
+/*before and after
+
+There is no significant difference in terms of performance between these two examples. ::before and ::after are really just secret spans.
+
+In general, we probably shouldn't use these two pseudo-elements. In a vanilla HTML/CSS world, it can be helpful to "bundle" content in with a CSS selector. In the era of components, however, we have better ways of bundling content.
+
+There are also some accessibility concerns with ::before and ::after. Some screen readers? will try to vocalize the content. Others will ignore them entirely. This inconsistency is problematic.
+
+That said, if the effect is entirely decorative (eg. colorful shapes), I believe it's fine to create them with an empty content string:*/
+
+
+h6::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: peachpuff;
+  margin: 8px;
 }
