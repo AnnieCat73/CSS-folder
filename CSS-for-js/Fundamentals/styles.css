@@ -55,7 +55,7 @@ body {
 }
 
 section {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 h2 {
@@ -103,3 +103,14 @@ li:first-child {
 li:last-child {
   color: green;
 }
+
+
+/*:first-of-type and :last-of-type
+
+In addition to :first-child and :last-child, we also have :first-of-type and :last-of-type. They're almost identical, but they have one critical difference.
+
+:first-of-type depends on the type of the HTML tag.*/
+
+ p:first-of-type {
+    color: red;
+  }
