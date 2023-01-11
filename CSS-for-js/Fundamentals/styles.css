@@ -62,6 +62,10 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+h3 {
+  margin-bottom: 1rem;
+}
+
 
 
 /*Focus*
@@ -114,3 +118,34 @@ In addition to :first-child and :last-child, we also have :first-of-type and :la
  p:first-of-type {
     color: red;
   }
+
+
+/*Pseudo-elements
+
+Pseudo-elements are like pseudo-classes, but they don't target a specific state. Instead, they target "sub-elements" within an element.
+
+For example, we can style the placeholder text in a form input with ::placeholder
+
+In terms of syntax, pseudo-elements use two colons instead of one (::), though some pseudo-elements also support single-colon syntax.
+
+If we stop and think about it, something pretty interesting is happening here. We haven't explicitly created a <placeholder> element, but by adding the placeholder attribute to the <input> tag, a pseudo-element is created.
+
+This is why they're called pseudo-elements — these selectors target elements in the DOM that we haven't explicitly created with HTML tags.
+
+Placeholders are criticized because the text is typically very light; if someone has poor vision, they might not be able to read the text at all.
+
+Here's the thing, though: placeholders aren't meant to contain critical information. They're meant to provide an example, to give folks an idea about how to format their data. They should never be used to label an input (use a <label> element instead).
+
+What if the user can't read the placeholder, and enters data in an incorrect format? First, we should build forms that are flexible and support a wide range of user inputs. With the power of JavaScript, we can transform their input into a standardized format!
+
+But, if they really do enter invalid data, a helpful error message should be shown. It should explain what the user did wrong, and how to fix it. And it should be bright and high-contrast.
+
+Here's a quick test you can use to check if you're using placeholders correctly: if you were to remove all of the placeholders from the form, would it still be usable, and easy to fill out? If the answer is “no”, you have some work to do.*/
+
+
+input {
+  font-size: 1rem;
+}
+input::placeholder {
+  color: goldenrod;
+}
