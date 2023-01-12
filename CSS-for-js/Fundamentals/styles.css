@@ -67,7 +67,7 @@ h3 {
 }
 
 .m-top {
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
 .m-bottom {
   margin-bottom: 2rem;
@@ -177,3 +177,34 @@ h6::before {
   background-color: peachpuff;
   margin: 8px;
 }
+
+
+/*Combinators
+
+By putting a space between nav and a, we're combining two selectors in a very specific way: we're saying that the styles should only apply to a tags that are nested within nav tags. The first two links in the snippet qualify, but the last one doesn't.
+
+The term “combinator” refers to a character that combines multiple selectors. In this case, the space character combines nav and a to create a descendant selector.
+
+The descendant selector will apply to all descendants, no matter how deeply nested they are. For example, the anchor tags will still work even if they're inside a list:*/
+
+
+nav a {
+  color: red;
+  font-weight: bold;
+}
+
+/*Direct Child
+
+In CSS, we can differentiate between children and descendants. Think of a family tree: a child is only one level down from the parent. A descendant might be 1 level down (child), 2 levels down (grandchild), 3 levels down…
+
+What if we only want to target children, and not deeper descendants?
+
+Here's an example using another combinator.*/
+
+li {
+    margin-bottom: 8px;
+  }
+  
+  .main-list > li {
+    border: 2px dotted;
+  }
