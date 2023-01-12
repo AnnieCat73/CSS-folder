@@ -208,3 +208,15 @@ li {
   .main-list > li {
     border: 2px dotted;
   }
+
+  /*Exercise*/
+
+  .recipe a {
+    color: deeppink;
+  }
+
+  .recipe aside a {
+    color: black;
+    text-decoration: underline;
+
+  }
