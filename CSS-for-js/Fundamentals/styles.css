@@ -264,3 +264,134 @@ aside a:hover {
   background-color: hsl(340deg 100% 50% / 0.25);
 }
 
+
+/*UNITS*
+
+Pixels are nice because they correspond more-or-less with what you see on the screen*
+
+The em unit is an interesting fellow. It's a relative unit, equal to the font size of the current element.
+
+If a heading has a font-size of 24px, and we give it a bottom padding of 2em, we can expect that the element will have 48px of cushion underneath it (2 × 24px).
+
+Using em means that a component's UI will change depending on the font size of the container it's placed within. This can be useful, but more often than not
+
+It was introduced because there's a common frustrating issue with the em unit: it compounds.
+
+For example, consider the following snippet:
+
+HTML
+<style>
+  main {
+    font-size: 1.125em;
+  }
+  article {
+    font-size: 0.9em;
+  }
+  p.intro {
+    font-size: 1.25em;
+  }
+</style>
+<main>
+  <article>
+    <p class="intro">
+      What size is this text?
+    </p>
+  </article>
+</main>
+
+How large, in pixels, is that .intro paragraph font?
+
+To figure it out, we have to multiply each ratio. The root font size is 16px by default, and so the equation is 16 × 1.125 × 0.9 × 1.25. The answer is 20.25 pixels.
+
+What? Why?? This happens because font size is inheritable. The paragraph has a font size of 1.25em, which means “1.25x the current font size”. But what is the current font size? Well, it gets inherited from the parent: 0.9em. And so it's 1.25x the parent, which is 0.9x its parent, which is 1.125x its parent.
+
+Essentially, we need to multiply every em value in the tree until we either hit a "fixed" value (using pixels), or we make it all the way to the top of the tree. This is exactly as gnarly as it sounds. 😬
+
+To solve this problem, the CSS language designers created the rem unit. It stands for “Root EM”.
+
+The rem unit is like the em unit, except it's always a multiple of the font size on the root node, the <html> element. It ignores any inherited font sizes, and always calculates based on the top-level node.
+
+A rare opportunity for the “em” unit
+When I need a relative unit, I almost always reach for rem. It's much simpler and more predictable than em, for the “compounding” issues discussed earlier.
+
+That said, the em unit works particularly well when it comes to margins on headings and paragraphs.
+
+As an example, here's how I might style the headings using rems:
+
+CSS
+h1 {
+  font-size: 3rem
+  margin-top: 6rem;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font-size: 2rem
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+Because each heading level has its own font size, we need to calculate unique margin values for each one.
+
+Here's the exact same UI, described using em instead:
+
+CSS
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h1, h2, h3 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+Each heading level has a unique font size, but with em, they can share their margin declarations. This is because em is calculated based on the current element's font size.
+
+In other words, we're saying that each heading level should have “2x” top margin, and “0.5x” bottom margin. Those ratios are applied to the heading's font size.
+
+Ultimately, both approaches are 100% valid, and equally accessible. I just wanted to share this neat little em trick. 😄
+
+Rems
+The rem unit is quite a lot like the em unit, with one crucial difference: it's always relative to the root element, the <html> tag.
+
+No matter where an element is in the DOM tree, the rem is consistent.
+
+It behaves consistently and predictably, like pixels, but it respects user preferences when it comes to increasing/decreasing default font sizes.
+
+Leveraging CSS variables
+This is my favourite option. Here's what it looks like:
+
+CSS
+html {
+  --14px: 0.875rem;
+  --15px: 0.9375rem;
+  --16px: 1rem;
+  --17px: 1.0625rem;
+  --18px: 1.125rem;
+  --19px: 1.1875rem;
+  --20px: 1.25rem;
+  --21px: 1.3125rem;
+}
+h1 {
+  font-size: var(--21px);
+}
+
+or
+
+html {
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.3125rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2.652rem;
+  --font-size-4xl: 4rem;
+}
