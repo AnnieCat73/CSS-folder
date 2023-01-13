@@ -203,20 +203,43 @@ Here's an example using another combinator.*/
 
 li {
     margin-bottom: 8px;
-  }
+}
   
-  .main-list > li {
-    border: 2px dotted;
-  }
+.main-list > li {
+  border: 2px dotted;
+}
 
-  /*Exercise*/
+/*Exercise*/
 
-  .recipe a {
-    color: deeppink;
-  }
+article p:nth-of-type(1)  {
+  color: black;
+}
 
-  .recipe aside a {
-    color: black;
-    text-decoration: underline;
+article a {
+  color: deeppink;
+  text-decoration: none;
+}
 
-  }
+article a:hover {
+  text-decoration: underline;
+}
+
+aside p:last-of-type {
+  margin-bottom: 0;
+}
+
+aside {
+  background: peachpuff;
+  border: 2px solid;
+  padding: 16px;
+}
+
+aside a {
+  color: black;
+  text-decoration: underline;
+}
+
+aside a:hover {
+  text-decoration: none;
+}
+
