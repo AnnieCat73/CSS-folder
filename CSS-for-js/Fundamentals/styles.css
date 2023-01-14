@@ -395,3 +395,41 @@ html {
   --font-size-3xl: 2.652rem;
   --font-size-4xl: 4rem;
 }
+
+
+STYLES AND SEMANTICS
+
+Styles and semantics
+CSS allows us to change the cosmetic presentation of text, but it doesn't affect the semantic meaning of the markup. For that, we need to use specialized HTML tags.
+
+The <strong> HTML tag is meant to convey that an element is critically important or urgent, like “Warning: Product may explode if shaken”.
+
+The <em> HTML tag is used for emphasis, the way one might emphasize a particular word in a sentence, like “these pretzels are making me thirsty.”
+
+Semantics are important because not everyone can see the cosmetic styles. For a variety of reasons, some people use assistive technologies like screen readers (software that reads the text using a synthesized voice) to help them navigate the web. When we use the <em> tag, for example, the synthesized voice will stress the syllable much like a human would!
+
+That said, this applies specifically to “copy”, the text content on our websites. We don't need to follow the same rules when it comes to UI elements. For example, we might want to make an input's <label> bold, and we can do this purely in CSS, without using a <strong> tag.
+
+
+/*LINEHEIGHT
+
+line-height is a bit of an odd duck because it takes a unitless number. This number is multiplied by the element's font-size to calculate the actual line height.
+
+As an example, suppose we have the following CSS:
+
+p {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+We can calculate the actual height of each line by multiplying the font size (2rem) by the line-height (1.5), for a derived value of 3rem.
+
+By default, browsers come with a surprisingly small amount of line height. In Chrome, the default value is 1.15. In Firefox, it's 1.2.
+
+These default values produce densely-packed lines of text which can be hard to read for people who are dyslexic or have poor vision. To comply with accessibility guidelines, our body text should have a minimum line-height of 1.5. This is according to WCAG 1.4.12, Text Spacing guidelines.
+
+p {
+  line-height: 1.5;
+}
+It's possible to pass other unit types (eg. pixels, rems), but I recommend always using this unitless number, so that the line-height always scales with the element's font-size.
+
+
