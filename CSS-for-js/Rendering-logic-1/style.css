@@ -99,7 +99,8 @@ These days, browsers don't have massive discrepancies when it comes to layout or
 
 /*
   3. Allow percentage-based heights in the application
-*
+  As discussed in the “Height Algorithms” lesson, using the percentage unit for the height property won't always work. This only works if the parent defines an absolute height (eg. height: 400px), or if all of the ancestors use percentages, all the way up to the root HTML element.
+  By setting html and body to have height: 100%, we make it easier for us to use percentage-based heights down the line, if we decide to.*
 html, body {
   height: 100%;
 }
@@ -116,7 +117,10 @@ body {
 
 /*
   6. Improve media defaults
-*
+
+  If we try to use an inline element in our layout, though, weird things happen. We have to worry about inline magic space. By setting display: block on all media elements by default, we sidestep a whole category of funky issues.
+
+  I also set max-width: 100%. This is done to keep large images from overflowing, if they're placed in a container that isn't wide enough to contain them. Because images/videos are replaced elements, they don't behave like other elements do.*
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
@@ -131,14 +135,24 @@ input, button, textarea, select {
 
 /*
   8. Avoid text overflows
+
+  hyphens: auto uses hyphens (in languages that support them) to indicate hard wraps. It also makes hard wraps much more common.
+
+  It can be worthwhile if you have very-narrow columns of text, but it can also be a bit distracting. I chose not to include it in the reset, but it's worth experimenting with!
 *
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+  /*hyphens: auto;*
 }
 
 /*
   9. Create a root stacking context
-*
+
+  isolation property allows us to create a new stacking context without setting a z-index.
+
+  By creating a stacking context on our application's container, we ensure that everything within our application will participate in an "app-specific" context, rather than the global top-level context. This makes it possible for us to guarantee that elements created using portals (eg. modals, tooltips) will always show up on top of our application.
+
+  We're using the selector #__next here because in the Next.js framework, the application container is given this ID. The specific selector will vary depending on your framework; with Create React App, for example, the root container is #root.*
 #root, #__next {
   isolation: isolate;
 }
