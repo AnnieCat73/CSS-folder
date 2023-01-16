@@ -264,3 +264,26 @@ The CSS language includes many different selectors, and each selector has a rela
  class styles are more specific than tag styles
 
  CHECK OUT ARTICLE ON CASCADE: https://wattenberger.com/blog/css-cascade
+
+
+ LOGICAL PROPERTIES
+
+Here are the built-in styles for p tags, in Chrome:
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+These properties are equivalent to the 4 cardinal directions: margin-top, margin-bottom, margin-left, and margin-right.
+
+margin-block refers to the vertical axis. margin-block-start refers to the top, since block elements are stacked top-to-bottom. Similarly, margin-inline-start refers to the left edge, since "inline" is the horizontal direction, and words are placed left-to-right.
+
+Why use these alternatives? Because not all languages are left-to-right, top-to-bottom. If you were to switch your browser's language to Arabic, margin-inline-start would add spacing to the right instead of to the left, since Arabic is a right-to-left language.
+
+The main selling point for logical properties is internationalization. If you want your product to be available in a left-to-right language like English and a right-to-left language like Arabic, you can save yourself a lot of trouble by using logical properties.
+
+The main argument against using logical properties is browser support. Now, to be clear, browser support for logical properties is very good—at the time of writing, 98% of devices support them. But there are some noticeable gaps, including Internet Explorer 10 and 11, Opera Mini, and relatively-recent versions of Safari.
