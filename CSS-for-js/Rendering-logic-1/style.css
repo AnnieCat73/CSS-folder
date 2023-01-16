@@ -228,3 +228,39 @@ widows
 word-break
 word-spacing
 word-wrap
+
+
+THE CASCADE
+
+Ex:
+
+<style>
+  p {
+    font-weight: bold;
+    color: hsl(0deg 0% 10%);
+  }
+
+  .introduction {
+    color: violet;
+  }
+</style>
+
+<p class="introduction">
+  Hello world
+</p>
+
+We've created two rules, one targeting a tag (p), another targeting a class (introduction). Then, we've created an HTML element that matches them both.
+
+You may already know what happens here: we wind up with a bold, violet paragraph. It plucks the font-weight declaration from the p tag, and the color declaration from the .introduction class.
+
+When the browser needs to display our introduction paragraph on the screen, it first needs to figure out which declarations apply to it. And before it can do that, it needs to collect a set of matching rules. Once it has a list of applicable rules, it works out any conflicts. I imagine this as a sort of deathmatch: if multiple selectors each apply the same property, it pits them against each other. Two fighters enter, but only one emerges.
+
+That's the main idea. The browser will take a set of applicable style rules, and whittle it down to a list of specific declarations that are applicable.
+
+How does it determine which rules win each battle? It depends on the specificity of the selector.
+
+The CSS language includes many different selectors, and each selector has a relative power. For example, classes are "more specific" than tags, so if there is a conflict between a class and a tag, the class wins. IDs, however, are more specific than classes.
+
+ class styles are more specific than tag styles
+
+ CHECK OUT ARTICLE ON CASCADE: https://wattenberger.com/blog/css-cascade
