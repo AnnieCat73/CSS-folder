@@ -287,3 +287,22 @@ Why use these alternatives? Because not all languages are left-to-right, top-to-
 The main selling point for logical properties is internationalization. If you want your product to be available in a left-to-right language like English and a right-to-left language like Arabic, you can save yourself a lot of trouble by using logical properties.
 
 The main argument against using logical properties is browser support. Now, to be clear, browser support for logical properties is very good—at the time of writing, 98% of devices support them. But there are some noticeable gaps, including Internet Explorer 10 and 11, Opera Mini, and relatively-recent versions of Safari.
+
+
+THE BOX MODEL
+
+Winter Layers
+The four aspects that make up the box model are:
+
+Content
+Padding
+Border
+Margin
+
+A helpful analogy is to imagine a person out for a winter walk, wearing a big poofy coat:
+
+illustration of a man in a winter coat, with scarf and hat
+The content is the person themselves, the human being inside the coat.
+The padding is the polyester stuffing in the coat. The more stuffing there is, the more poofed-up the coat will be, and the more space the person will take up.
+The border is the material of the coat. It has a thickness and a color, and it affects the person's appearance.
+The margin is the person's “personal space”. As we've learned in recent years, it's good to have 2 meters (6 feet) of space around us.
