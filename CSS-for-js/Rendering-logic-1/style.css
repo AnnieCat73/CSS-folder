@@ -306,3 +306,20 @@ The content is the person themselves, the human being inside the coat.
 The padding is the polyester stuffing in the coat. The more stuffing there is, the more poofed-up the coat will be, and the more space the person will take up.
 The border is the material of the coat. It has a thickness and a color, and it affects the person's appearance.
 The margin is the person's “personal space”. As we've learned in recent years, it's good to have 2 meters (6 feet) of space around us.
+
+
+BOX SIZING
+
+The box-sizing CSS property allows us to change the rules for size calculations. The default value (content-box) only takes the inner content into account, but it offers an alternative value: border-box.
+
+Instead of having to remember to swap box-sizing on every layout element, we can set it as the default value for all elements with this handy CSS snippet:
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+You might be wondering: why do we need to add *::before and *::after? Shouldn't the wildcard selector (*) select everything?
+
+Well, yes and no. The * selector will select all elements, but ::before and ::after aren't considered elements. They're pseudo-elements. And so we need to select them explicitly.
