@@ -323,3 +323,50 @@ Instead of having to remember to swap box-sizing on every layout element, we can
 You might be wondering: why do we need to add *::before and *::after? Shouldn't the wildcard selector (*) select everything?
 
 Well, yes and no. The * selector will select all elements, but ::before and ::after aren't considered elements. They're pseudo-elements. And so we need to select them explicitly.
+
+
+PADDING
+
+A helpful way to think about padding is that it's "inner space".
+
+Padding and units
+
+em - so padding relative to font-size
+rem, em - HE ARGUES THAT THE px is more accessible, can still zoom, scaling, same for margin and border*/
+
+
+/*em*/
+header {
+  font-size: 2rem;
+  padding: 2em;
+  background-color: peachpuff;
+}
+main {
+  background: silver;
+  padding: 2em;
+}
+
+/*rem*/
+
+.rem-header {
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: peachpuff;
+}
+.rem {
+  background: silver;
+  padding: 2rem;
+}
+
+/*px*/
+
+.px-header {
+  font-size: 2rem;
+  padding: 16px;
+  background-color: peachpuff;
+}
+
+.px {
+  background: silver;
+  padding: 16px;
+}
