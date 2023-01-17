@@ -332,7 +332,9 @@ A helpful way to think about padding is that it's "inner space".
 Padding and units
 
 em - so padding relative to font-size
-rem, em - HE ARGUES THAT THE px is more accessible, can still zoom, scaling, same for margin and border*/
+rem, em - HE ARGUES THAT THE px is more accessible, can still zoom, scaling, same for margin and border 
+
+NB Don't ever use %*/
 
 
 /*em*/
@@ -369,4 +371,27 @@ main {
 .px {
   background: silver;
   padding: 16px;
+}
+
+/*BORDER
+
+There are three styles specific to border:
+
+Border width (eg. 3px, 1em)
+Border style (eg. solid, dotted)
+Border color (eg. hotpink, black)
+They can be combined into a shorthand:
+
+.box {
+  border: 3px solid hotpink;
+}
+
+If we don't specify a border color, it'll use the font's color by default. This isn't well-known, but it can be useful in cases where those things should be synchronized!
+
+currentColor is always a reference to the element's derived text color (whether set explicitly or inherited), and it can be used anywhere a color might be used:
+
+.box {
+  color: hotpink;
+  border: 1px solid currentColor;
+  box-shadow: 2px 2px 2px currentColor;
 }
