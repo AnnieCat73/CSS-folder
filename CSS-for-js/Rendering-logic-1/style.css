@@ -395,3 +395,42 @@ currentColor is always a reference to the element's derived text color (whether 
   border: 1px solid currentColor;
   box-shadow: 2px 2px 2px currentColor;
 }
+
+
+BORDER RADIUS*/
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  border: 4px solid hotpink;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  border: 4px solid hotpink;
+  border-radius: 10px 10px 40px 40px;
+  margin-bottom: 25px;
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+  border: 4px solid hotpink;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 64px;
+  margin-bottom: 25px;
+}
+
+/*You can also use percentages; 50% will turn your shape into a circle or oval, since each corner's radius is 50% of the total width/height:*/
+
+.box4 {
+  width: 100px;
+  height: 100px;
+  border: 4px solid hotpink;
+  border-radius: 50%;
+}
