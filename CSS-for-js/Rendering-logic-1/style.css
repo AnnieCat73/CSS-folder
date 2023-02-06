@@ -464,4 +464,32 @@ Outlines have a special outline-offset property. It allows you to add a bit of a
 }
 
 
-/*Margin*/
+/*Margin*
+
+Margin increases the space around an element, giving it some breathing room. As we saw earlier, margin is "personal space".
+
+In some ways, margin is the most amorphous and mysterious. It can do wacky things, like pull an element outside a parent, or center itself within its container.
+
+Negative margin:
+
+With padding and border, only positive numbers (including 0) are supported. With margin, however, we can drop into the negatives.
+
+A negative margin can pull an element outside its parent
+
+Negative margins can also pull an element's sibling closer*/
+
+
+.margin-wrapper {
+  width: 200px;
+  height: 200px;
+  border: 3px solid;
+}
+
+.pink-box {
+  width: 50%;
+  height: 50%;
+  border: 3px solid deeppink;
+  background: white;
+  margin-top: -32px;
+  margin-left: -32px;
+}
