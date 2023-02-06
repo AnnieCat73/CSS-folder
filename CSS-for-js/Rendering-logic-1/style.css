@@ -396,8 +396,36 @@ currentColor is always a reference to the element's derived text color (whether 
   box-shadow: 2px 2px 2px currentColor;
 }
 
+Border vs Outline
 
-BORDER RADIUS*/
+The core difference is that outline doesn't affect layout. Outline is kinda more like box-shadow; it's a cosmetic effect draped over an element, without nudging it around, or changing its size.
+
+Outlines share many of the same properties:
+
+border-width becomes outline-width
+border-color becomes outline-color
+border-style becomes outline-style
+Outlines are stacked outside border, and can sometimes be used as a "second border", for effect:
+
+Outlines have a special outline-offset property. It allows you to add a bit of a gap between the element and its outline.*/
+
+.box7 {
+  width: 100px;
+  height: 100px;
+  border: 4px solid darkviolet;
+  outline: 4px solid deeppink;
+}
+
+.outline-offset {
+  width: 100px;
+  height: 100px;
+  border: 4px solid darkviolet;
+  outline: 4px solid currentColor;
+  outline-offset: 4px;
+  margin-top: 2rem;
+}
+
+/*BORDER RADIUS*/
 
 .box1 {
   width: 100px;
@@ -434,3 +462,6 @@ BORDER RADIUS*/
   border: 4px solid hotpink;
   border-radius: 50%;
 }
+
+
+/*Margin*/
