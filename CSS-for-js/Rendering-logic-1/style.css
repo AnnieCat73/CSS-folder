@@ -493,3 +493,16 @@ Negative margins can also pull an element's sibling closer*/
   margin-top: -32px;
   margin-left: -32px;
 }
+
+.neighbor-wrapper {
+  width: 200px;
+  height: 200px;
+  border: 3px solid;
+}
+
+.neighbor {
+  width: 50%;
+  height: 50%;
+  background: silver;
+  margin-left: 16px;
+}
