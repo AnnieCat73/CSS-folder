@@ -532,3 +532,36 @@ The interesting thing is those two black boxes: they "follow" the deep pink box 
   border-color: deeppink;
   margin-top: -24px;/*SO FOLLOW THIS ONE UP*/
 }
+
+
+/*Auto margins
+Margins have one other trick up their sleeve: they can be used to center a child in a container.
+
+Watch what happens when we set an element's left and right margin to auto. The auto value seeks to fill the maximum available space. If you take the free space around an element and distribute it evenly on both sides, you wind up centering that element.
+
+Two caveats:
+
+- This only works for horizontal margin. Setting top/bottom margin to auto is equivalent to setting it to 0px*.
+
+- This only works on elements with an explicit width. Block elements will naturally grow to fill the available horizontal space, so we need to give our element a width in order to center it.
+
+The nice thing about the auto-margin trick is that it can be selectively applied to a single child in a container.
+
+For example, let's say we're building a blog. Our article has a bunch of headings and paragraphs and images, and we want them to be laid out normally. But we want pull-quotes to be centered.
+
+*/
+
+.content {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background: palevioletred;
+  padding: 16px;
+}
+
+.auto-margin-wrapper {
+  width: 100%;
+  height: 200px;
+  border: 3px solid silver;
+  margin-top: 2rem;
+}
