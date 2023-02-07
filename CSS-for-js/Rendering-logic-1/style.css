@@ -565,3 +565,27 @@ For example, let's say we're building a blog. Our article has a bunch of heading
   border: 3px solid silver;
   margin-top: 2rem;
 }
+
+/*Card outsite the box exercise
+i.e margin peaks out*/
+
+.outside {
+  background: #222;
+  padding: 32px;
+}
+
+.card-outside-box {
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.card-outside-box h1 {
+  background: deeppink;
+  padding: 16px 32px;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: -48px;/*here*/
+}
