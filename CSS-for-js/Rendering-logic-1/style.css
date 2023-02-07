@@ -476,13 +476,19 @@ With padding and border, only positive numbers (including 0) are supported. With
 
 A negative margin can pull an element outside its parent
 
-Negative margins can also pull an element's sibling closer*/
+Negative margins can also pull an element's sibling closer
+
+Margin, though, it's about changing the gap between elements. Negative margin shrinks the gap below an element, causing the next element to scoot up closer.
+
+Finally, negative margin can affect the position of all siblings. Check out what happens when we apply negative margin to the first box in a series.
+The interesting thing is those two black boxes: they "follow" the deep pink box up.When we use margin to tweak an element's position, we might also be tweaking every subsequent element as well.*/
 
 
 .margin-wrapper {
   width: 200px;
   height: 200px;
   border: 3px solid;
+  margin-top: 2rem;
 }
 
 .pink-box {
@@ -498,6 +504,7 @@ Negative margins can also pull an element's sibling closer*/
   width: 200px;
   height: 200px;
   border: 3px solid;
+  margin-top: 2rem;
 }
 
 .neighbor {
@@ -505,4 +512,23 @@ Negative margins can also pull an element's sibling closer*/
   height: 50%;
   background: silver;
   margin-left: 16px;
+}
+
+.siblings-margin-wrapper {
+  width: 200px;
+  height: 200px;
+  border: 3px solid silver;
+  margin-top: 2rem;
+}
+
+.box {
+  width: 25%;
+  height: 25%;
+  border: 3px solid;
+  background: white;
+}
+
+.box.one {
+  border-color: deeppink;
+  margin-top: -24px;/*SO FOLLOW THIS ONE UP*/
 }
