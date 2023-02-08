@@ -625,3 +625,26 @@ This is the problem. width: auto has a different meaning for replaced elements. 
 p, img {
   margin-bottom: 16px;
 }
+
+
+/*FLOW LAYOUT*
+
+Flow layout is the default layout mode. Everything we've seen so far has used Flow layout. A plain HTML document, with no CSS applied, uses Flow layout exclusively. Other layout modes are, including Positioned layout, “Flexible Box” layout (AKA Flexbox), and Grid layout (AKA CSS Grid). 
+
+There are two main element types in Flow layout:
+
+- Block elements: things like headings, paragraphs, footers, asides. The chunks of content that make up a page.
+
+- Inline elements: things like links, or a string of bold text. Generally, inline elements are meant to highlight bits of text, or elements within a block container.
+
+- There's also a third value, inline-block, which is a sort of fusion between the two types.
+
+<div> and <header> are block elements, span and <a> are inline elements.
+
+We can toggle any particular element with the display property:
+
+Transform a particular <a> tag from `inline` to `block`: 
+a.nav-link {
+  display: block;
+}
+
