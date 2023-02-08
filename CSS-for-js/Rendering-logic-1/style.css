@@ -648,3 +648,39 @@ a.nav-link {
   display: block;
 }
 
+
+INLINE ELEMENTS
+
+You can shift things in the inline direction with margin-left and margin-right, since that pushes it around in the inline direction, but you can't give it a width or height. 
+
+There's an exception to this rule: replaced elements.
+
+A replaced element is one that embeds a "foreign" object. This includes:
+
+<img />
+<video />
+<canvas />
+
+These elements are all technically inline, but they're special: they can affect block layout. You can give them explicit dimensions, or add some margin-top.
+
+
+BLOCK ELEMENTS
+
+When you place a block level element on the page, its content box greedily expands to fill the entire available horizontal space.
+
+A heading might only need 150px to contain its letters, but if you put it in an 800px container, it will expand to fill 800px of width.
+
+What if we force it to shrink down to the minimum size required for the letters? We can do this with the special width keyword fit-content
+
+h2 {
+  width: fit-content;
+  border: 2px dotted;
+}
+
+It's still a block element even though space to right is available so if you add another p f.ex after it will go underneath it*/
+
+
+h6 {
+  width: fit-content;
+  border: 2px dotted;
+}
