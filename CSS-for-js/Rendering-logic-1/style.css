@@ -589,3 +589,39 @@ i.e margin peaks out*/
   border-radius: 4px;
   margin-top: -48px;/*here*/
 }
+
+
+/*Stretched content
+
+So if we have centered text but in the middle an image that fills up the whole container, how do we do that? The container padding is getting in the way!
+
+Images, as well as other “replaced elements” like <video> and <canvas>, are special. They don't automatically expand to fill the available space. Instead, they rely on their intrinsic size.
+
+For example, suppose I take a photo on an old webcam. That photo has a native size of 640 × 480. When I embed this image on the page, using an <img> tag, it'll have a default width of 640px.
+
+This is the problem. width: auto has a different meaning for replaced elements. It doesn't mean “stretch out and fill all of the space”, it means “use your natural width”!*/
+
+.stretched {
+  background: #222;
+  padding: 32px;
+}
+
+.card-stretched {
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.stretched-out {/*How to part 1*/
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
+.stretched-out img {/*How to part 2*/
+  display: block;
+  width: 100%;
+}
+
+p, img {
+  margin-bottom: 16px;
+}
