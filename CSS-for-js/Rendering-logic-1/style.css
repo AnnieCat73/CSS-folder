@@ -742,3 +742,36 @@ Unlike block elements, an inline element can produce shapes other than boxes*/
 strong {
   border: 2px solid;
 }
+
+
+/*INLINE-BLOCK
+
+An inline-block element is a block-level element that can be placed in an inline context.
+
+In terms of layout, it's treated as an inline element. We can drop it in the middle of a paragraph, without totally borking the layout. But internally, it acts much more like a block element.
+
+First ex it's an inline-block. Because this tag is now secretly a block-level element, it has access to the full universe of CSS. Usually, properties like width and margin-top have no effect on an inline element, but they do work on inline-block elements.*/
+
+.inline-block strong {
+  display: inline-block;
+  color: white;
+  background-color: red;
+  width: 100px;
+  margin-top: 32px;
+  text-align: center;
+}
+.inline-block-2 strong {
+  /*display: inline-block; - it becomes inline here*/
+  color: white;
+  background-color: red;
+  width: 100px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.inline-block strong:hover {
+  transform: scale(1.2);
+}
+
+
+
