@@ -684,3 +684,61 @@ h6 {
   width: fit-content;
   border: 2px dotted;
 }
+
+/*INLINE ELEMENTS
+
+Here's an example of an image with a fixed size of 300×300 pixels, sitting in a plain ol' div. The image is taking up the correct size, 300×300, but the parent has a slightly larger height.
+
+The image is 300px tall, but its parent <div> is 306px tall. Where are those extra few pixels coming from?? It's not padding, it's not border, it's not margin…
+
+The reason for this extra “magic space” is that the browser treats inline elements as if they're typography. It makes sense that with text, you'd want a bit of extra space, so that the lines in a paragraph aren't crammed in too tightly.
+
+There are two ways we can fix this problem:
+
+1) Set images to display: block — if you're noticing this problem, there's a good chance your images aren't interspersed with text, so setting them to display as blocks makes sense.
+
+2) Set the line-height on the wrapping div to 0
+
+
+SPace between inline elements
+
+The following markup creates whitespace between elements:
+
+<img
+  src="/cfj-mats/placekitten-100.jpg"
+  width="100"
+  alt="Cat photo"
+/>
+<img
+  src="/cfj-mats/placekitten-100.jpg"
+  width="100"
+  alt="Cat photo"
+/>
+<img
+  src="/cfj-mats/placekitten-100.jpg"
+  width="100"
+  alt="Cat photo"
+/>
+
+This happens because HTML is space-sensitive, at least to an extent. The browser can't tell the difference between whitespace added to separate words in a paragraph, and whitespace added to indent our HTML and keep it readable.
+
+BUT IF YOU DO THIS in your markup it has no whitespace between
+them:
+
+<img src="/cfj-mats/placekitten-100.jpg" width="100" alt="Cat photo" /><img src="/cfj-mats/placekitten-100.jpg" width="100" alt="Cat photo" /><img src="/cfj-mats/placekitten-100.jpg" width="100" alt="Cat photo" />
+
+How do we solve this problem? Well, it turns out that this issue is specific to Flow layout. So, the simplest thing is to switch the container to use Flexbox. 
+
+Inline elements can line-wrap
+
+Inline elements have one pretty big trick up their sleeves; they can line-wrap.
+
+This paragraph features a multi-line <strong> tag:
+
+This is a paragraph with some very bolded words in it.
+
+Unlike block elements, an inline element can produce shapes other than boxes*/
+
+strong {
+  border: 2px solid;
+}
