@@ -775,3 +775,15 @@ First ex it's an inline-block. Because this tag is now secretly a block-level el
 
 
 
+/*ISSUE WITH INLINE-BLOCK:
+
+Here's the big downside with inline-block: It disables line-wrapping.
+
+Because the link can't line-wrap, it forces the entire link onto the next line, adding an awkward gap.
+
+f.ex this is a link with a line under it: 
+good working relationship with design
+
+- it's too long and if needed doesn't break into a new line, it creates a gap, see end of Flow Layout for image
+
+You may be tempted to pick really-short link text, to avoid this problem, but that would be a mistake; descriptive link text is important for accessibility.*/
