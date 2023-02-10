@@ -787,3 +787,25 @@ good working relationship with design
 - it's too long and if needed doesn't break into a new line, it creates a gap, see end of Flow Layout for image
 
 You may be tempted to pick really-short link text, to avoid this problem, but that would be a mistake; descriptive link text is important for accessibility.*/
+
+
+/*WIDTH ALGORITHMS
+
+When we use percentage-based widths, those percentages are based on the parent element's content space. If the body tag makes 400px of space available, any child with 100% width will become 400px wide, regardless of any other circumstances. So if you set margin on either side of the body tax f.ex
+
+
+SO IMPORTANT DISTINCTION FROM ABOVE:
+
+Block elements have a default width value of auto, not 100%. width: auto works very similar to margin: auto; it's a hungry value that will grow as much as it's able to, but no more. In the case above, our h1 will grow to consume (100% - 32px), since there is 16px of margin on either side.
+
+
+Keyword values
+
+Broadly speaking, there are two kinds of values we can specify for width:
+
+- Measurements (100%, 200px, 5rem)
+- Keywords (auto, fit-content)
+
+Measurement-based values are either completely explicit (eg. 200px), or relative to the parent's available space (eg. 50%). Keywords, on the other hand, let us specify different sorts of behaviours depending on the context.
+
+We've already seen how auto will let our element greedily consume the available space while respecting any constraints.
