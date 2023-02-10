@@ -809,3 +809,19 @@ Broadly speaking, there are two kinds of values we can specify for width:
 Measurement-based values are either completely explicit (eg. 200px), or relative to the parent's available space (eg. 50%). Keywords, on the other hand, let us specify different sorts of behaviours depending on the context.
 
 We've already seen how auto will let our element greedily consume the available space while respecting any constraints.
+
+
+MIN-CONTENT
+
+width: min-content
+
+we're specifying that we want our element to become as narrow as it can, based on the child contents. This is a totally different perspective: we aren't sizing based on the space made available by the parent, we're sizing based on the element's children!
+
+It chooses the smallest possible value for width that still contains each word. Whenever it encounters whitespace or a hyphenated word, it'll break it onto a new line.
+
+This value is known as an intrinsic value, while measurements and the auto keyword are extrinsic. */
+
+.min {
+  width: min-content;
+  background-color: fuchsia;
+}
