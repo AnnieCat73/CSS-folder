@@ -825,3 +825,22 @@ This value is known as an intrinsic value, while measurements and the auto keywo
   width: min-content;
   background-color: fuchsia;
 }
+
+
+/*MAX-CONTENT
+
+width: max-content
+
+It takes an opposite strategy: it never adds any line-breaks. The element's width will be the smallest value that contains the content, without breaking it up
+
+Pays no attention to the constraints set by the parent. It will size the element based purely on the length of its unbroken children.*/
+
+.max {
+  width: max-content;
+  background-color: mediumspringgreen;
+}
+
+.smax {
+  width: max-content;
+  background-color: mediumspringgreen;
+}
