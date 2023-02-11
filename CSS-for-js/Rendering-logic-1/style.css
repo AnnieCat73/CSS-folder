@@ -853,6 +853,10 @@ Here's how it works: like min-content and max-content, the width is based on the
 
 If the content is too wide to fit in the parent, however, it adds line-breaks as-needed to ensure it never exceeds the available space. It behaves just like width: auto.*/
 
+.fit-content {
+  max-width: 16rem;
+}
+
 .fit {
   width: fit-content;
   background-color: peachpuff;
