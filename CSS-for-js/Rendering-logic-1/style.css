@@ -844,3 +844,18 @@ Pays no attention to the constraints set by the parent. It will size the element
   width: max-content;
   background-color: mediumspringgreen;
 }
+
+/*FIT-CONTENT
+
+width: fit-content
+
+Here's how it works: like min-content and max-content, the width is based on the size of the children. If that width can fit within the parent container, it behaves just like max-content, not adding any line-breaks.
+
+If the content is too wide to fit in the parent, however, it adds line-breaks as-needed to ensure it never exceeds the available space. It behaves just like width: auto.*/
+
+.fit {
+  width: fit-content;
+  background-color: peachpuff;
+  margin-bottom: 16px;
+  padding: 8px;
+}
