@@ -863,3 +863,17 @@ If the content is too wide to fit in the parent, however, it adds line-breaks as
   margin-bottom: 16px;
   padding: 8px;
 }
+
+/*MIN and MAX WIDTHS
+
+We can add constraints to an element's size using min-width and max-width.
+
+The particularly exciting thing about min-width and max-width is that they let us mix units. We can specify constraints in pixels, but set a percentage width.*/
+
+.box50 {
+  width: 50%;
+  min-width: 170px;
+  max-width: 300px;
+  margin: 0 auto;
+  border: solid hotpink;
+}
