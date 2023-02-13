@@ -877,3 +877,11 @@ The particularly exciting thing about min-width and max-width is that they let u
   margin: 0 auto;
   border: solid hotpink;
 }
+
+.max-width-wrapper {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  outline: 1px solid red;
+}
