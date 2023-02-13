@@ -885,3 +885,20 @@ The particularly exciting thing about min-width and max-width is that they let u
   padding: 0 16px;
   outline: 1px solid red;
 }
+
+
+/*FIGURES AND CAPTIONS
+
+The <figure> HTML element is fairly niche, but super useful. It allows us to display any sort of “non-typical” content: images, videos, code snippets, widgets, etc. It also lets us caption that content with <figcaption>.
+
+<figure> elements are block-level elements, which means they fill the available horizontal space. But what if we wanted them to shrink to wrap around the image inside?*/
+
+
+.cat-wrapper {
+  outline: 1px solid grey;
+  width: 300px;
+}
+
+/*.cat {
+  width: 300px;
+}*/
