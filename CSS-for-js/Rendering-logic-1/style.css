@@ -891,7 +891,14 @@ The particularly exciting thing about min-width and max-width is that they let u
 
 The <figure> HTML element is fairly niche, but super useful. It allows us to display any sort of “non-typical” content: images, videos, code snippets, widgets, etc. It also lets us caption that content with <figcaption>.
 
-<figure> elements are block-level elements, which means they fill the available horizontal space. But what if we wanted them to shrink to wrap around the image inside?*/
+<figure> elements are block-level elements, which means they fill the available horizontal space. But what if we wanted them to shrink to wrap around the image inside?
+
+NB EXAMPLE HERE
+
+If want figure to wrap around an image can use width:min-content. So what happens here is that figure looks at its children and shrinks to fit the widest child, 
+so here image is widest, but if figcaption had been longer than img then it would fit that. NB remember figure is a block element so it takes up as much space as possible from one side to the other.
+
+*/
 
 
 .cat-wrapper {
@@ -909,4 +916,9 @@ The <figure> HTML element is fairly niche, but super useful. It allows us to dis
 
 .figure-wrapper:nth-of-type(1) {
   margin-bottom: 2rem;
+}
+
+.figure-wrapper-after {
+  width: min-content;
+  outline: 1px solid red;
 }
