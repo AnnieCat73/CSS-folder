@@ -931,3 +931,11 @@ Setting an element to have a height of 50% will force that item to take up half 
 The default "width" behaviour of a block-level element is to fill all the available width, whereas the default "height" behaviour is to be as small as possible while fitting all of the element's content; it's closer to width: min-content than width: auto!
 
 We generally want to avoid setting fixed heights.
+
+When it comes to layout wrappers like this, setting a fixed height is usually a bad idea.*/
+
+.fixed {
+  height: 100px;
+  max-width: 300px;
+  border: solid;
+}
