@@ -965,7 +965,7 @@ When we get to our wrapper, we want to use min-height. This way, the minimum siz
 
 .wrapper {
   min-height: 100%;
-  border: solid;
+  border: solid 1px red;
 }
 
 /*Not working so need to do this:
@@ -977,3 +977,15 @@ html, body {
   min-height: 100%;
   border: solid;
 }
+
+
+/*VH UNIT
+
+You may be familiar with the vh unit, a unit designed exactly for this purpose. If you set height: 100vh, your element will inherit its height from the viewport size.
+
+Unfortunately, this unit doesn't quite work the way we'd often like, because of mobile devices.
+
+
+To avoid flickering UI issues, browsers like iOS Safari and Chrome Android will set vh equal to the maximum viewport height, after scrolling. This means that when the page first loads, 100vh will actually be quite a bit taller than the viewable area.
+
+In general, I recommend using the html/body height: 100% method described above. It produces a better experience in most cases.
