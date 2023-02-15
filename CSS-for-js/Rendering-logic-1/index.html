@@ -224,6 +224,22 @@
       </p>
     </div>
   </section>
+  <section>
+    <h5>min-height</h5>
+    <div class="wrapper">
+      <p style="margin: 0;">
+        I'm not very tall! Min-height doesn't work here!
+      </p>
+    </div>
+    <div>
+      <p style="margin-top: 2rem;">How to fix it:</p>
+      <ul>
+        <li>Put height: 100% on every element before your main one (including html and body)</li>
+        <li>Put min-height: 100% on that wrapper</li>
+        <li>Don't try and use percentage-based heights within that wrapper</li>
+      </ul>
+    </div>
+  </section>
   
 </body>
 </html>

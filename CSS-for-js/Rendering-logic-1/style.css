@@ -961,4 +961,19 @@ Put min-height: 100% on that wrapper
 Don't try and use percentage-based heights within that wrapper
 When html is given height: 100%, it takes up the height of the viewport. That serves as our base. The body tag's 100% is based on that base size.
 
-When we get to our wrapper, we want to use min-height. This way, the minimum size is equal to the viewport height, but it can overflow and take up more space if required by the content.
+When we get to our wrapper, we want to use min-height. This way, the minimum size is equal to the viewport height, but it can overflow and take up more space if required by the content.*/
+
+.wrapper {
+  min-height: 100%;
+  border: solid;
+}
+
+/*Not working so need to do this:
+
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  border: solid;
+}
