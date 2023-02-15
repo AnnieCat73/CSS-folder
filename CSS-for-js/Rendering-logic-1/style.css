@@ -939,3 +939,26 @@ When it comes to layout wrappers like this, setting a fixed height is usually a 
   max-width: 300px;
   border: solid;
 }
+
+/*MINUMUM-HEIGHT
+
+ But what about when we want to set a minimum height?
+
+For example, let's say that we have an element that wraps around our entire app. If a specific page doesn't have much content, the entire app might be less than 100% of our window height. What if we want it to take up at least 100% of the available space?
+
+Our goal is to have a .wrapper element that will be no smaller than 100% of the available height. But min-height: 100% doesn't work.
+
+Have you ever tried to use a percentage-based height, only to discover that it seems to have no effect? In this lesson, we're going to look at why this happens.
+
+As we saw earlier, the default behaviour of an element in terms of height is to be as small as possible, to contain its children.
+
+Our section sits inside the <body> tag, and so when we set a percentage-based height or min-height, the percentage is based on that parent height. <body> doesn't have a specific height set, which means it uses the default behaviour: stay as short as possible, while still containing all the children.
+
+Here's how to fix it:
+
+Put height: 100% on every element before your main one (including html and body)
+Put min-height: 100% on that wrapper
+Don't try and use percentage-based heights within that wrapper
+When html is given height: 100%, it takes up the height of the viewport. That serves as our base. The body tag's 100% is based on that base size.
+
+When we get to our wrapper, we want to use min-height. This way, the minimum size is equal to the viewport height, but it can overflow and take up more space if required by the content.
