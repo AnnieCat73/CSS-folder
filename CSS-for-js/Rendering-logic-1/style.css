@@ -989,3 +989,29 @@ Unfortunately, this unit doesn't quite work the way we'd often like, because of 
 To avoid flickering UI issues, browsers like iOS Safari and Chrome Android will set vh equal to the maximum viewport height, after scrolling. This means that when the page first loads, 100vh will actually be quite a bit taller than the viewable area.
 
 In general, I recommend using the html/body height: 100% method described above. It produces a better experience in most cases.
+
+
+WHAT ABOUT THE FOOTER - when want it to stay at the bottom
+
+Having a full-height container is an important pre-requisite,
+in order to solve this problem, we'd need to use Flexbox:
+
+html, body {
+  height: 100%;
+}
+
+.wrapper-min {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.wrapper-min footer {
+  border: solid hotpink;
+  padding: 8px;
+  margin-top: auto; /////////////////
+}
+
+*/
+
+
