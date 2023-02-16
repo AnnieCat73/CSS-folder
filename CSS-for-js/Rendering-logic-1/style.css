@@ -1014,4 +1014,6 @@ html, body {
 
 */
 
+/*MARGIN COLLAPSE
 
+Margin is akin to "personal space". Adjacent margins will sometimes "collapse", and overlap. Margins side by side will collapse into one another. Ex of 1 person with margin around it then walks past another person with margin around them. As walk past they will share space, i.e margin collapse/overlap.
