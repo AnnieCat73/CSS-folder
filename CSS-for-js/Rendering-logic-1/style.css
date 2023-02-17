@@ -1034,3 +1034,6 @@ Only vertical margins collapse
 
 
 See example: Each paragraph has 24px of vertical margin (margin-top and margin-bottom), and that margin collapses. The paragraphs will be 24px apart, not 48px apart.
+
+
+NB Margin collapse is unique to Flow layout. If you have children inside a display: flex parent, those children's margins will never collapse.
