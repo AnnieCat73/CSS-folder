@@ -1037,3 +1037,8 @@ See example: Each paragraph has 24px of vertical margin (margin-top and margin-b
 
 
 NB Margin collapse is unique to Flow layout. If you have children inside a display: flex parent, those children's margins will never collapse.
+
+
+The bigger margin wins
+
+ Say, the top element wants 72px of space below, while the bottom element only needs 24px? The bigger number wins.
