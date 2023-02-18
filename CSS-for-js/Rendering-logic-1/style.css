@@ -1071,3 +1071,21 @@ Margin is meant to increase the distance between siblings. It is not meant to in
 “But that can't be!”, I can hear you saying. “I've used margin before to increase the distance between the parent and the first child!”
 
 Margins only collapse when they're touching. Here are some examples of nested margins that don't collapse.
+
+1)Blocked by padding or border
+
+You can think of padding/border as a sort of wall; if it sits between two margins, they can't collapse, because there's an obstruction in the way. Even 1px of padding or border will cause margins not to collapse.
+
+2)Blocked by a gap
+
+A 150px-tall single child will have a 150px-tall parent, with no pixels to spare on either side.
+
+But what if we explicitly give our parent element a height? Well, that would create a gap underneath the child.But because there's some empty space below the child, its bottom margin will never collapse.
+
+3)Blocked by a scroll container
+
+If the parent element creates a scroll container, with a declaration like overflow: auto or overflow: hidden, it will disable margin collapse if the margins are on either side of the scroll container.
+
+Margins must be touching in order for them to collapse.
+
+Margins can collapse in the same
