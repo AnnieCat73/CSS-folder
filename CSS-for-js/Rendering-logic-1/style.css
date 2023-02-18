@@ -1089,3 +1089,59 @@ If the parent element creates a scroll container, with a declaration like overfl
 Margins must be touching in order for them to collapse.
 
 Margins can collapse in the same
+
+
+MARGINS CAN COLLAPSE IN THE SAME DIRECTION
+
+The child margin is getting “absorbed” into the parent margin. The two are combining, and are subject to the same rules of margin-collapse
+
+<style>
+  .parent {
+    margin-top: 72px;
+  }
+
+  .child {
+    margin-top: 24px;
+  }
+</style>
+
+<div class="parent">
+  <p class="child">Paragraph One</p>
+</div>
+
+
+NB The trouble is that 0px margin is still a collapsible margin. Each section has 0px top margin, and it gets combined with the 32px top margin on the paragraph. Since 32px is the larger of the two, it wins.
+
+
+MORE THAN TWO MARGINS CAN COLLAPSE
+
+<header>
+  <h1>My Project</h1>
+</header>
+<section>
+  <p>Hello World</p>
+</section>
+
+header {
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin-bottom: 20px;
+}
+
+section {
+  margin-top: 30px;
+}
+
+section p {
+  margin-top: 40px;
+}
+
+The space between our <header> and <section> has 4 separate margins competing to occupy that space!
+
+The header wants space below itself
+The h1 in the header has bottom margin, which collapses with its parent
+The section below the header wants space above itself
+The p in the section has top margin, which collapses with its parent
+Ultimately, the paragraph has the largest cumulative margin, so it wins, and 40px separates the header and section.
