@@ -1145,3 +1145,22 @@ The h1 in the header has bottom margin, which collapses with its parent
 The section below the header wants space above itself
 The p in the section has top margin, which collapses with its parent
 Ultimately, the paragraph has the largest cumulative margin, so it wins, and 40px separates the header and section.
+
+
+NEGATIVE MARGINS
+
+A negative margin will pull an element in the opposite direction. A sibling with a negative margin-top might overlap its neighbor.
+
+How do negative margins collapse? Well, it's actually quite similar to positive ones! The negative margins will share a space, and the size of that space is determined by the most significant negative margin. In this example, the elements overlap by 75px, since the more-negative margin (-75px) was more significant than the other (-25px).
+
+What about when negative and positive margins are mixed? In this case, the numbers are added together. In this example, the -25px negative margin and the 25px positive margin cancel each other out and have no effect, since -25px + 25px is 0.
+
+MULTIPLE POSITIVE AND NEGATIVE MARGINS
+
+What if we have multiple margins competing for the same space, and some are negative?
+
+If there are more than 2 margins involved, the algorithm looks like this:
+
+All of the positive margins collapse together (eg. 10px and 50px collapse into a single 50px margin).
+All of the negative margins collapse together (eg. -20px and -30px collapse into a single -30px margin).
+Add those two numbers together (50px + -30px = 20px).
