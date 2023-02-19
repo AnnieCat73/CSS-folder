@@ -1164,3 +1164,16 @@ If there are more than 2 margins involved, the algorithm looks like this:
 All of the positive margins collapse together (eg. 10px and 50px collapse into a single 50px margin).
 All of the negative margins collapse together (eg. -20px and -30px collapse into a single -30px margin).
 Add those two numbers together (50px + -30px = 20px).
+
+
+USING MARGIN EFFECTIVELY
+
+I try and avoid putting margin on something at the component boundary.
+
+You might be imagining embedding this video in a blog post, and you know you'll want some space around it... but applying margin in this way is gluing the component without knowing where you'll stick it.
+
+You might be saying “But no, I know where I want to stick it! In the blog post!”. And that's fine for bespoke, one-off components… but VideoClip sounds generic and reusable.
+
+You may want to create a VideoStrip component that lines up several video clips without any gap, and now you have a problem, because the same component needs different amounts of margin in different situations.
+
+Basic idea is that components aren't allowed to have "external margin", margin that extends past the edge of the border box. Instead, components are grouped using layout components
