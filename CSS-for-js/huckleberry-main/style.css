@@ -41,3 +41,15 @@ p {
   /*transform: matrix(1, 0, 0, -1, 0, 0);*/
 }
 
+
+.max-width-wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.intro-chunk {
+  max-width: 450px;
+  padding-top: 96px;
+  padding-bottom: 64px;
+}
+
