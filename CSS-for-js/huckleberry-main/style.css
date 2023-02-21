@@ -49,7 +49,14 @@ p:last-child {
 }
 
 .indented-heading {
+  font-size: 1.5rem;
   background-color: #ffbf00;
+  line-height: 1.2;
+  margin: 0;
+  margin-left: -32px;
+  padding: 16px 32px;
+  border-bottom: 8px solid hsl(45deg 100% 40%);
+  width: fit-content;
   /*transform: matrix(1, 0, 0, -1, 0, 0);*/
 }
 
