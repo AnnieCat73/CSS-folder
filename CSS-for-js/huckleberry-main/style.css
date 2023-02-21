@@ -11,12 +11,18 @@ body {
 
 /* Add styles here! */
 
+header {
+  border-bottom: 8px solid hsl(0deg 0% 60%);
+}
+
 
 h1 {
   font-size: 2rem;
   font-weight: 800;
   line-height: 1.2;
   color:black;
+  margin: 0;
+  margin-bottom: 3rem;
 }
 
 h2 {
@@ -30,6 +36,8 @@ p {
   font-size: 1.25rem;
   line-height: 1.5;
   color:black;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .intro-chunk strong {
@@ -63,6 +71,6 @@ main {
 .card {
   background-color: #ffffff;
   padding: 24px;
-  margin: 0 -24px;
+  margin: 0 -24px;/*makes text line up*/
 }
 
