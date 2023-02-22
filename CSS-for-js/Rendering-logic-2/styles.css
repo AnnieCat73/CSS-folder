@@ -72,3 +72,18 @@ h3 {
 .m-bottom {
   margin-bottom: 2rem;
 }
+
+
+/*POSITIONED LAYOUT
+
+Static positioning
+The default value of the position property is static.
+
+Occasionally, you'll see tutorials refer to "statically-positioned" elements. All this really means is that the elements are not using Positioned layout; they're using some other layout mode, like Flow or Flexbox or Grid.
+
+If an element is currently using Positioned layout and you want to opt out, you can set position to either static or initial:
+
+.box {
+  /* Revert to its default value, which is ‘static’ *
+  position: initial;
+}
