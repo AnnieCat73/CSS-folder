@@ -54,10 +54,11 @@ p:last-child {
   line-height: 1.2;
   margin: 0;
   margin-left: -32px;
+  margin-top: -16px;
+  margin-bottom: 1rem;
   padding: 16px 32px;
   border-bottom: 8px solid hsl(45deg 100% 40%);
   width: fit-content;
-  /*transform: matrix(1, 0, 0, -1, 0, 0);*/
 }
 
 
@@ -83,5 +84,6 @@ main {
   background-color: #ffffff;
   padding: 24px;
   margin: 0 -24px;/*makes text line up*/
+  BORDER-BOTTOM: 8px solid hsl(0deg 0% 60%);
 }
 

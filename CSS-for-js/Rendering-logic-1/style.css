@@ -1176,3 +1176,8 @@ You might be saying “But no, I know where I want to stick it! In the blog post
 You may want to create a VideoStrip component that lines up several video clips without any gap, and now you have a problem, because the same component needs different amounts of margin in different situations.
 
 Basic idea is that components aren't allowed to have "external margin", margin that extends past the edge of the border box. Instead, components are grouped using layout components
+
+
+NB REM VS PX
+
+USE REM IF YOU THINK PADDING OR MARGIN SHOULD EXPAND WITH THE USERS FONT-SIZE. SO IF THEY DECIDE TO MAKE IS SMALLER OR LARGER WILL THE SPACING ADJUST WITH THE CHANGING FONT-SIZE. IF USE PX IT WILL NOT. STAYS WHAT YOU SET IT TO.
