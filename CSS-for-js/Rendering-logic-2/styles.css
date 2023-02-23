@@ -145,3 +145,20 @@ Next, the second paragraph gets added in its natural position, which is also rig
 This process will continue for each provided absolute element.
 
 Being able to take elements out-of-flow is super handy. Any time you want an element to be "floating above" the content, like a tooltip or a dropdown or a modal, absolute positioning is your friend.
+
+When we toggle on that position: absolute, you'll notice that the parent "collapses" down, so that it's 8px tall (4px top border, 4px bottom).
+
+Why does this happen? Well, in terms of flow layout, the parent is empty! Remember, absolute elements are like holograms, they don't really exist. And since this parent element has no other children, it's as if it was an empty div: */
+
+.child1 {
+  /* Toggle this property: */
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: pink;
+  opacity: 0.5;
+}
+
+.parent1 {
+  border: 4px solid;
+}
