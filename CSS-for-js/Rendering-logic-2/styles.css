@@ -51,11 +51,16 @@ body {
   line-height: 1.6;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 section {
   padding: 3rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -87,3 +92,29 @@ If an element is currently using Positioned layout and you want to opt out, you 
   /* Revert to its default value, which is ‘static’ *
   position: initial;
 }
+
+
+RELATIVE POSITIONING
+
+You can often slap position: relative on an element, and observe zero difference. It appears to have no effect!
+
+In fact, it does two things:
+
+Constrains certain children (we'll get to this shortly!)
+Enables additional CSS properties to be used.
+When we opt into Positioned layout, we enable a handful of new CSS properties, including:
+
+top
+left
+right
+bottom
+
+We can use those directional values to shift the element around. With relative positioning, those values are relative to its natural position.
+
+You can also use negative numbers to push the element in the opposite direction; for relatively-positioned nodes, left: -10px has the same effect as right: 10px.
+
+The big difference is that position doesn't impact layout. Notice in the visualization that the grey boxes above and below (representing sibling elements) don't move; they don't get pulled along for the ride, as they do with margin.
+
+When we push a relatively-positioned element around with top/left/right/bottom, the browser acts like the element is still in its original position. The displacement is purely cosmetic.
+
+Finally, it's important to note that relative positioning can be applied to both block and inline elements. This allows us to nudge inline elements in a way that isn't really possible otherwise.
