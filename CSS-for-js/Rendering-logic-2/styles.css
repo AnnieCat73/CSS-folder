@@ -164,3 +164,23 @@ Why does this happen? Well, in terms of flow layout, the parent is empty! Rememb
 }
 
 /*IN GENERAL, absolute positioning is intended to be used in situations where we don't want it to affect its surrounding layout.
+
+
+CENTERING TRICK IN absolute: position so can use margin: 0 auto;
+
+absolute positioning (position: absolute)
+Equal distances from each edge (ideally 0px)
+A fixed size (defined width and height properties)
+Hungry margins (margin: auto)
+
+.box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background: deeppink;
+}
