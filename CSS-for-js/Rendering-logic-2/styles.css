@@ -184,3 +184,39 @@ Hungry margins (margin: auto)
   margin: auto;
   background: deeppink;
 }
+
+
+THE INSET PROPERTY
+
+As we saw, the centering trick requires setting all 4 edge properties to the same value:
+
+.box {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+This feels very tedious, and modern CSS has given us a more terse way to accomplish this:
+
+.box {
+  inset: 0;
+}
+
+or
+
+.box {
+  position: absolute;
+  inset: 25px;
+  background: deeppink;
+}
+
+This is equivalent to:
+
+.box {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  background: deeppink;
+}
