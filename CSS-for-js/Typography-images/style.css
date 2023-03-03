@@ -81,3 +81,53 @@ h3 {
 
 /*ICONS
 
+SVG 
+
+SVGs tend to look more crisp and sharp.
+They're easier to position and use (width instead of font-size makes way more sense!).
+They can be more accessible.
+They can be multi-color.
+They can be tweaked and animated.
+
+What's an SVG?
+SVG is a vector image format. This means that instead of storing information about the colors of specific pixels, it stores the instructions for how to draw the image.
+
+It's written in XML, which means it looks an awful lot like HTML. Here's a "Hello world" SVG which draws a pink circle:
+
+ <svg
+  viewBox="0 0 100 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="50" cy="50" r="40" stroke="black" fill="pink" />
+</svg>
+
+You can save this into a file called circle.svg and use it like any other image format (for example, <img src="/circle.svg" />). But you can also copy/paste the code directly into your HTML. This is known as "inline SVG":
+
+<html>
+<body>
+  <h1>Hello World</h1>
+  <div class="icon-wrapper">
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="50" cy="50" r="40" stroke="black" fill="pink" />
+    </svg>
+  </div>
+</body>
+</html>
+
+When we inline our SVGs, we can target individual sub-elements with CSS and JS!
+
+/* This will change the circle from pink to green! 
+.icon-wrapper circle {
+  fill: green;
+}
+
+Here are some of my favourites:
+
+Feather icons
+icomoon
+Material Design icons
