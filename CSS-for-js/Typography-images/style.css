@@ -131,3 +131,41 @@ Here are some of my favourites:
 Feather icons
 icomoon
 Material Design icons
+
+
+ICONS & ACCESSIBILITY
+
+ Screen readers can accurately dictate the text on our page, but they don't know how to deal with our SVG icons.
+
+There are a number of ways we can add additional text information for folks using a screen reader. Here's my favourite:
+
+<button>
+  <HelpCircle />
+  <span class="visually-hidden">
+    Visit the help center
+  </span>
+</button>
+
+We can tell screen readers to ignore an element using the aria-hidden attribute, f.ex the screen reader may interpret the icon as "Go home go home":
+
+<a href="/">
+  Go Home
+  <span class="revealed" aria-hidden="true">
+    Go Home
+  </span>
+</a>
+
+
+SPACING ISSUES
+
+The problem is that SVG elements have a default value of display: inline, and inline elements have "magic space". So may add padding to the icon
+
+To solve it use descendant selector so 
+
+button {
+  padding: 0;
+}
+
+button and svg {
+  display: block
+}
