@@ -231,3 +231,42 @@ Instead, the attribution should go in a <figcaption> below the image:
 </figure>
 
 The important thing is that you're writing alt text with the right goal in mind. You're not simply describing images for people who can't see them. You're trying to provide the context needed so that people can navigate and use your website / web application.
+
+
+IMG VS BACKGROUND-IMAGE
+
+It's important to use an img tag for semantically-meaningful images, because background images can't be given alt text.
+
+A mistake developers often make is to use background-image on a semantically-relevant image because they need to take advantage of related CSS properties like background-size and background-position.
+
+IMAGES FIT AND POSITION
+
+img is known as a "replaced element". Unlike other DOM nodes, the browser replaces the <img> tag with a foreign entity. images are inline elements, and inline elements "go with the flow"; we generally can't give an inline element a height, since that would mess with the layout. And yet, images can be given a height.
+
+Images come with their own intrinsic size, based on the dimensions of the image file. In this example, our image has a natural size of 400 × 300
+
+<!--
+  Because the image is naturally
+  400 × 300, it'll take up that
+  size by default.
+-->
+<img
+  alt="Blank image showing its own measurements, 400 by 300"
+  src="/cfj-mats/size-400-300.png"
+/>
+
+Images also have an intrinsic aspect ratio. This means that if we only supply one dimension, either width or height, the other dimension scales up or down as-needed, to preserve the aspect ratio
+
+img {
+  width: 200px;
+}
+
+Even though we haven't set a height, it scales down to 150px, to preserve the same proportions.
+
+What happens if we provide both a width and a height? What if it doesn't match the image's natural aspect ratio?
+
+By default, the image will distort. It's impossible to display an image accurately when we change its proportions.
+
+ A better alternative in most cases is to crop the image, trimming off any excess that can't fit in the specified rectangle.
+
+For many years, this was only possible with background images. Fortunately, modern CSS includes a couple tools that can help us out in this case. First, let's look at object-fit
