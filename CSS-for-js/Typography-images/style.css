@@ -169,3 +169,25 @@ button {
 button and svg {
   display: block
 }
+
+
+IMAGES
+
+The Fundamentals
+
+The img HTML tag has two required attributes:
+
+src
+alt
+
+alt is a property that allows you to specify "alternative text". It's meant to serve as a description of what the image contains.
+
+You've probably heard that alt text is important. It provides critical context to folks who aren't able to see the images, whether because of a visual disability or because of a faulty network connection.
+
+Not all images require alternative text. If the image is purely decorative and has no semantic value, you can specify alt="" to indicate that screen readers can ignore it.
+
+How do we know if an image is semantically valuable? I try and imagine what the user experience would be like if the image failed to load. If I don't know what's depicted in the image, would it make the product harder to use? If so, it definitely requires alt text.
+
+In some cases, an image isn't critical to the user experience, but it still provides value. For example, Wikipedia articles include relevant photos. While the article still makes sense without these photos, they provide valuable context, and should be described with alt text.
+
+If you're not sure if an image qualifies as decorative or not, it's best to err on the safe side, and add alt text. Folks using screen readers can easily skip past images, so don't worry about "polluting" the experience for them!
