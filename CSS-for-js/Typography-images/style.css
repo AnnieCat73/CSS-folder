@@ -191,3 +191,43 @@ How do we know if an image is semantically valuable? I try and imagine what the 
 In some cases, an image isn't critical to the user experience, but it still provides value. For example, Wikipedia articles include relevant photos. While the article still makes sense without these photos, they provide valuable context, and should be described with alt text.
 
 If you're not sure if an image qualifies as decorative or not, it's best to err on the safe side, and add alt text. Folks using screen readers can easily skip past images, so don't worry about "polluting" the experience for them!
+
+
+ALT TEXT
+
+The goal with alternative text should be to convey the semantic meaning of the image to the user.
+
+Like many sites, the company logo is in the top-left corner. Let's assume that it links to the product's homepage.
+
+What should the alt text be, for this green corner logo?
+
+Many developers will describe the image as they see it, something like “Abstract green octopus illustration”
+
+Here's what I'd set it to:
+
+<img
+  alt="Octo Analytics logo - Home"
+  src="/logo.png"
+/>
+
+We're letting the user know that it's a logo, and that it leads to the homepage. 
+
+One more thing: Alt text should not include additional contextual information. For example, here's what you shouldn't do:
+
+<img
+  src="/landscape.jpg"
+  alt="Painting of a beautiful landscape. Artist: C. Essess"
+/>
+Instead, the attribution should go in a <figcaption> below the image:
+
+<figure>
+  <img
+    src="/landscape.jpg"
+    alt="Painting of a beautiful landscape."
+  />
+  <figcaption>
+    Artist: C. Essess
+  </figcaption>
+</figure>
+
+The important thing is that you're writing alt text with the right goal in mind. You're not simply describing images for people who can't see them. You're trying to provide the context needed so that people can navigate and use your website / web application.
