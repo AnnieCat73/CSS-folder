@@ -321,3 +321,20 @@ img {
   object-fit: cover;
   object-position: left center;
 }
+
+
+IMAGES AND FLEXBOX
+
+Because the image tag is fundamentally weird, it doesn't always behave the way we expect when it interacts with certain layout modes. This is especially true when it comes to Flexbox.*/
+
+.flex-img {
+  display: flex;
+  gap: 8px;
+}
+
+img {
+  flex: 1;
+}
+.twice-as-big {
+  flex: 2;
+}
