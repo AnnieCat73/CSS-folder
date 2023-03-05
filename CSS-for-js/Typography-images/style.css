@@ -270,3 +270,20 @@ By default, the image will distort. It's impossible to display an image accurate
  A better alternative in most cases is to crop the image, trimming off any excess that can't fit in the specified rectangle.
 
 For many years, this was only possible with background images. Fortunately, modern CSS includes a couple tools that can help us out in this case. First, let's look at object-fit
+
+“Object”?
+The object-fit property works on images, but it isn't exclusive to images: it can also be used on <video> tags!
+
+In general, it's less relevant with videos, but it can come in handy when working with "video GIFs" (short videos that look/act like animated GIFs, but come in at a fraction of the size).
+
+OBJECT POSITION
+
+object-position lets us specify how the image should be translated or cropped within its available space. It's very similar to background-position, if you're familiar with that property.
+
+In its purest form, object-position takes two numbers: one for the horizontal offset, and one for the vertical offset.
+
+.thing {
+  /* Anchor to the top-left corner *
+  /* Same as "0% 0%" *
+  object-position: left top;
+}
