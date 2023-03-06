@@ -357,9 +357,38 @@ img {
 
 /*BUT BETTER TO THINK OF IMAGES AS BLOCKS
 IT DOESN'T BELONG AS A DIRECT CHILD OF A FLEX PARENT
-IT SHOULD BE IN A CONTAINER I.E DIV*/
+IT SHOULD BE IN A CONTAINER I.E DIV
+
+*/
 
 
 .flex-img-propersolution {
-
+  display: flex;
+  gap: 8px;
 }
+
+/*undo min-width first and no-flex*/
+.no-minw {
+  min-width: unset;
+}
+
+.no-flex {
+  flex: unset;
+}
+
+/*then add flex: 1 on col class*/
+
+.col {
+  flex: 1;
+}
+
+/*then set img to 100% to fill its div or container*/
+
+img {
+  width: 100%;
+}
+
+
+/*SO FOR FLEXBOX ADD A DIV AROUND THE IMAGE
+SET THE DIV TO HAVE A flex: 1
+SET THE IMG ITSELF TO width: 100%*/
