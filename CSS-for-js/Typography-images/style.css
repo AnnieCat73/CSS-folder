@@ -338,3 +338,6 @@ img {
 .twice-as-big {
   flex: 2;
 }
+
+/*Why is the first image above so skinny.
+Here axis is horizontal so default alignment is stretch
