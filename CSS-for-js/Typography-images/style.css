@@ -392,3 +392,32 @@ img {
 /*SO FOR FLEXBOX ADD A DIV AROUND THE IMAGE
 SET THE DIV TO HAVE A flex: 1
 SET THE IMG ITSELF TO width: 100%*/
+
+
+/*FLEXBOX EXERCISE*/
+
+.reviews {
+  text-align: center;
+  min-width: 300px;
+}
+
+.average-rating {
+  font-size: 1.25rem;
+  margin-top: 32px;
+  color: gold;
+  font-style: italic;
+}
+
+.book-img {
+  /*
+    We'll learn more about this fancy
+    property in a future module!
+  */
+  filter:
+    drop-shadow(
+      -8px
+      32px
+      10px
+      hsl(260deg 50% 4% / 0.5)
+    );
+}
