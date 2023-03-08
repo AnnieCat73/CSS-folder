@@ -396,9 +396,27 @@ SET THE IMG ITSELF TO width: 100%*/
 
 /*FLEXBOX EXERCISE*/
 
+.main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 0;
+  background-color:azure;
+}
+
+.image-wrapper,
+.reviews {
+ flex: 1; /*should equally share that space*/
+}
+
+.image-wrapper img {
+  width: 100%;
+  min-width: 300px;
+  /*object-position: -32px 0;*/
+}
+
 .reviews {
   text-align: center;
-  min-width: 300px;
+  
 }
 
 .average-rating {
