@@ -439,3 +439,26 @@ SET THE IMG ITSELF TO width: 100%*/
       hsl(260deg 50% 4% / 0.5)
     );
 }
+
+
+/*ASPECT RATIO
+
+Images have an intrinsic aspect ratio. 
+
+what is an intrinic ratio? So, having an intrinsic ratio in this case means that an element will maintain its aspect ratio when resized - think of an <img /> with max-width: 100% for example - change the width of it's parent and it will change size - but keep the same shape.
+
+The 3 images above are each given the same height (200px), but they wind up taking up drastically different widths, because of their natural aspect ratios.
+
+What if we wanted them all to have the same aspect ratio? We could accomplish this by giving them all the same width and height, and using object-fit to avoid stretching
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+How can we scale our images proportionally, at a prescribed aspect ratio?
+
+The aspect-ratio property takes two slash-separated numbers, like 4 / 3 or 7 / 11. This is a ratio of width to height; an aspect ratio of 2 / 1 means that the image will be twice as wide as it is tall.
+
+The aspect-ratio property isn't specific to images, either; it works on any element, including notoriously-tricky ones like <video> tags or iframes.
