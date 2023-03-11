@@ -537,3 +537,34 @@ The problem with this alternative is that the element's content box will be 0px 
 We can solve that with absolute positioning. The .padding-hack element becomes a containing block with position: relative. Our image uses absolute positioning to take it out of flow and fill that containing block.
 
 This fallback approach is a pain. It's hacky and it pollutes our markup. Is there an alternative?
+
+
+IMPORTANT
+
+In most cases, the aspect-ratio property is used to add a bit of visual polish, for presentational purposes. It isn't usually required for functionality.
+
+Given that most browsers support it, it's reasonable to ask: can we start using it, and provide a different-but-still-good alternative experience, for those using unsupported browsers?
+
+<style>
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  @supports (aspect-ratio: 1 / 1) {
+    img {
+      height: revert;
+      aspect-ratio: 1 / 1;
+    }
+  }
+</style>
+
+<section>
+  <div class="image-wrapper">
+    <img
+      alt="A wide-open outdoor concrete area. Architecture"
+      src="/cfj-mats/architecture-hugo-sousa.jpg"
+    />
+  </div>
+</section>
