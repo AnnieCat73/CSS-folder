@@ -462,3 +462,78 @@ How can we scale our images proportionally, at a prescribed aspect ratio?
 The aspect-ratio property takes two slash-separated numbers, like 4 / 3 or 7 / 11. This is a ratio of width to height; an aspect ratio of 2 / 1 means that the image will be twice as wide as it is tall.
 
 The aspect-ratio property isn't specific to images, either; it works on any element, including notoriously-tricky ones like <video> tags or iframes.
+
+Padding fallback
+The aspect-ratio has very solid browser support nowadays, but it'll never be supported in Internet Explorer. If we want to support all browsers, we can rely on an old hack using padding-bottom.
+
+Here's what the code looks like:
+
+<style>
+  .image-wrapper {
+    flex: 1;
+  }
+  .padding-hack {
+    height: 0px;
+    padding-bottom: 100%;
+    position: relative;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<section>
+  <div class="image-wrapper">
+    <div class="padding-hack">
+      <img
+        alt="A wide-open outdoor concrete area. Architecture"
+        src="/cfj-mats/architecture-hugo-sousa.jpg"
+      />
+    </div>
+  </div>
+  <div class="image-wrapper">
+    <div class="padding-hack">
+      <img
+        alt="A modular building against a blue sky. Architecture"
+        src="/cfj-mats/architecture-joel-filipe.jpg"
+      />
+    </div>
+  </div>
+  <div class="image-wrapper">
+    <div class="padding-hack">
+      <img
+        alt="A unique building with inset curves. Architecture"
+        src="/cfj-mats/architecture-julien-moreau.jpg"
+      />
+    </div>
+  </div>
+</section>
+
+The .padding-hack element has been given a height of 0px, so its content box is 228px by 0px. But the resulting image is square, because it has 228px of bottom padding, exactly the same amount as the width.
+
+As we saw in Module 1, percentages in padding always refer to width. When we set padding-bottom: 50%, for example, we're saying that the element's bottom padding should be half of its width. Not its height.
+
+So by combining 0px height with a percentage-based padding-bottom, we can recreate any aspect ratio:
+
+.padding-hack {
+  /* Equivalent to `aspect-ratio: 2 / 1` *
+  height: 0px;
+  padding-bottom: 50%;
+}
+
+.padding-hack-other {
+  /* Equivalent to `aspect-ratio: 5 / 7` *
+  height: 0px;
+  padding-bottom: calc(7 / 5 * 100%);
+}
+
+The problem with this alternative is that the element's content box will be 0px tall. We need this element to hold an image, but it can't do it with 0px of usable space!
+
+We can solve that with absolute positioning. The .padding-hack element becomes a containing block with position: relative. Our image uses absolute positioning to take it out of flow and fill that containing block.
+
+This fallback approach is a pain. It's hacky and it pollutes our markup. Is there an alternative?
