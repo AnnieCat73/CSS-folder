@@ -601,4 +601,56 @@ srcset is essentially a "plural" version of src. The browser will scan through t
 
 We keep a redundant src property strictly for older browsers: srcset enjoys universal browser support amongst modern browsers, but the src attribute ensures that IE users will still see our images.
 
-To help debug, the browser devtools will let you know which source is currently being served if you hover over the URL in the Elements pane:
+To help debug, the browser devtools will let you know which source is currently being served if you hover over the URL in the Elements pane
+
+
+THE PICTURE ELEMENT
+
+There's another way to solve the same problem: the <picture> element!
+
+<picture>
+  <source
+    srcset="
+      /cfj-mats/responsive-diamond.png 1x,
+      /cfj-mats/responsive-diamond@2x.png 2x,
+      /cfj-mats/responsive-diamond@3x.png 3x
+    "
+  />
+  <img
+    alt=""
+    src="/cfj-mats/responsive-diamond.png"
+  />
+</picture>
+
+The benefit to this approach is that we can specify multiple sources. This allows us to supply different file formats
+
+<picture>
+  <source
+    type="image/avif"
+    srcset="
+      /cfj-mats/responsive-diamond.avif 1x,
+      /cfj-mats/responsive-diamond@2x.avif 2x,
+      /cfj-mats/responsive-diamond@3x.avif 3x
+    "
+  />
+  <source
+    type="image/webp"
+    srcset="
+      /cfj-mats/responsive-diamond.webp 1x,
+      /cfj-mats/responsive-diamond@2x.webp 2x,
+      /cfj-mats/responsive-diamond@3x.webp 3x
+    "
+  />
+  <img
+    alt=""
+    src="/cfj-mats/responsive-diamond.png"
+  />
+</picture>
+
+It's based on the lessons learned in video compression, and it creates dramatically smaller images; in this example, the .avif version of our 3x image is 75% smaller than the .png!
+
+At the time of writing, only Chrome, Firefox, and Opera support AVIF. If we tried to use an AVIF image in an <img> tag, it would render as a broken image icon in other browsers.
+
+<picture> allows us to use modern image formats in a safe way, by providing fallbacks for other browsers.
+
+When the browser encounters a <picture> tag, it scans through the <source> children, and the individual paths within srcset. The order matters: When the browser finds a match, it will download the image from the server and show it to the user. We want our smallest files (AVIF) to be on top.
