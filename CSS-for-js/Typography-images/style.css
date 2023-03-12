@@ -568,3 +568,37 @@ Given that most browsers support it, it's reasonable to ask: can we start using 
     />
   </div>
 </section>
+
+
+RESPONSIVE IMAGES
+
+modern screens come in all sorts of configurations and densities.
+
+If we render an image at its native size, it's going to be fuzzy on a high-DPI display. To keep things crisp, we need to serve different images depending on the screen's pixel ratio.
+
+When exporting assets from the design tool, it's common to export 2 or 3 versions of the image. The ratio is generally included in the filename, like this:
+
+cat.jpg (300 × 300)
+cat@2x.jpg (600 × 600)
+cat@3x.jpg (900 × 900)
+
+NB SEE ADDY OSMANI IMAGE OPTIMIZATION
+
+The srcset attribute
+The quickest way to get up and running with responsive images is to use the srcset HTML attribute:
+
+<img
+  alt=""
+  src="/cfj-mats/responsive-diamond.png"
+  srcset="
+    /cfj-mats/responsive-diamond.png 1x,
+    /cfj-mats/responsive-diamond@2x.png 2x,
+    /cfj-mats/responsive-diamond@3x.png 3x
+  "
+/>
+
+srcset is essentially a "plural" version of src. The browser will scan through the list and apply the first one that matches.
+
+We keep a redundant src property strictly for older browsers: srcset enjoys universal browser support amongst modern browsers, but the src attribute ensures that IE users will still see our images.
+
+To help debug, the browser devtools will let you know which source is currently being served if you hover over the URL in the Elements pane:
