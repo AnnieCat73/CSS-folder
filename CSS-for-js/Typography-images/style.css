@@ -654,3 +654,54 @@ At the time of writing, only Chrome, Firefox, and Opera support AVIF. If we trie
 <picture> allows us to use modern image formats in a safe way, by providing fallbacks for other browsers.
 
 When the browser encounters a <picture> tag, it scans through the <source> children, and the individual paths within srcset. The order matters: When the browser finds a match, it will download the image from the server and show it to the user. We want our smallest files (AVIF) to be on top.
+
+
+STYLING AND TARGETING PICTURE ELEMENTS
+
+Because <picture> breaks what was a single element (img) into multiple elements (picture, source, img), it may not be clear how to style it.
+
+First, we should ignore <source> tags from a styling perspective.
+
+Next, it's important to understand that no matter which source is selected, the <img> tag will always be used, and it acts like any other image tag. The sources exist to "swap out" the src attribute. We want to add additional properties, like alt text, to the <img> tag, and not to <picture> or <source>.
+
+Finally, the <picture> element behaves like a <span>, an inline wrapper that wraps around the <img> tag*.
+In Internet Explorer, where <picture> isn't supported, it's a block-level wrapper, since unrecognized elements are treated like divs
+
+This <picture> wrapper comes in handy. For example, we can use it to our advantage inside a Flex container
+
+<main>
+  <picture>
+    <source
+      srcset="/cfj-mats/responsive-diamond@2x.png 2x"
+    />
+    <source
+      srcset="/cfj-mats/responsive-diamond@3x.png 3x"
+    />
+    <img
+      alt=""
+      src="/cfj-mats/responsive-diamond.png"
+    />
+  </picture>
+  <p>Hello World</p>
+</main>
+
+main {
+  display: flex;
+  gap: 8px;
+}
+
+picture {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid;
+}
+
+picture img {
+  display: block;
+  width: 100%;
+}
+
+p {
+  flex: 2;
+  border: 2px solid;
+}
