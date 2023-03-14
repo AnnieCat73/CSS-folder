@@ -705,3 +705,53 @@ p {
   flex: 2;
   border: 2px solid;
 }
+
+
+BACKGROUND IMAGES
+
+By default, a background image will be rendered at its native size, and then tiled across the element.
+
+There's a problem with this, though. As we've discussed, most monitors are "high DPI". If we render an image at its natural size, it'll look blurry and fuzzy, since a single software pixel is being stretched across multiple hardware pixels.
+
+To keep things crisp, we'll need to provide different images for different devices, scaling up based on the pixel ratio. When it comes to background images, we can do this with a media query, min-resolution
+
+
+min-resolution is supported across all major browsers except Safari. We can support Safari with an alternative syntax, -webkit-min-device-pixel-ratio.
+
+Notice that we also need to specify a background-size in pixels; otherwise, our high-DPI images will render in their native size, producing much larger images without any additional clarity. The background-size should match the width of the standard 1x image.
+
+min-resolution is supported across all major browsers except Safari. We can support Safari with an alternative syntax, -webkit-min-device-pixel-ratio.
+
+Notice that we also need to specify a background-size in pixels; otherwise, our high-DPI images will render in their native size, producing much larger images without any additional clarity. The background-size should match the width of the standard 1x image.
+
+<style>
+  body {
+    background-image:
+      url('/cfj-mats/geometric-pattern.png');
+    background-size: 450px;
+  }
+  
+  @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx)
+  {
+    body {
+      background-image:
+        url('/cfj-mats/geometric-pattern@2x.png');
+    }
+  }
+  
+  @media
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx)
+  {
+    body {
+      background-image:
+        url('/cfj-mats/geometric-pattern@3x.png');
+    }
+  }
+</style>
+
+<main>
+  <h1>Hello World</h1>
+</main>
