@@ -760,3 +760,14 @@ Notice that we also need to specify a background-size in pixels; otherwise, our 
 FIT AND POSITIONING
 
 It also has background=size and background-position equivalent to  object-fit and object-position properties
+
+BACKGROUND REPEAT NB
+
+background-repeat: repeat;
+- The pattern will be truncated at the bottom and on the right.
+
+background-repeat: space;
+- round will scale the image up or down, to avoid having the image cut off at the bottom or the right. It preserves the aspect ratio.
+
+background-repeat: round;
+- space won't tweak the size of the image. Instead, it'll leave gaps between the images.
